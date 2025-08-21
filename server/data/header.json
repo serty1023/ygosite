@@ -1,0 +1,30 @@
+{
+    "header":
+    [
+        {
+            "path": "tutorial",
+            "english": "How To Play",
+            "vietnamese": "Hướng Dẫn Chơi"
+        },
+        {
+            "path": "advanced_guide",
+            "english": "Advanced Guide",
+            "vietnamese": "Nâng Cao"
+        },
+        {
+            "path": "search?mode=matched-search",
+            "english": "Search",
+            "vietnamese": "Tìm Kiếm"
+        },
+        {
+            "path": "decks",
+            "english": "Decks",
+            "vietnamese": "Bộ Bài"
+        },
+        {
+            "path": "",
+            "english": "News",
+            "vietnamese": "Tin Tức"
+        }
+    ]
+}

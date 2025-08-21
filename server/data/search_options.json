@@ -1,0 +1,51 @@
+{
+    "search-options":
+    {
+        "english":
+        [
+            {
+                "mode": "matched-search",
+                "title": "Matched Search",
+                "content": "Search Card By Name"
+            },
+            {
+                "mode": "card-text-search",
+                "title": "Card Text Search",
+                "content": "Search Card By Card Text"
+            },
+            {
+                "mode": "advanced-search",
+                "title": "Advanced Search",
+                "content": "Search Card By Name and Allow Misspelling"
+            },
+            {
+                "mode": "filter-search",
+                "title": "Filter Search",
+                "content": "Search Card By Name, Attribute, Type,..."
+            }
+        ],
+        "vietnamese":
+        [
+            {
+                "mode": "matched-search",
+                "title": "Tìm Kiếm Trùng Khớp",
+                "content": "Tìm Kiếm Lá Bài Theo Tên"
+            },
+            {
+                "mode": "card-text-search",
+                "title": "Tìm Kiếm Nội Dung",
+                "content": "Tìm Kiếm Lá Bài Theo Mô Tả"
+            },
+            {
+                "mode": "advanced-search",
+                "title": "Tìm Kiếm Nâng Cao",
+                "content": "Tìm Kiếm Lá Bài Theo Tên và Cho Phép Sai Chính Tả"
+            },
+            {
+                "mode": "filter-search",
+                "title": "Bộ Lọc Tìm Kiếm",
+                "content": "Tìm Kiếm Lá Bài Theo Tên, Hệ, Tộc,..."
+            }
+        ]
+    }
+}

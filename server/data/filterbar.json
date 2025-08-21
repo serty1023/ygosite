@@ -1,0 +1,145 @@
+{
+    "filterbar":
+    [
+        {
+            "title": 
+            {
+                "english": "Type",
+                "vietnamese": "Loại"
+            },
+            "buttons":
+            [
+                "Monster",
+                "Spell",
+                "Trap"
+            ]
+        },
+        {
+            "title": 
+            {
+                "english": "Attribute",
+                "vietnamese": "Thuộc Tính"
+            },
+            "buttons":
+            [
+                "DARK",
+                "LIGHT",
+                "FIRE",
+                "WATER",
+                "EARTH",
+                "WIND",
+                "DIVINE"
+            ]
+        },
+        {
+            "title": 
+            {
+                "english": "Spell/Trap Icon",
+                "vietnamese": "Biểu Tượng Phép/Bẫy"
+            },
+            "buttons":
+            [
+                "Normal",
+                "Equip",
+                "Ritual",
+                "Continuous",
+                "Field",
+                "Quick-Play",
+                "Counter"
+            ]
+        },
+        {
+            "title":
+            {
+                "english": "Monster Type",
+                "vietnamese": "Tộc Quái Thú"
+            },
+            "buttons":
+            [
+                "Spellcaster",
+                "Dragon",
+                "Zombie",
+                "Warrior",
+                "Beast-Warrior",
+                "Beast",
+                "Winged Beast",
+                "Fiend",
+                "Fairy",
+                "Insect",
+                "Dinosaur",
+                "Reptile",
+                "Fish",
+                "Sea Serpent",
+                "Aqua",
+                "Pyro",
+                "Thunder",
+                "Rock",
+                "Plant",
+                "Machine",
+                "Psychic",
+                "Divine-Beast",
+                "Wyrm",
+                "Cyberse",
+                "Illusion"
+            ]              
+        },
+        {
+            "title":
+            {
+                "english": "Monster Card Type",
+                "vietnamese": "Loại Quái Thú"
+            },
+            "buttons":
+            [
+                "Normal",
+                "Effect",
+                "Ritual",
+                "Fusion",
+                "Synchro",
+                "Xyz",
+                "Pendulum",
+                "Link"
+            ]
+        },
+        {
+            "title":
+            {
+                "english": "Monster Sub-category",
+                "vietnamese": "Danh Mục Quái Thú"
+            },
+            "buttons":
+            [
+                "Toon",
+                "Spirit",
+                "Union",
+                "Gemini",
+                "Tuner",
+                "Flip"
+            ]
+        },
+        {
+            "title": 
+            {
+                "english": "Level/Rank",
+                "vietnamese": "Cấp Độ/Rank"
+            },
+            "buttons": [0,1,2,3,4,5,6,7,8,9,10,11,12,13]
+        },
+        {
+            "title": 
+            {
+                "english": "Pendulum Scale",
+                "vietnamese": "Pendulum"
+            },
+            "buttons": [0,1,2,3,4,5,6,7,8,9,10,11,12,13]
+        },
+        {
+            "title": 
+            {
+                "english": "Link-Rating",
+                "vietnamese": "Link"
+            },
+            "buttons": [1,2,3,4,5,6]
+        }
+    ]
+}

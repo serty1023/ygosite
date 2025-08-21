@@ -1,0 +1,127 @@
+:root
+{
+    /*FONT*/
+    --default-font: sans-serif;
+    /*COLOR*/
+    /*--black: rgb(0 0 0)*/
+    --dark-gray: rgb(50 50 50);
+    --light-black: rgb(75 75 75);
+    --gray: rgb(150 150 150);
+    --light-gray: rgb(200 200 200);
+    /*--white: rgb(255 255 255)*/
+}
+
+body
+{
+    background-color: black;
+    margin: 0px;
+    font-family: var(--default-font);
+}
+
+#blank
+{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--dark-gray);
+}
+
+.introduction
+{
+    width: 55%;
+    justify-self: center;
+    margin-top: auto;
+    p
+    {
+        font-size: 150%;
+        line-height: 150%;
+        text-align: center;
+        color: var(--light-gray);
+    }
+}
+
+.data-container
+{
+    background-color: var(--light-black);
+    width: 70vw;
+    margin-top: 15vh;
+    margin-bottom: 5vh;
+    border: 5px solid var(--gray);
+    border-radius: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2%;
+    img
+    {
+        width: 30%;
+    }
+}
+
+.card-information
+{
+    background-color: var(--gray);
+    width: 60%;
+    border: 5px solid var(--light-gray);
+    border-radius: 10px;
+    h1
+    {
+        color: white;
+        -webkit-text-stroke: 1px black;
+        padding-left: 2.5%;
+    }
+}
+
+.information-table
+{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 2%;
+    row-gap: 25px;
+    padding-left: 5%;
+    padding-right: 5%;
+    p
+    {
+        color: var(--gray);
+        margin: 0px;
+    }
+    .information-grid,.banlist-info
+    {
+        background-color: var(--light-gray);
+        font-size: 125%;
+        font-weight: bold;
+        border: 2px solid white;
+        border-radius: 10px;
+        display: flex;
+        flex-direction: column;
+        padding: 7.5px;
+        div
+        {
+            display: flex;
+            align-items: center;
+            img
+            {
+                padding: 5px;
+                width: 15%;
+            }
+        }
+    }
+    .banlist-info
+    {
+        p
+        {
+            color: black;
+        }
+    }
+    .stats-grid
+    {
+        background-color: var(--light-gray);
+        font-size: 125%;
+        font-weight: bold;
+        border: 2px solid white;
+        border-radius: 10px;
+        display: flex;
+        padding: 7.5px;
+    }
+}

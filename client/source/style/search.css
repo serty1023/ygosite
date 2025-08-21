@@ -1,0 +1,207 @@
+:root
+{
+    /*COLOR*/
+    /*--black: rgb(0 0 0)*/
+    --dark-gray: rgb(50 50 50);
+    --light-black: rgb(75 75 75);
+    --gray: rgb(150 150 150);
+    --light-gray: rgb(200 200 200);
+    /*--white: rgb(255 255 255)*/
+}
+
+.search-options
+{
+    height: 40vh;
+    width: 50%;
+    margin-top: 125px;
+    border-radius: 20px;
+    background-color: var(--light-black);
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+    div
+    {
+        border-radius: 20px;
+        height: 40%;
+        width: 45%;
+        background-color: var(--gray);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        p
+        {
+            text-align: center;
+            font-weight: bold;
+        }
+        .title
+        {
+            width: fit-content;
+            display: flex;
+            flex-direction: row;
+            gap: 15px;
+            h1
+            {
+                font-size: 125%;
+            }
+        }
+    }
+    div:hover
+    {
+        cursor: pointer;
+        background-color: var(--light-gray);
+        .title
+        {
+            background-color: var(--light-gray);
+        }
+    }
+    .light-gray
+    {
+        background-color: var(--light-gray);
+        pointer-events: none;
+        .title
+        {
+            background-color: var(--light-gray);
+        }
+    }
+}
+
+.searchbar
+{
+    width: 40%;
+    margin-top: 10vh;
+    margin-bottom: 5vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.input
+{
+    width: 100%;
+    height: 40px;
+    margin-bottom: 2vh;
+    display: flex;
+    input
+    {
+        width: 90%;
+        height: 100%;
+        outline: none;
+        border: none;
+        border-top-left-radius: 99999px;
+        border-bottom-left-radius: 99999px;
+        font-size: 20px;
+        padding: 0px 0px 0px 25px;
+    }
+    button
+    {
+        background-color: white;
+        width: 10%;
+        height: 100%;
+        border: none;
+        border-top-right-radius: 99999px;
+        border-bottom-right-radius: 99999px;
+        padding: 0px;
+    }
+}
+
+.filterbar
+{
+    width: 70vw;
+    background-color: var(--light-black);
+    padding: 1vh;
+    border-radius: 25px;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5vh;
+}
+
+.bar
+{
+    display: flex;
+    .title
+    {
+        width: 25%;
+        display: flex;
+        align-items: center;
+        h1
+        {
+            width: 100%;
+            font-size: 110%;
+            background-color: var(--gray);
+            margin: 1vh;
+            padding: 1vh;
+            border-radius: 10px;
+        }
+    }
+    .button-grid, .button-grid-1
+    {
+        width: 75%;
+        display: grid;
+        grid-template-columns: repeat(7,1fr);
+        align-items: center;
+        row-gap: 0.5vh;
+        gap: 0.5vh;
+        button
+        {
+            background-color: var(--gray);
+            max-height: auto;
+            min-height: 3.5vh;
+            font-size: 90%;
+            font-weight: bold;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 5px;
+            border: 1px solid black;
+            border-radius: 99999px;
+            img
+            {
+                width: 25%;
+            }
+        }
+        button:hover
+        {
+            cursor: pointer;
+            background-color: var(--light-gray);
+            border-color: white;
+        }
+        .clicked
+        {
+            background-color: var(--light-gray);
+        }
+    }
+    .button-grid-1
+    {
+        grid-template-columns: repeat(5,1fr);
+        button
+        {
+            justify-content: start;
+        }
+    }
+}
+
+.results
+{
+    width: 75%;
+    margin-bottom: 10vh;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: start;
+    gap: 3.125%;
+    h1
+    {
+        color: var(--light-gray);
+        font-size: 200%;
+    }
+    img
+    {
+        margin-top: 3vh;
+        width: 17.5%;
+        transition: 0.25s;
+    }
+    img:hover
+    {
+        scale: 1.1;
+    }
+}

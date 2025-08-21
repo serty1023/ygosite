@@ -1,0 +1,32 @@
+.footer
+{
+    height: 75px;
+    width: 100%;
+    background-color: black;
+    margin-top: auto;
+    border-radius: 15px 15px 0 0;
+}
+
+.contact
+{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    gap: 10%;
+    h1
+    {
+        color: white;
+    }
+}
+
+.contact-information
+{
+    p
+    {
+        color: white;
+    }
+    p:hover
+    {
+        cursor: pointer;
+    }
+}
