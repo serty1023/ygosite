@@ -39,18 +39,18 @@ function Card()
     card.desc = card.desc.replace("[ Pendulum Effect ]","<b><i>-[Pendulum Effect]-</i></b>");
     card.desc = card.desc.replace("[ Monster Effect ]","<b><i>-[Monster Effect]-</i></b>");
 
-    let height = "80vh";
+    let height = "85vh";
     if (card.desc.length > 800)
     {
-        height = "110vh";
+        height = "115vh";
     }
     else if (card.desc.length > 700)
     {
-        height = "100vh";
+        height = "105vh";
     }
     else if (card.desc.length > 600)
     {
-        height = "90vh";
+        height = "95vh";
     };
     
     return (
@@ -166,8 +166,8 @@ function Card()
                         </div>
                     </>
                     : null}
-                    <div className="information-grid" style={{gridColumn: "span 3",fontSize: "125%",fontWeight:"normal"}}>
-                        <p style={{color: "black"}} dangerouslySetInnerHTML={{ __html: card.desc}}></p>
+                    <div className="information-grid" style={{gridColumn: "span 3",fontSize: "125%"}}>
+                        <p style={{color: "black",textAlign: "justify",padding: "2vh",fontFamily: "Garamond"}} dangerouslySetInnerHTML={{ __html: card.desc}}></p>
                     </div>
                     <div className="banlist-info"style={{gridColumn: "span 3"}}>
                         {(!card.banlist_info) ? 

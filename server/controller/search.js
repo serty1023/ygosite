@@ -97,10 +97,64 @@ async function search(input,filterValue,mode)
             Spell_Trap_Icon = filterValue["Spell/Trap Icon"],
             Monster_Type = filterValue["Monster Type"],
             Monster_Card_Type = filterValue["Monster Card Type"],
-            Monster_Sub_category = filterValue["Monster_Sub_category"],
+            Monster_Sub_category = filterValue["Monster Sub-category"],
             Level_Rank = filterValue["Level/Rank"],
             Pendulum_Scale = filterValue["Pendulum Scale"],
             Link_Rating = filterValue["Link-Rating"];
+
+        if (Attribute || Monster_Type || Monster_Card_Type || Monster_Sub_category || Level_Rank || Pendulum_Scale || Link_Rating)
+        {
+            if (Type && (Type.includes("Spell") || Type.includes("Trap")))
+            {
+                cardData = [];
+            };
+            if (Attribute)
+            {
+                cardData = cardData.filter(card => Attribute.includes(card.attribute));
+            };
+            if (Monster_Type)
+            {
+                cardData = cardData.filter(card => Monster_Type.includes(card.race));
+            };
+            if (Monster_Card_Type)
+            {
+                cardData = cardData.filter(card => Monster_Card_Type.every(type => card.humanReadableCardType.includes(type)));
+            };
+            if (Monster_Sub_category)
+            {
+                cardData = cardData.filter(card => Monster_Sub_category.every(category => card.humanReadableCardType.includes(category)));
+            };
+            if (!Link_Rating)
+            {
+                if (Level_Rank)
+                {
+                    Level_Rank = cardData = cardData.filter(card => Level_Rank.includes(card.level));
+                };
+                if (Pendulum_Scale)
+                {
+                    cardData = cardData.filter(card => Pendulum_Scale.includes(card.scale));
+                };
+            }
+            else
+            {
+                if (Level_Rank || Pendulum_Scale)
+                {
+                    cardData = [];
+                }
+                else
+                {
+                    cardData = cardData.filter(card => Link_Rating.includes(card.linkval));
+                };
+            };
+        }
+        else
+        {
+            if (Type && Type.includes("Monster"))
+            {
+                cardData = [];
+            };
+            cardData = cardData.filter(card => Spell_Trap_Icon.every(icon => card.race.includes(icon)));
+        };
 
         cardData.forEach(card => 
         {
