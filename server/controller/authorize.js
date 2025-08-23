@@ -1,10 +1,10 @@
-function developerCheck()
+function developerCheck(request,response,next)
 {
     if (process.env.developer == "ON")
     {
-        return true;
+        return next();
     };
-    return false;
+    return response.json( {error:"Unauthorize"} );
 };
 
 module.exports = developerCheck;

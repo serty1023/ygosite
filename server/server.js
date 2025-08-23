@@ -16,6 +16,7 @@ application.use(express.json());
 
 application.use("/search",searchRouter);
 application.use("/",interfaceRouter);
+application.use("/",deckRouter);
 
 process.env.developer = "ON";
 
