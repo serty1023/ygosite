@@ -4,7 +4,7 @@ const developerCheck = require("../controller/authorize.js");
 
 const deckRouter = express.Router();
 
-deckRouter.get("/", developerCheck, (request,response) =>
+deckRouter.get("/decks", developerCheck, (request,response) =>
 {
     response.json(deckData);
 });
