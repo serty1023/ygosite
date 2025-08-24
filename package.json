@@ -6,7 +6,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start:client": "npm run dev --prefix client",
     "start:server": "node --watch server/server.js",
-    "start:all": "concurrently \"npm run start:server\" \"npm run start:client\""
+    "dev-start:all": "developer=ON concurrently \"npm run start:server\" \"npm run start:client\"",
+    "start:all": "developer=OFF concurrently \"npm run start:server\" \"npm run start:client\""
   },
   "keywords": [],
   "author": "",

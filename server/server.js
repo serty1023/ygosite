@@ -18,8 +18,6 @@ application.use("/search",searchRouter);
 application.use("/",interfaceRouter);
 application.use("/",deckRouter);
 
-process.env.developer = "ON";
-
 application.listen(3000 , () =>
 {
     console.log("Application is running at PORT:3000");
