@@ -8,9 +8,20 @@ function Decks()
         <div className="decks-container">
             {deckData.decks.map(deck => 
             (
-                <h1>
-                    {deck.name}
-                </h1>
+                <div key={deck.id} className="deck">
+                    <img src={deck.avatar}/>
+                    <div className="deck-information">
+                        <h1 className="deck-name">
+                            {deck.name}
+                        </h1>
+                        <p className="deck-description">
+                            {deck.description}
+                        </p>
+                        <h1 className="author">
+                            {deck.author ? deck.author : "Unknown"}
+                        </h1>
+                    </div>
+                </div>
             ))}
         </div>
     </>);
