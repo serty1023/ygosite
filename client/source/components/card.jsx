@@ -5,7 +5,7 @@ import "../style/index.css";
 function Card()
 {
     const [card,getCardContent] = useState([]);
-    const [loading,setLoading] = useState(true)
+    const [loading,setLoading] = useState(true);
 
     useEffect(() =>
     {
@@ -33,7 +33,6 @@ function Card()
     },[]);
 
     if (loading) return;
-    console.log(card);
 
     card.desc = card.desc.replace(/(\r\n|\n|\r)/g,"<br>");
     card.desc = card.desc.replace("[ Pendulum Effect ]","<b><i>-[Pendulum Effect]-</i></b>");

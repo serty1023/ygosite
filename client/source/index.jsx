@@ -1,4 +1,5 @@
 import { BrowserRouter as Router,Routes,Route,Navigate } from "react-router-dom";
+import Title from "./components/title.jsx";
 import Header from "./components/header.jsx";
 import EmptyHeader from "./components/emptyheader.jsx";
 import Introduction from "./components/introduction.jsx";
@@ -23,6 +24,7 @@ function Index()
     return (
     <>
         <Router>
+            <Title/>
             <Routes>
                 <Route path="/" element={<Navigate to="/ygosite/home" replace/>}/>
                 <Route path="/ygosite" element={<Navigate to="/ygosite/home" replace/>}/>
