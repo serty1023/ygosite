@@ -9,18 +9,20 @@ const loginForm =
         {
             username: "USERNAME",
             password: "PASSWORD",
+            confirm_password: "CONFIRM PASSWORD"
         },
         placeholder:
         {
             username: "Enter username...",
-            password: "Enter password..."
+            password: "Enter password...",
+            confirm_password: "Confirm password..."
         },
         text:
         { 
-            question: "Don't have an account? ",
-            action: "Create one!"
+            question: "Already have an account? ",
+            action: "Login!"
         },
-        button: "LOGIN"
+        button: "CREATE ACCOUNT"
     },
     vietnamese:
     {
@@ -28,22 +30,24 @@ const loginForm =
         {
             username: "TÊN TÀI KHOẢN",
             password: "MẬT KHẨU",
+            confirm_password: "XÁC NHẬN MẬT KHẨU"
         },
         placeholder:
         {
             username: "Nhập tên tài khoản...",
-            password: "Nhập mật khẩu..."
+            password: "Nhập mật khẩu...",
+            confirm_password: "Xác nhận mật khẩu..."
         },
         text:
         { 
-            question: "Không có tài khoản? ",
-            action: "Tạo tài khoản!"
+            question: "Đã có tài khoản? ",
+            action: "Đăng Nhập!"
         },
-        button: "ĐĂNG NHẬP"
+        button: "TẠO TÀI KHOẢN"
     }
 };
 
-function LoginForm()
+function RegisterForm()
 {
     return (
     <>
@@ -60,12 +64,16 @@ function LoginForm()
                     {loginForm[language].label.password}
                 </p>
                 <input type="password" placeholder={loginForm[language].placeholder.password}/>
+                <p>
+                    {loginForm[language].label.confirm_password}
+                </p>
+                <input type="password" placeholder={loginForm[language].placeholder.confirm_password}/>
                 <button>
                     {loginForm[language].button}
                 </button>
                 <p>
                     {loginForm[language].text.question}
-                    <a href="/ygosite/register">
+                    <a href="/ygosite/login">
                         {loginForm[language].text.action}
                     </a>
                 </p>
@@ -74,4 +82,4 @@ function LoginForm()
     </>);
 };
 
-export default LoginForm;
+export default RegisterForm;

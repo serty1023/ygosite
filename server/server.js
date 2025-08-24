@@ -2,6 +2,7 @@ const express = require("express");
 const searchRouter = require("./routes/searchRouter");
 const interfaceRouter = require("./routes/interface.js");
 const deckRouter = require("./routes/deckRouter.js");
+const userRouter = require("./routes/userRouter.js")
 const cors = require("cors");
 
 const application = express();
@@ -17,6 +18,7 @@ application.use(express.json());
 application.use("/search",searchRouter);
 application.use("/",interfaceRouter);
 application.use("/",deckRouter);
+application.use("/",userRouter);
 
 application.listen(3000 , () =>
 {

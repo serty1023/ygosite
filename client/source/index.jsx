@@ -8,6 +8,7 @@ import Search from "./components/search.jsx";
 import Card from "./components/card.jsx";
 import Decks from "./components/decks.jsx";
 import LoginForm from "./components/login.jsx";
+import RegisterForm from "./components/register.jsx";
 import Footer from "./components/footer.jsx";
 
 const routesPath =
@@ -34,6 +35,7 @@ function Index()
                     <Route path={`/ygosite/${path}`} element={<Header/>}/>
                 ))}
                 <Route path="/ygosite/login" element={<EmptyHeader/>}/>
+                <Route path="/ygosite/register" element={<EmptyHeader/>}/>
             </Routes>
             <Routes>
                 <Route path="/ygosite/search/*" element={<Navigate to="/ygosite/search?mode=matched-search" replace/>}/>
@@ -43,6 +45,7 @@ function Index()
                 <Route path="ygosite/cards" element={<Card/>}/>
                 <Route path="/ygosite/decks" element={<Decks/>}/>
                 <Route path="ygosite/login" element={<LoginForm/>}/>
+                <Route path="/ygosite/register" element={<RegisterForm/>}/>
             </Routes>
             <Routes>
                 {routesPath.map(path =>
