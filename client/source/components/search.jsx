@@ -1,6 +1,6 @@
 import { useState,useEffect } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faMagnifyingGlass,faQuoteLeft,faQuoteRight,faGears,faFilter } from "@fortawesome/free-solid-svg-icons";
+import { faMagnifyingGlass,faQuoteLeft,faQuoteRight,faGears,faFilter,faSpinner } from "@fortawesome/free-solid-svg-icons";
 import { language,mode } from "../main.jsx";
 import "../style/search.css";
 import Filterbar from "./filterbar.jsx";
@@ -43,7 +43,8 @@ function Search()
     const [inputValue,setInputValue] = useState("");
     const [filterValue,setFilterValue] = useState([]);
     const [results,getResults] = useState([]);
-    const [posted,postedCheck] = useState(false)
+    const [posted,postedCheck] = useState(false);
+    const [searching,searchingState] = useState(false);
     const postInput = async (event) =>
     {
         event.preventDefault();
@@ -60,6 +61,7 @@ function Search()
 
         try 
         {
+            searchingState(true);
             const response = await fetch("http://localhost:3000/search",
             {
                 method: "POST",
@@ -82,6 +84,10 @@ function Search()
         catch (error)
         {
             console.log("ERROR",error);
+        }
+        finally
+        {
+            searchingState(false);
         };
     };
 
@@ -140,6 +146,11 @@ function Search()
             {mode == "filter-search" ? <Filterbar filterValue={filterValue} setFilterValue={setFilterValue}/>
             : null}
         </form>
+        {searching ? 
+        <h1 style={{color:"white"}}>
+            Searching...
+        </h1> 
+        : null}
         <div className="results"
         style={{justifyContent: results.length == 0 ? "center" : "start"}}>
             {posted && results.length == 0 ? 

@@ -21,6 +21,7 @@ const loginForm =
             question: "Don't have an account? ",
             action: "Create one!"
         },
+        alert: "Wrong username or password",
         button: "LOGIN"
     },
     vietnamese:
@@ -40,6 +41,7 @@ const loginForm =
             question: "Không có tài khoản? ",
             action: "Tạo tài khoản!"
         },
+        alert: "Sai tên tài khoản hoặc mật khẩu",
         button: "ĐĂNG NHẬP"
     }
 };
@@ -48,7 +50,6 @@ function LoginForm()
 {
     const [username,getUsername] = useState("");
     const [password,getPassword] = useState("");
-    const [results,getResults] = useState([]);
 
     const login = async (event) =>
     {
@@ -70,8 +71,15 @@ function LoginForm()
                 }),
             });
             const results = await response.json();
-            getResults(results);
-            console.log(results);
+            if (results == true)
+            {
+                window.location.href = "/ygosite/home";
+                localStorage.setItem("login",1);
+            }
+            else
+            {
+                window.alert(loginForm[language].alert);
+            };
         }
         catch (error)
         {

@@ -1,12 +1,14 @@
 const express = require("express");
 const userData = require("../data/user.json");
 const developerCheck = require("../controller/authorize.js");
+const fs = require("fs");
+const path = require("path");
 
-const deckRouter = express.Router();
+const userRouter = express.Router();
 
-deckRouter.get("/users", developerCheck, (request,response) =>
+userRouter.get("/users", developerCheck, (request,response) =>
 {
-    response.json(userData);
+    response.json(userData.users);
 });
 
-module.exports = deckRouter;
+module.exports = userRouter;
