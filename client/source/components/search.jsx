@@ -67,7 +67,8 @@ function Search()
                 {
                     "Content-Type": "application/json"
                 },
-                body: JSON.stringify({
+                body: JSON.stringify(
+                {
                     input:inputValue,
                     filterValue:filter,
                     mode
@@ -137,7 +138,7 @@ function Search()
                 </button>
             </div>
             {mode == "filter-search" ? <Filterbar filterValue={filterValue} setFilterValue={setFilterValue}/>
-        : null}
+            : null}
         </form>
         <div className="results"
         style={{justifyContent: results.length == 0 ? "center" : "start"}}>

@@ -45,7 +45,6 @@ function cartesianProduct(arrays)
 };
 
 let cardData = null;
-let filterbarContent = null;
 
 async function getCards()
 {
@@ -76,7 +75,6 @@ async function search(input,filterValue,mode)
                 results.push(card);
             };
         });
-        return results;
     }
     else if (mode == "card-text-search")
     {
@@ -87,7 +85,6 @@ async function search(input,filterValue,mode)
                 results.push(card);
             };
         });
-        return results;
     }
     else if (mode == "filter-search")
     {
@@ -163,8 +160,8 @@ async function search(input,filterValue,mode)
                 results.push(card);
             }
         });
-        return results;
     };
+    return results;
 };
 
 module.exports = { search };
