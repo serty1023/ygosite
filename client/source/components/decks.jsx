@@ -1,12 +1,24 @@
 import "../style/decks.css";
-import deckData from "/Users/serty1023/Documents/YGOSITE/server/data/decks.json";
+import { useEffect,useState } from "react";
 
 function Decks()
 {
+    const [deckData,getDeckData] = useState([]);
+
+    useEffect(() =>
+    {
+        fetch("http://localhost:3000/decks")
+        .then(response => response.json())
+        .then(data => 
+        {
+            getDeckData(data["decks"]);
+        });
+    },[]);
+
     return (
     <>
         <div className="decks-container">
-            {deckData.decks.map(deck => 
+            {deckData.map(deck => 
             (
                 <div key={deck.id} className="deck" onClick={() => window.location.href = `/ygosite/decks?${deck.name.toLowerCase()}[${deck.id}]`}>
                     <img src={deck.avatar}/>
