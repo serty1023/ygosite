@@ -48,7 +48,7 @@ function Index()
             <Title/>
             <Routes>
                 <Route path="/*" element={<Navigate to="/ygosite/home" replace/>}/>
-                <Route path="/ygosite/*" element={<Navigate to="/ygosite/home" replace/>}/>
+                <Route path="/ygosite/" element={<Navigate to="/ygosite/home" replace/>}/>
                 <Route path="/ygosite/search/*" element={<Navigate to="/ygosite/search?mode=matched-search" replace />}/>
                 <Route path="/ygosite" element={<NormalLayout/>}>
                     <Route path="home" element={<Introduction/>}/>
