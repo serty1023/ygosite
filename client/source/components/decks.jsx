@@ -20,7 +20,7 @@ function Decks()
         <div className="decks-container">
             {deckData.map(deck => 
             (
-                <div key={deck.id} className="deck" onClick={() => window.location.href = `/ygosite/decks?${deck.name.toLowerCase()}[${deck.id}]`}>
+                <div key={deck.id} className="deck" onClick={() => window.location.href = `/ygosite/decks/${deck.name.toLowerCase()}[${deck.id}]`}>
                     <img src={deck.avatar}/>
                     <div className="deck-information">
                         <h1 className="deck-name">
