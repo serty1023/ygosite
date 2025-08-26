@@ -1,5 +1,4 @@
-import { useState,useEffect } from "react";
-import { language,mode } from "../main.jsx";
+import { useState,useEffect,useContext } from "react";
 
 const iconTitle =
 [
@@ -11,6 +10,7 @@ const iconTitle =
 
 function Filterbar( {filterValue,setFilterValue} )
 {
+    const { language } = useContext(LanguageContext);
     const [filterbarContent,getFilterbarContent] = useState([]);
 
     useEffect(() =>

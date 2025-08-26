@@ -1,9 +1,9 @@
-import { useState,useEffect } from "react";
-import { language } from "../main";
+import { useState,useEffect,useContext } from "react";
 import "../style/tutorial.css";
 
 function Tutorials()
 {
+    const { language } = useContext(LanguageContext);
     const [tutorialsContent,getTutorialContent] = useState([]);
 
     useEffect(() =>

@@ -1,24 +1,21 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronDown } from "@fortawesome/free-solid-svg-icons/faChevronDown";
-import { languageLabel,language } from "../main";
+import { useContext } from "react";
+import { LanguageContext } from "./language.jsx";
 import "../style/header.css";
 
 function LanguageSwitcher()
 {
+    const { language, setLanguage, languageValue } = useContext(LanguageContext);
     function dropdown()
     {
         document.getElementsByClassName("language-value")[0].classList.toggle("show");
-    };
-    function setLanguage(language_value)
-    {
-        localStorage.setItem("language",language_value);
-        window.location.reload();
     };
     return (
     <>
         <div className="language-button-container">
             <h1 onClick={() => dropdown()}>
-                {`${languageLabel[language]} `}
+                {`${languageValue[language].label} `}
                 <FontAwesomeIcon icon={faChevronDown}/>
             </h1>
             <div className="language-value">

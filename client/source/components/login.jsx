@@ -1,5 +1,5 @@
-import { useState,useEffect } from "react";
-import { language } from "../main.jsx";
+import { useState,useContext } from "react";
+import { LanguageContext } from "./language.jsx";
 import "../style/login.css";
 
 const loginForm =
@@ -48,6 +48,7 @@ const loginForm =
 
 function LoginForm()
 {
+    const { language } = useContext(LanguageContext);
     const [username,getUsername] = useState("");
     const [password,getPassword] = useState("");
 

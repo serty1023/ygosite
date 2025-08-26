@@ -1,5 +1,5 @@
-import { useState,useEffect } from "react";
-import { language } from "../main.jsx";
+import { useState,useEffect,useContext } from "react";
+import { LanguageContext } from "./language";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEnvelope } from "@fortawesome/free-regular-svg-icons";
 import { faSquareFacebook } from "@fortawesome/free-brands-svg-icons";
@@ -7,6 +7,7 @@ import "../style/footer.css";
 
 function Footer()
 {
+    const language = useContext(LanguageContext);
     const [footerContent,getFooterContent] = useState([]);
 
     useEffect(() =>

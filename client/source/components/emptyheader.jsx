@@ -1,4 +1,3 @@
-import { language } from "../main.jsx";
 import LanguageSwitcher from "./language_switcher.jsx";
 import "../style/login.css";
 

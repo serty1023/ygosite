@@ -1,5 +1,5 @@
-import { useState,useEffect } from "react";
-import { language,login } from "../main.jsx";
+import { useState,useEffect,useContext } from "react";
+import { LanguageContext } from "./language.jsx";
 import LanguageSwitcher from "./language_switcher.jsx";
 import "../style/header.css";
 
@@ -32,6 +32,7 @@ function sign()
 
 function Header()
 {
+    const { language } = useContext(LanguageContext);
     const [headerContent,getHeaderContent] = useState([]);
 
     useEffect(() =>
@@ -57,7 +58,7 @@ function Header()
             </div>
             <div className="login">
                 <a onClick={() => sign()}>
-                    {loginText[language][login]}
+                    {loginText[language][0]}
                 </a>
             </div>
             <LanguageSwitcher/>

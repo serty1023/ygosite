@@ -1,7 +1,7 @@
-import { useState,useEffect } from "react";
+import { useNavigate,useSearchParams } from "react-router-dom";
+import { useState,useEffect,useContext } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMagnifyingGlass,faQuoteLeft,faQuoteRight,faGears,faFilter,faSpinner } from "@fortawesome/free-solid-svg-icons";
-import { language,mode } from "../main.jsx";
 import "../style/search.css";
 import Filterbar from "./filterbar.jsx";
 
@@ -21,16 +21,7 @@ const modeList =
 
 function Search()
 {
-    function modeSwitch(mode)
-    {
-        window.location.href = "/ygosite/search?mode=" + mode;
-    };
-
-    if (!modeList.includes(mode))
-    {
-        window.location.href = "/ygosite/search?mode=matched-search";
-    };
-
+    const { language } = useContext(LanguageContext);
     const [searchbarContent,getSearchbarContent] = useState([]);
 
     useEffect(() =>
@@ -89,6 +80,20 @@ function Search()
         {
             searchingState(false);
         };
+    };
+
+    const [searchParams] = useSearchParams();
+    const mode = searchParams.get("mode");
+    const navigate = useNavigate();
+
+    function modeSwitch(mode)
+    {
+        navigate(`/ygosite/search?mode=${mode}`);
+    };
+
+    if (!modeList.includes(mode))
+    {
+        navigate("/ygosite/search?mode=matched-search");
     };
 
     return (
