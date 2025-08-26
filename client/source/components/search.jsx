@@ -1,5 +1,6 @@
 import { useNavigate,useSearchParams } from "react-router-dom";
 import { useState,useEffect,useContext } from "react";
+import { LanguageContext } from "./language.jsx";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMagnifyingGlass,faQuoteLeft,faQuoteRight,faGears,faFilter,faSpinner } from "@fortawesome/free-solid-svg-icons";
 import "../style/search.css";

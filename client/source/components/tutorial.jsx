@@ -1,4 +1,5 @@
 import { useState,useEffect,useContext } from "react";
+import { LanguageContext } from "./language";
 import "../style/tutorial.css";
 
 function Tutorials()
@@ -11,7 +12,7 @@ function Tutorials()
         fetch("http://localhost:3000/interface")
         .then(response => response.json())
         .then(data => getTutorialContent(data["tutorials"].tutorials[language]))
-    },[]);
+    });
 
     return (
     <>

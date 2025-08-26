@@ -7,7 +7,7 @@ import "../style/footer.css";
 
 function Footer()
 {
-    const language = useContext(LanguageContext);
+    const { language } = useContext(LanguageContext);
     const [footerContent,getFooterContent] = useState([]);
 
     useEffect(() =>

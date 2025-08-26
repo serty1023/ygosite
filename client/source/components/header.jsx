@@ -15,20 +15,7 @@ const loginText =
         "Đăng Nhập",
         "Đăng Xuất"
     ]
-}
-
-function sign()
-{
-    if (login == 0)
-    {
-        window.location.href = "/ygosite/login"
-    }
-    else
-    {
-        localStorage.setItem("login",0);
-        window.location.reload();
-    }
-}
+};
 
 function Header()
 {
@@ -41,6 +28,21 @@ function Header()
         .then(response => response.json())
         .then(data => getHeaderContent(data["header"].header))
     },[]);
+
+    const login = localStorage.getItem("login") || "0";
+
+    function sign()
+    {
+        if (login == "0")
+        {
+            window.location.href = "/ygosite/login"
+        }
+        else
+        {
+            localStorage.setItem("login","0");
+            window.location.reload();
+        }
+    };
 
     return (
     <>
