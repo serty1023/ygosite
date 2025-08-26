@@ -1,4 +1,4 @@
-import { BrowserRouter as Router,Routes,Route,Navigate } from "react-router-dom";
+import { BrowserRouter as Router,Routes,Route,Outlet,Navigate } from "react-router-dom";
 import Title from "./components/title.jsx";
 import Header from "./components/header.jsx";
 import EmptyHeader from "./components/emptyheader.jsx";
@@ -18,9 +18,27 @@ const routesPath =
     "tutorial",
     "search",
     "cards",
-    "decks",
-    "deck"
+    "decks"
 ]
+
+function NormalLayout()
+{
+    return (
+    <>
+        <Header/>
+        <Outlet/>
+        <Footer/>
+    </>);
+};
+
+function EmptyLayout()
+{
+    return (
+    <>
+        <EmptyHeader/>
+        <Outlet/>
+    </>);
+};
 
 function Index()
 {
@@ -29,32 +47,21 @@ function Index()
         <Router>
             <Title/>
             <Routes>
-                <Route path="/" element={<Navigate to="/ygosite/home" replace/>}/>
-                <Route path="/ygosite" element={<Navigate to="/ygosite/home" replace/>}/>
+                <Route path="/*" element={<Navigate to="/ygosite/home" replace/>}/>
                 <Route path="/ygosite/*" element={<Navigate to="/ygosite/home" replace/>}/>
-                {routesPath.map(path =>
-                (
-                    <Route path={`/ygosite/${path}`} element={<Header/>}/>
-                ))}
-                <Route path="/ygosite/login" element={<EmptyHeader/>}/>
-                <Route path="/ygosite/register" element={<EmptyHeader/>}/>
-            </Routes>
-            <Routes>
-                <Route path="/ygosite/search/*" element={<Navigate to="/ygosite/search?mode=matched-search" replace/>}/>
-                <Route path="/ygosite/decks/" element={<Deck/>}/>
-                <Route path="/ygosite/home" element={<Introduction/>}/>
-                <Route path="ygosite/tutorial" element={<Tutorials/>}/>
-                <Route path="/ygosite/search" element={<Search/>}/>
-                <Route path="ygosite/cards" element={<Card/>}/>
-                <Route path="/ygosite/decks" element={<Decks/>}/>
-                <Route path="/ygosite/login" element={<LoginForm/>}/>
-                <Route path="/ygosite/register" element={<RegisterForm/>}/>
-            </Routes>
-            <Routes>
-                {routesPath.map(path =>
-                (
-                    <Route path={`/ygosite/${path}`} element={<Footer/>}/>
-                ))}
+                <Route path="/ygosite/search/*" element={<Navigate to="/ygosite/search?mode=matched-search" replace />}/>
+                <Route path="/ygosite" element={<NormalLayout/>}>
+                    <Route path="home" element={<Introduction/>}/>
+                    <Route path="tutorial" element={<Tutorials/>}/>
+                    <Route path="search" element={<Search/>}/>
+                    <Route path="card" element={<Card/>}/>
+                    <Route path="decks" element={<Decks/>}/>
+                    <Route path="decks/:name" element={<Deck/>}/>
+                </Route>
+                <Route path="/ygosite/" element={<EmptyLayout/>}>
+                    <Route path="login" element={<LoginForm/>}/>
+                    <Route path="register" element={<RegisterForm/>}/>
+                </Route>
             </Routes>
         </Router>
     </>);

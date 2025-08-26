@@ -1,9 +1,11 @@
 import "../style/decks.css";
 import { useEffect,useState } from "react";
+import { useParams } from "react-router-dom";
 
 function Deck()
 {
     const [deckData,getDeckData] = useState([]);
+    const { name } = useParams();
 
     useEffect(() =>
     {
