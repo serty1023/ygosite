@@ -166,7 +166,7 @@ function Card()
                     </>
                     : null}
                     <div className="information-grid" style={{gridColumn: "span 3",fontSize: "125%"}}>
-                        <p style={{color: "black",textAlign: "justify",padding: "2vh",fontFamily: "Garamond"}} dangerouslySetInnerHTML={{ __html: card.desc}}></p>
+                        <p style={{color: "black",textAlign: "justify",padding: "2vh"}} dangerouslySetInnerHTML={{ __html: card.desc}}></p>
                     </div>
                     <div className="banlist-info"style={{gridColumn: "span 3"}}>
                         {(!card.banlist_info) ? 

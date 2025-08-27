@@ -54,9 +54,9 @@ function Index()
                     <Route path="home" element={<Introduction/>}/>
                     <Route path="tutorial" element={<Tutorials/>}/>
                     <Route path="search" element={<Search/>}/>
-                    <Route path="card" element={<Card/>}/>
+                    <Route path="cards" element={<Card/>}/>
                     <Route path="decks" element={<Decks/>}/>
-                    <Route path="decks/:name" element={<Deck/>}/>
+                    <Route path="decks/:id" element={<Deck/>}/>
                 </Route>
                 <Route path="/ygosite/" element={<EmptyLayout/>}>
                     <Route path="login" element={<LoginForm/>}/>
