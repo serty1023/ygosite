@@ -47,7 +47,7 @@ function Header()
 
     return (
     <>
-        <div className="dark-header">
+        <div className="header">
             <div className="logo-container">
                 <img src="/source/images/LOGO.png" onClick={() => window.location.href = "/ygosite/home"}/>
             </div>

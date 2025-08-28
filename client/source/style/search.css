@@ -1,12 +1,21 @@
-:root
+.dark
 {
-    /*COLOR*/
-    /*--black: rgb(0 0 0)*/
+    --black-color: rgb(0 0 0);
     --dark-gray: rgb(50 50 50);
     --light-black: rgb(75 75 75);
     --gray: rgb(150 150 150);
     --light-gray: rgb(200 200 200);
-    /*--white: rgb(255 255 255)*/
+    --white-color: rgb(255 255 255);
+}
+
+.light
+{
+    --black-color: rgb(255 255 255);
+    --dark-gray: rgb(205 205 205);
+    --light-black: rgb(180 180 180);
+    --gray: rgb(105 105 105);
+    --light-gray: rgb(55 55 55);
+    --white-color: rgb(0 0 0);
 }
 
 .search-options
@@ -95,7 +104,7 @@
     }
     button
     {
-        background-color: white;
+        background-color: var(--white-color);
         width: 10%;
         height: 100%;
         border: none;
@@ -153,7 +162,7 @@
             justify-content: center;
             align-items: center;
             gap: 5px;
-            border: 1px solid black;
+            border: 1px solid var(--black-color);
             border-radius: 99999px;
             img
             {
@@ -164,7 +173,7 @@
         {
             cursor: pointer;
             background-color: var(--light-gray);
-            border-color: white;
+            border-color: var(--white-color);
         }
         .clicked
         {

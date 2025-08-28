@@ -13,14 +13,13 @@ function ThemeProvider({ children })
     useEffect(() =>
     {
         localStorage.setItem("theme",theme);
+        document.getElementById("blank").className = theme;
     },[theme]);
     
     return (
     <>
         <ThemeContext.Provider value={{ theme,setTheme }}>
-            <div className={theme}>
-                {children}
-            </div>
+            {children}
         </ThemeContext.Provider>
     </>);
 };

@@ -1,15 +1,21 @@
-:root
+.dark
 {
-    /*FONT*/
-    --default-font: sans-serif;
-    /*COLOR*/
-    /*--black: rgb(0 0 0)*/
+    --black-color: rgb(0 0 0);
     --dark-gray: rgb(50 50 50);
     --light-black: rgb(75 75 75);
-    --semi-gray: rgb(100 100 100);
     --gray: rgb(150 150 150);
     --light-gray: rgb(200 200 200);
-    /*--white: rgb(255 255 255)*/
+    --white-color: rgb(255 255 255);
+}
+
+.light
+{
+    --black-color: rgb(255 255 255);
+    --dark-gray: rgb(205 205 205);
+    --light-black: rgb(180 180 180);
+    --gray: rgb(105 105 105);
+    --light-gray: rgb(55 55 55);
+    --white-color: rgb(0 0 0);
 }
 
 .decks-container
@@ -85,7 +91,7 @@
     height: 30vh;
     margin-top: 10vh;
     margin-bottom: 10vh;
-    background-color: white;
+    background-color: var(--white-color);
     display: flex;
     .deck-information
     {
@@ -127,7 +133,7 @@
     {
         grid-column: span 10;
         font-size: 175%;
-        color: white;
+        color: var(--white-color);
     }
     img
     {

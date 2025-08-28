@@ -8,19 +8,31 @@
 {
     /*FONT*/
     --default-font: sans-serif;
-    /*COLOR*/
-    /*--black: rgb(0 0 0)*/
+}
+
+.dark
+{
+    --black-color: rgb(0 0 0);
     --dark-gray: rgb(50 50 50);
     --light-black: rgb(75 75 75);
-    --semi-gray: rgb(100 100 100);
     --gray: rgb(150 150 150);
     --light-gray: rgb(200 200 200);
-    /*--white: rgb(255 255 255)*/
+    --white-color: rgb(255 255 255);
+}
+
+.light
+{
+    --black-color: rgb(255 255 255);
+    --dark-gray: rgb(205 205 205);
+    --light-black: rgb(180 180 180);
+    --gray: rgb(105 105 105);
+    --light-gray: rgb(55 55 55);
+    --white-color: rgb(0 0 0);
 }
 
 body
 {
-    background-color: black;
+    background-color: var(--black-color);
     margin: 0px;
     font-family: var(--default-font);
 }
@@ -98,7 +110,7 @@ body
         background-color: var(--light-gray);
         font-size: 125%;
         font-weight: bold;
-        border: 2px solid white;
+        border: 2px solid var(--white-color);
         border-radius: 10px;
         display: flex;
         flex-direction: column;
@@ -118,7 +130,7 @@ body
     {
         p
         {
-            color: black;
+            color: var(--black-color);
         }
     }
     .stats-grid
@@ -126,7 +138,7 @@ body
         background-color: var(--light-gray);
         font-size: 125%;
         font-weight: bold;
-        border: 2px solid white;
+        border: 2px solid var(--white-color);
         border-radius: 10px;
         display: flex;
         padding: 7.5px;

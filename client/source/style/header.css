@@ -1,22 +1,21 @@
-:root
+.dark
 {
-    /*COLOR*/
-    /*--black: rgb(0 0 0)*/
+    --black-color: rgb(0 0 0);
     --dark-gray: rgb(50 50 50);
     --light-black: rgb(75 75 75);
     --gray: rgb(150 150 150);
     --light-gray: rgb(200 200 200);
-    /*--white: rgb(255 255 255)*/
-}
-
-.dark
-{
-    --black: rgb(0 0 0);
+    --white-color: rgb(255 255 255);
 }
 
 .light
 {
-    --black: rgb(255 255 255)
+    --black-color: rgb(255 255 255);
+    --dark-gray: rgb(205 205 205);
+    --light-black: rgb(180 180 180);
+    --gray: rgb(105 105 105);
+    --light-gray: rgb(55 55 55);
+    --white-color: rgb(0 0 0);
 }
 
 .header
@@ -26,19 +25,7 @@
     top: 0;
     height: 75px;
     width: 100%;
-    background-color: var(--black);
-    display: flex;
-    border-radius: 0 0 15px 15px;
-}
-
-.dark-header
-{
-    z-index: 2;
-    position: fixed;
-    top: 0;
-    height: 75px;
-    width: 100%;
-    background-color: var(--light-gray);
+    background-color: var(--black-color);
     display: flex;
     border-radius: 0 0 15px 15px;
 }
@@ -70,7 +57,7 @@
     a
     {
         text-decoration: none;
-        color: white;
+        color: var(--white-color);
         font-size: 125%;
         font-weight: bold;
     }
@@ -172,7 +159,7 @@
     align-items: center;
     .icon
     {
-        color: white;
+        color: var(--white-color);
         scale: 1.75;
     }
     .icon:hover
