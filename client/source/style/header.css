@@ -21,6 +21,18 @@
     border-radius: 0 0 15px 15px;
 }
 
+.dark-header
+{
+    z-index: 2;
+    position: fixed;
+    top: 0;
+    height: 75px;
+    width: 100%;
+    background-color: var(--light-gray);
+    display: flex;
+    border-radius: 0 0 15px 15px;
+}
+
 .logo-container
 {
     align-self: center;
@@ -99,7 +111,7 @@
 .language-button-container
 {
     height: 100%;
-    width: 15%;
+    width: 10%;
     display: flex;
     justify-content: start;
     align-items: center;
@@ -139,5 +151,22 @@
     .show
     {
         height: fit-content;
+    }
+}
+
+.dark-mode
+{
+    width: 5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .icon
+    {
+        color: white;
+        scale: 1.75;
+    }
+    .icon:hover
+    {
+        cursor: pointer;
     }
 }

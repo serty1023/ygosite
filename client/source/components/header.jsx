@@ -1,6 +1,7 @@
 import { useState,useEffect,useContext } from "react";
 import { LanguageContext } from "./language.jsx";
 import LanguageSwitcher from "./language_switcher.jsx";
+import ThemeSwitcher from "./theme_switcher.jsx";
 import "../style/header.css";
 
 const loginText =
@@ -46,7 +47,7 @@ function Header()
 
     return (
     <>
-        <div className="header">
+        <div className="dark-header">
             <div className="logo-container">
                 <img src="/source/images/LOGO.png" onClick={() => window.location.href = "/ygosite/home"}/>
             </div>
@@ -64,6 +65,7 @@ function Header()
                 </a>
             </div>
             <LanguageSwitcher/>
+            <ThemeSwitcher/>
         </div>
     </>);
 };

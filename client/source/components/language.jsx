@@ -21,7 +21,7 @@ function LanguageProvider({ children })
     const [language,setLanguage] = useState(() =>
     {
         const language_value = localStorage.getItem("language");
-        return languageValue[language_value].value ? language_value : "english";
+        return languageValue[language_value] ? language_value : "english";
     });
 
     useEffect(() =>
