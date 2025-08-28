@@ -9,9 +9,12 @@ function Introduction()
 
     useEffect(() =>
     {
-        fetch("http://localhost:3000/interface")
+        fetch("http://localhost:3000/interface/introduction",
+        {
+            headers: {"access":"true"}
+        })
         .then(response => response.json())
-        .then(data => getIntroductionContent(data["introduction"].introduction))
+        .then(data => getIntroductionContent(data))
     },[]);
 
     return (

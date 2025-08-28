@@ -12,9 +12,12 @@ function Footer()
 
     useEffect(() =>
     {
-        fetch("http://localhost:3000/interface")
+        fetch("http://localhost:3000/interface/footer",
+        {
+            headers: {"access":"true"}
+        })
         .then(response => response.json())
-        .then(data => getFooterContent(data["footer"].footer))
+        .then(data => getFooterContent(data))
     },[]);
 
     return (

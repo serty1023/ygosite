@@ -16,9 +16,12 @@ function Filterbar( {filterValue,setFilterValue} )
 
     useEffect(() =>
     {
-        fetch("http://localhost:3000/interface")
+        fetch("http://localhost:3000/interface/filterbar",
+        {
+            headers: {"access":"true"}
+        })
         .then(response => response.json())
-        .then(data => getFilterbarContent(data["filterbar"].filterbar))
+        .then(data => getFilterbarContent(data))
     },[]);
 
     return (

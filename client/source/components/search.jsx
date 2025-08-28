@@ -27,9 +27,12 @@ function Search()
 
     useEffect(() =>
     {
-        fetch("http://localhost:3000/interface")
+        fetch("http://localhost:3000/interface/search_options",
+        {
+            headers: {"access":"true"}
+        })
         .then(response => response.json())
-        .then(data => getSearchbarContent(data["search_options"]["search-options"][language]))
+        .then(data => getSearchbarContent(data[language]))
     },[]);
 
     const [inputValue,setInputValue] = useState("");

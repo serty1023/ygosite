@@ -9,10 +9,13 @@ function Tutorials()
 
     useEffect(() =>
     {
-        fetch("http://localhost:3000/interface")
+        fetch("http://localhost:3000/interface/tutorials",
+        {
+            headers: {"access":"true"}
+        })
         .then(response => response.json())
-        .then(data => getTutorialContent(data["tutorials"].tutorials[language]))
-    });
+        .then(data => getTutorialContent(data[language]))
+    },[language]);
 
     return (
     <>

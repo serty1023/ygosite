@@ -25,9 +25,12 @@ function Header()
 
     useEffect(() =>
     {
-        fetch("http://localhost:3000/interface")
+        fetch("http://localhost:3000/interface/header",
+        {
+            headers: {"access":"true"}
+        })
         .then(response => response.json())
-        .then(data => getHeaderContent(data["header"].header))
+        .then(data => getHeaderContent(data))
     },[]);
 
     const login = localStorage.getItem("login") || "0";
@@ -61,7 +64,7 @@ function Header()
             </div>
             <div className="login">
                 <a onClick={() => sign()}>
-                    {loginText[language][0]}
+                    {loginText[language][login]}
                 </a>
             </div>
             <LanguageSwitcher/>
