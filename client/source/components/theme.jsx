@@ -18,7 +18,9 @@ function ThemeProvider({ children })
     return (
     <>
         <ThemeContext.Provider value={{ theme,setTheme }}>
-            {children}
+            <div className={theme}>
+                {children}
+            </div>
         </ThemeContext.Provider>
     </>);
 };
