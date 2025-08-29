@@ -1,18 +1,17 @@
 const userData = require("../data/user.json");
+const argon2 = require("argon2");
 const fs = require("fs");
 const path = require("path");
 
 async function login(username,password)
 {
-    const userFound = userData.users.find(user => user.username == username && user.password == password);
-    if (userFound)
-    {
-        return true;
-    }
-    else
+    const userFound = userData.users.find(user => user.username == username);
+    if (!userFound)
     {
         return false;
     };
+    const passwordMatched = await argon2.verify(userFound.password,password);
+    return passwordMatched;
 };
 
 async function register(username,password,confirm_password)
@@ -27,9 +26,12 @@ async function register(username,password,confirm_password)
     {
         return false;
     };
+    password = await argon2.hash(password);
+    const highestID = users.length > 0 ? Math.max(...users.map(u => u.id)) : -1;
+    const id = highestID + 1;
     const user = 
     {
-        id: userData.users.length,
+        id: id,
         username: username,
         password: password
     };

@@ -2,13 +2,13 @@
     "users": [
         {
             "id": 0,
-            "username": "dummy",
-            "password": "weakestdummy"
+            "username": "serty1023",
+            "password": "$argon2id$v=19$m=65536,t=3,p=4$EvJGfJz2f/J8l5nCoAUN3g$UVkCioj5rbE8zweFxQ3HA/RsT5MopLvfY3RRC2moF0M"
         },
         {
             "id": 1,
-            "username": "dummy2",
-            "password": "weakestdummy2"
+            "username": "serty1024",
+            "password": "$argon2id$v=19$m=65536,t=3,p=4$ni0Em1OYwh6XexGFCgJrJQ$jZV/8BQbKaOBTYSt8JU/dMDVVNn/MebZTwPcpKMxaco"
         }
     ]
 }
