@@ -38,25 +38,33 @@ function Card()
     card.desc = card.desc.replace("[ Pendulum Effect ]","<b><i>-[Pendulum Effect]-</i></b>");
     card.desc = card.desc.replace("[ Monster Effect ]","<b><i>-[Monster Effect]-</i></b>");
 
-    let height = "85vh";
-    if (card.desc.length > 800)
+    let height = 85;
+    if (card.desc.length < 200)
     {
-        height = "115vh";
+        height = 75;
+    }
+    else if (card.desc.length > 800)
+    {
+        height = 115;
     }
     else if (card.desc.length > 700)
     {
-        height = "105vh";
+        height = 105;
     }
     else if (card.desc.length > 600)
     {
-        height = "95vh";
+        height = 95;
+    };
+    if (card.name.length >= 40)
+    {
+        height = height + 5;
     };
     
     return (
     <>
-        <div className="data-container" style={{height: `${height}`}}>
+        <div className="data-container" style={{height: `${height}vh`}}>
             <img src={card.card_images[0].image_url}/>
-            <div className="card-information" style={{height: `calc(0.9 * ${height})`}}>
+            <div className="card-information" style={{height: `calc(0.9 * ${height}vh)`}}>
                 <h1 className="card-name">
                     {card.name}
                 </h1>
@@ -139,7 +147,7 @@ function Card()
                                 <p>
                                     ATK
                                 </p>
-                                <p style={{color: "black"}}>
+                                <p style={{color: "var(--black-color)"}}>
                                     {card.atk}
                                 </p>
                             </div>
@@ -149,7 +157,7 @@ function Card()
                                     <p>
                                         Link-Rating
                                     </p>
-                                    <p style={{color: "black"}}>
+                                    <p style={{color: "var(--black-color)"}}>
                                         {card.linkval}
                                     </p>
                                 </>
@@ -157,7 +165,7 @@ function Card()
                                     <p>
                                         DEF
                                     </p>
-                                    <p style={{color: "black"}}>
+                                    <p style={{color: "var(--black-color)"}}>
                                         {card.def}
                                     </p>
                                 </>}
@@ -166,7 +174,7 @@ function Card()
                     </>
                     : null}
                     <div className="information-grid" style={{gridColumn: "span 3",fontSize: "125%"}}>
-                        <p style={{color: "black",textAlign: "justify",padding: "2vh"}} dangerouslySetInnerHTML={{ __html: card.desc}}></p>
+                        <p style={{color: "var(--black-color)",textAlign: "justify",padding: "2vh"}} dangerouslySetInnerHTML={{ __html: card.desc}}></p>
                     </div>
                     <div className="banlist-info"style={{gridColumn: "span 3"}}>
                         {(!card.banlist_info) ? 

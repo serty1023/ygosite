@@ -104,7 +104,7 @@
     }
     button
     {
-        background-color: var(--white-color);
+        background-color: white;
         width: 10%;
         height: 100%;
         border: none;

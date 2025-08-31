@@ -87,6 +87,7 @@ body
     h1
     {
         font-family: "Matrix";
+        color: var(--black-color);
         font-variant: small-caps;
         padding-left: 2.5%;
     }
@@ -102,7 +103,7 @@ body
     padding-right: 5%;
     p
     {
-        color: var(--semi-gray);
+        color: var(--gray);
         margin: 0px;
     }
     .information-grid,.banlist-info
@@ -115,6 +116,7 @@ body
         display: flex;
         flex-direction: column;
         padding: 7.5px;
+        color: var(--black-color);
         div
         {
             display: flex;

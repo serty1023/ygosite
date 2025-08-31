@@ -10,7 +10,10 @@ function Deck()
 
     useEffect(() =>
     {
-        fetch(`http://localhost:3000/decks/${id}`)
+        fetch(`http://localhost:3000/decks/${id}`,
+        {
+            headers:{"access":"true"}
+        })
         .then(response => response.json())
         .then(data => 
         {

@@ -81,14 +81,18 @@ function RegisterForm()
                 window.alert("Created account successful! Login to continue...");
                 window.location.href = "/ygosite/login";
             }
-            else if (results == "false")
+            else if (results == "userFound")
             {
                 window.alert("Username was taken! Try another!");
             }
-            else
+            else if (results == "notMatched")
             {
                 window.alert("Password doesn't match! Please re-confirm!")
             }
+            else if (results == "regexError")
+            {
+                window.alert("Password must be atleast 6 characters long, include atleast 1 letter and 1 number!")
+            };
         }
         catch (error)
         {

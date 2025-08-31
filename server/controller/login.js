@@ -16,15 +16,20 @@ async function login(username,password)
 
 async function register(username,password,confirm_password)
 {
+    const passwordRegex = /^(?=.*[A-Za-z])(?=.*\d).{6,}$/;
     const users = userData.users;
     const userFound = users.find(user => user.username == username);
     if (userFound)
     {
-        return "false";
+        return "userFound";
     };
     if (password != confirm_password)
     {
-        return false;
+        return "notMatched";
+    };
+    if (!passwordRegex.test(password))
+    {
+        return "regexError";
     };
     password = await argon2.hash(password);
     const highestID = users.length > 0 ? Math.max(...users.map(u => u.id)) : -1;

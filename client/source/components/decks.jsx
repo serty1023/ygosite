@@ -1,8 +1,18 @@
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
+import { useContext,useEffect,useState } from "react";
+import { LanguageContext } from "./language.jsx";
 import "../style/decks.css";
-import { useEffect,useState } from "react";
+
+const searchPlaceHolder =
+{
+    english: "Search",
+    vietnamese: "Tìm Kiếm"
+};
 
 function Decks()
 {
+    const { language } = useContext(LanguageContext);
     const [deckData,getDeckData] = useState([]);
 
     useEffect(() =>
@@ -20,6 +30,14 @@ function Decks()
 
     return (
     <>
+        <form className="decksearch">
+            <div className="input">
+                <input className="user-search" type="text" placeholder={searchPlaceHolder[language] + "..."}/>
+                <button className="magnyfying-glass">
+                    <FontAwesomeIcon icon={faMagnifyingGlass}/>
+                </button>
+            </div>
+        </form>
         <div className="decks-container">
             {deckData.map(deck => 
             (
