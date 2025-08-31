@@ -14,6 +14,7 @@ function Decks()
 {
     const { language } = useContext(LanguageContext);
     const [deckData,getDeckData] = useState([]);
+    const [inputValue,setInputValue] = useState("");
 
     useEffect(() =>
     {
@@ -28,18 +29,20 @@ function Decks()
         });
     },[]);
 
+    const filteredDeck = deckData.filter(deck => deck.name.toLowerCase().includes(inputValue.toLowerCase()));
+
     return (
     <>
-        <form className="decksearch">
+        <form className="decksearch" onSubmit={(event) => event.preventDefault()}>
             <div className="input">
-                <input className="user-search" type="text" placeholder={searchPlaceHolder[language] + "..."}/>
+                <input className="user-search" type="text" placeholder={searchPlaceHolder[language] + "..."} value={inputValue} onChange={(element) => setInputValue(element.target.value)}/>
                 <button className="magnyfying-glass">
                     <FontAwesomeIcon icon={faMagnifyingGlass}/>
                 </button>
             </div>
         </form>
         <div className="decks-container">
-            {deckData.map(deck => 
+            {filteredDeck.map(deck => 
             (
                 <div key={deck.id} className="deck" onClick={() => window.location.href = `/ygosite/decks/${deck.id}`}>
                     <img src={deck.avatar}/>
