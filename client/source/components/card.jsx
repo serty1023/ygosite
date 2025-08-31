@@ -188,10 +188,10 @@ function Card()
                         </> 
                         : <>
                             <p>
-                                TCG: {`${card.banlist_info.ban_tcg}` || "Unlimited"}
+                                TCG: {card.banlist_info.ban_tcg ? `${card.banlist_info.ban_tcg}` : "Unlimited"}
                             </p>
                             <p>
-                                OCG: {`${card.banlist_info.ban_ocg}` || "Unlimited"}
+                                OCG: {card.banlist_info.ban_ocg ? `${card.banlist_info.ban_ocg}` : "Unlimited"}
                             </p>
                         </>}
                     </div>
