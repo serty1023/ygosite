@@ -86,6 +86,24 @@ async function search(input,filterValue,mode)
             };
         });
     }
+    else if (mode == "advanced-search")
+    {
+        const inputWords = input.toLowerCase().trim().replace(/"/g,"").split(/[\s-]+/);
+        cardData.forEach(card => 
+        {
+            const cardWords = card.name.toLowerCase().trim().replace(/"/g,"").split(/[\s-]+/);
+            const matched = inputWords.every(inputWord => 
+                cardWords.some(cardWord => 
+                    levenshteinDistance(inputWord,cardWord) <= cardWord.length/2.5
+                )
+            );
+            
+            if (matched)
+            {
+                results.push(card);
+            };
+        });
+    }
     else if (mode == "filter-search")
     {
         const 
