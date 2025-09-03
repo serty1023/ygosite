@@ -167,7 +167,7 @@ async function search(input,filterValue,mode)
             if (card.name.toLowerCase().includes(input.trim().toLowerCase()))
             {
                 results.push(card);
-            }
+            };
         });
     };
     return results;

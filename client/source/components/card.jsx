@@ -38,6 +38,8 @@ function Card()
     card.desc = card.desc.replace("[ Pendulum Effect ]","<b><i>-[Pendulum Effect]-</i></b>");
     card.desc = card.desc.replace("[ Monster Effect ]","<b><i>-[Monster Effect]-</i></b>");
 
+    const brs = (card.desc.match(/<br>/g)).length || 0;
+
     let height = 85;
     if (card.desc.length < 200)
     {
@@ -59,6 +61,10 @@ function Card()
     {
         height = height + 5;
     };
+    if (card.name.length / brs >= 100)
+    {
+         height = height + 4 * brs; 
+    }
     
     return (
     <>
