@@ -28,22 +28,6 @@ function levenshteinDistance(a,b)
     return matrix[a.length][b.length];
 };
 
-function cartesianProduct(arrays)
-{
-    return arrays.reduce((acc,curr) => 
-    {
-        const response = [];
-        acc.forEach(a =>
-        {
-            curr.forEach(b =>
-            {
-                response.push([...a,b])
-            });
-        });
-        return response;
-    },[[]]);
-};
-
 let cardData = null;
 
 async function getCards()
@@ -88,21 +72,28 @@ async function search(input,filterValue,mode)
     }
     else if (mode == "advanced-search")
     {
-        const inputWords = input.toLowerCase().trim().replace(/"/g,"").split(/[\s-]+/);
-        cardData.forEach(card => 
+        if (input.length != 0)
         {
-            const cardWords = card.name.toLowerCase().trim().replace(/"/g,"").split(/[\s-]+/);
-            const matched = inputWords.every(inputWord => 
-                cardWords.some(cardWord => 
-                    levenshteinDistance(inputWord,cardWord) <= cardWord.length/2.5
-                )
-            );
-            
-            if (matched)
+            const inputWords = input.toLowerCase().trim().replace(/"/g,"").split(/[\s-]+/);
+            cardData.forEach(card => 
             {
-                results.push(card);
-            };
-        });
+                const cardWords = card.name.toLowerCase().trim().replace(/"/g,"").split(/[\s-]+/);
+                let archetypeWords = []
+                if (card.archetype)
+                {
+                    archetypeWords = card.archetype.toLowerCase().trim().replace(/"/g,"").split(/[\s-]+/);
+                };
+                const matched = inputWords.every(inputWord => 
+                    cardWords.some(cardWord => levenshteinDistance(inputWord,cardWord) <= cardWord.length/2.5) ||
+                    archetypeWords.some(archetypeWord => levenshteinDistance(inputWord,archetypeWord) <= archetypeWord.length/2.5)
+                );
+                
+                if (matched)
+                {
+                    results.push(card);
+                };
+            });
+        };
     }
     else if (mode == "filter-search")
     {
