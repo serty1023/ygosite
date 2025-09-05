@@ -52,13 +52,20 @@ async function search(input,filterValue,mode)
     let cardData = await getCards();
     if (mode == "matched-search")
     {
-        cardData.forEach(card =>
+        if (input.length != 0)
         {
-            if (card.name.toLowerCase().includes(input.trim().toLowerCase()))
+            cardData.forEach(card =>
             {
-                results.push(card);
-            };
-        });
+                if (card.name.toLowerCase().includes(input.trim().toLowerCase()))
+                {
+                    results.push(card);
+                };
+            });
+        }
+        else
+        {
+            results = [...cardData];
+        };
     }
     else if (mode == "card-text-search")
     {
