@@ -48,8 +48,6 @@ function Card()
     if (loading) return;
 
     card.desc = card.desc.replace(/(\r\n|\n|\r)/g,"<br>");
-    card.desc = card.desc.replace("[ Pendulum Effect ]",`<b><i>-[Pendulum Effect]-</i></b>`);
-    card.desc = card.desc.replace("[ Monster Effect ]",`<b><i>-[Monster Effect]-</i></b>`);
 
     const brs = (card.desc.match(/<br>/g) || []).length;
 
@@ -77,6 +75,10 @@ function Card()
     if (card.name.length / brs >= 100)
     {
          height = height + 4 * brs; 
+    }
+    if (card.pend_desc && card.pend_desc.length > 250)
+    {
+        height = height + 10;
     }
     
     return (
@@ -167,7 +169,7 @@ function Card()
                                     ATK
                                 </p>
                                 <p style={{color: "var(--black-color)"}}>
-                                    {card.atk}
+                                    {card.atk >= 0 ? card.atk : "?"}
                                 </p>
                             </div>
                             <div style={{width: "50%"}}>
@@ -185,15 +187,22 @@ function Card()
                                         DEF
                                     </p>
                                     <p style={{color: "var(--black-color)"}}>
-                                        {card.def}
+                                        {card.def >= 0 ? card.def : "?"}
                                     </p>
                                 </>}
                             </div>
                         </div>
                     </>
                     : null}
+                    {card.type.includes("Pendulum") && card.pend_desc ? 
                     <div className="information-grid" style={{gridColumn: "span 3",fontSize: "125%"}}>
-                        <p style={{color: "var(--black-color)",textAlign: "justify",padding: "2vh"}} dangerouslySetInnerHTML={{ __html: card.desc}}></p>
+                        <p style={{color: "var(--black-color)",textAlign: "justify",padding: "2vh"}} dangerouslySetInnerHTML={{ __html: card.pend_desc}}></p> 
+                    </div>
+                    : null}
+                    <div className="information-grid" style={{gridColumn: "span 3",fontSize: "125%"}}>
+                        {card.type.includes("Pendulum") && card.monster_desc ?
+                        <p style={{color: "var(--black-color)",textAlign: "justify",padding: "2vh"}} dangerouslySetInnerHTML={{ __html: card.monster_desc}}></p> 
+                        : <p style={{color: "var(--black-color)",textAlign: "justify",padding: "2vh"}} dangerouslySetInnerHTML={{ __html: card.desc}}></p> }
                     </div>
                     <div className="banlist-info"style={{gridColumn: "span 3"}}>
                         {(!card.banlist_info) ? 

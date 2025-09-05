@@ -92,6 +92,8 @@ function Search()
 
     function modeSwitch(mode)
     {
+        setInputValue([]);
+        setFilterValue([]);
         navigate(`/ygosite/search?mode=${mode}`);
     };
 
