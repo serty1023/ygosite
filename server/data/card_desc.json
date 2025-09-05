@@ -1,0 +1,25 @@
+{
+    "card_desc":
+    {
+        "when":
+        {
+            "vietnamese": "khi" 
+        },
+        "this card":
+        {
+            "vietnamese": "lá bài này"
+        },
+        "is activated":
+        {
+            "vietnamese": "được kích hoạt"
+        },
+        "you":
+        {
+            "vietnamese": "bạn"
+        },
+        "can":
+        {
+            "vietnamese": "có thể"
+        }
+    }
+}

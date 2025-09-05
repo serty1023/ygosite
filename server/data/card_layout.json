@@ -1,0 +1,53 @@
+{
+    "card_layout":
+    {
+        "english":
+        [
+            [
+                "Monster Card Type",
+                "Spell Card Type",
+                "Trap Card Type"
+            ],
+            [
+                "Attribute",
+                "Spell Type",
+                "Trap Type"
+            ],
+            [
+                "Level",
+                "Rank"
+            ],
+            "Pendulum Scale",
+            "Type",
+            "ATK",
+            [
+                "DEF",
+                "Link-Rating"
+            ]
+        ],
+        "vietnamese":
+        [
+            [
+                "Loại Quái Thú",
+                "Loại Bài Phép",
+                "Loại Bài Bẫy"
+            ],
+            [
+                "Thuộc Tính",
+                "Loại Phép",
+                "Loại Bẫy"
+            ],
+            [
+                "Cấp Độ",
+                "Rank"
+            ],
+            "Pendulum Scale",
+            "Tộc",
+            "ATK",
+            [
+                "DEF",
+                "Link"
+            ]
+        ]
+    }
+}

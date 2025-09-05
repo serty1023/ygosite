@@ -1,11 +1,24 @@
-import { useState,useEffect } from "react";
+import { useState,useEffect,useContext } from "react";
+import { LanguageContext } from "./language.jsx";
 import { cardID } from "../main";
 import "../style/index.css";
 
 function Card()
 {
+    const { language } = useContext(LanguageContext);
     const [card,getCardContent] = useState([]);
+    const [cardLayout,getCardLayout] = useState([]);
     const [loading,setLoading] = useState(true);
+
+    useEffect(() =>
+    {
+        fetch("http://localhost:3000/interface/card_layout",
+        {
+            headers: {"access":"true"}
+        })
+        .then(response => response.json())
+        .then(data => getCardLayout(data[language]))
+    },[language]);
 
     useEffect(() =>
     {
@@ -35,15 +48,15 @@ function Card()
     if (loading) return;
 
     card.desc = card.desc.replace(/(\r\n|\n|\r)/g,"<br>");
-    card.desc = card.desc.replace("[ Pendulum Effect ]","<b><i>-[Pendulum Effect]-</i></b>");
-    card.desc = card.desc.replace("[ Monster Effect ]","<b><i>-[Monster Effect]-</i></b>");
+    card.desc = card.desc.replace("[ Pendulum Effect ]",`<b><i>-[Pendulum Effect]-</i></b>`);
+    card.desc = card.desc.replace("[ Monster Effect ]",`<b><i>-[Monster Effect]-</i></b>`);
 
-    const brs = (card.desc.match(/<br>/g)).length || 0;
+    const brs = (card.desc.match(/<br>/g) || []).length;
 
-    let height = 85;
+    let height = 95;
     if (card.desc.length < 200)
     {
-        height = 75;
+        height = 80;
     }
     else if (card.desc.length > 800)
     {
@@ -55,7 +68,7 @@ function Card()
     }
     else if (card.desc.length > 600)
     {
-        height = 95;
+        height = 100;
     };
     if (card.name.length >= 40)
     {
@@ -78,11 +91,11 @@ function Card()
                     <div className="information-grid" style={{gridColumn: "span 2"}}>
                         <p>
                             {card.type.includes("Monster") ? 
-                            "Monster Card Type" 
+                            cardLayout[0][0]
                             : card.type.includes("Spell") ?
-                            "Spell Card Type"
+                            cardLayout[0][1]
                             : card.type.includes("Trap") ?
-                            "Trap Card Type"
+                            cardLayout[0][2]
                             : null}
                         </p>    
                         {card.humanReadableCardType}
@@ -90,11 +103,11 @@ function Card()
                     <div className="information-grid">
                         <p>
                             {card.type.includes("Monster") ? 
-                            "Attribute" 
+                            cardLayout[1][0]
                             : card.type.includes("Spell") ?
-                            "Spell Type"
+                            cardLayout[1][1]
                             : card.type.includes("Trap") ?
-                            "Trap Type"
+                            cardLayout[1][2]
                             : null}
                         </p>
                         <div>
@@ -115,8 +128,8 @@ function Card()
                     <div className="information-grid">
                         <p>
                             {card.type.includes("XYZ") ?
-                            "Rank"
-                            : "Level"}
+                            cardLayout[2][1]
+                            : cardLayout[2][0]}
                         </p>
                         <div>
                             {card.type.includes("XYZ") ?
@@ -129,7 +142,7 @@ function Card()
                     {card.type.includes("Pendulum") ?
                     <div className="information-grid">
                         <p>
-                            Pendulum Scale
+                            {cardLayout[3]}
                         </p>
                         <div>
                             <img src="/source/images/SCALE.png"/>
@@ -141,7 +154,7 @@ function Card()
                     <>
                         <div className="information-grid">
                             <p>
-                                Type
+                                {cardLayout[4]}
                             </p>
                             <div>
                                 <img src={`/source/images/${card.race}.png`}/>
@@ -161,7 +174,7 @@ function Card()
                                 {card.type.includes("Link") ? 
                                 <> 
                                     <p>
-                                        Link-Rating
+                                        {cardLayout[5]}
                                     </p>
                                     <p style={{color: "var(--black-color)"}}>
                                         {card.linkval}

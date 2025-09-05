@@ -33,7 +33,7 @@ function Search()
         })
         .then(response => response.json())
         .then(data => getSearchbarContent(data[language]))
-    },[]);
+    },[language]);
 
     const [inputValue,setInputValue] = useState("");
     const [filterValue,setFilterValue] = useState([]);
