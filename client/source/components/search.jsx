@@ -77,7 +77,7 @@ function Search()
             getResults(results[0]);
             getTotal(results[1]);
             postedCheck(true);
-            console.log(results[0]);
+            //console.log(results[0]);
         }
         catch (error)
         {

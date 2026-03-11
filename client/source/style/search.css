@@ -192,6 +192,19 @@
     }
 }
 
+.pagination
+{
+    width: 35%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    h1,p
+    {
+        color: var(--gray);
+        font-size: 175%;
+    }
+}
+
 .results
 {
     width: 75%;
