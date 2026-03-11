@@ -177,7 +177,7 @@ async function search(input,filterValue,mode)
             };
         });
     };
-    return results;
+    return [results,cardData.length];
 };
 
 module.exports = { search };

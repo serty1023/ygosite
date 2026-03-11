@@ -5,6 +5,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMagnifyingGlass,faQuoteLeft,faQuoteRight,faGears,faFilter } from "@fortawesome/free-solid-svg-icons";
 import "../style/search.css";
 import Filterbar from "./filterbar.jsx";
+import Results from "./results.jsx";
 
 const searchPlaceHolder =
 {
@@ -38,6 +39,7 @@ function Search()
     const [inputValue,setInputValue] = useState("");
     const [filterValue,setFilterValue] = useState([]);
     const [results,getResults] = useState([]);
+    const [total,getTotal] = useState([])
     const [posted,postedCheck] = useState(false);
     const [searching,searchingState] = useState(false);
     const postInput = async (event) =>
@@ -72,9 +74,10 @@ function Search()
                 }),
             });
             const results = await response.json();
-            getResults(results);
+            getResults(results[0]);
+            getTotal(results[1]);
             postedCheck(true);
-            console.log(results);
+            console.log(results[0]);
         }
         catch (error)
         {
@@ -162,18 +165,7 @@ function Search()
             Searching...
         </h1> 
         : null}
-        <div className="results"
-        style={{justifyContent: results.length == 0 ? "center" : "start"}}>
-            {posted && results.length == 0 ? 
-            <h1>
-                No Cards Found
-            </h1>
-            : 
-            results.map(card => 
-            (
-                <img key={card.id} src={card.card_images[0].image_url} loading="lazy" onClick={() => window.location.href = `/ygosite/cards?id=${card.id}`}/>
-            ))}
-        </div>
+        <Results posted={posted} results={results} total={total}/>
     </>);
 };
 
