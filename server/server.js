@@ -31,6 +31,7 @@ application.use("/",userRouter);
 
 application.listen(3000 , () =>
 {
-    console.log("Application is running at PORT:3000");
-    console.log("Dev Mode: " + process.env.developer)
+    console.log("Application is running at PORT:5173");
+    console.log("Server is running at http://localhost:3000/")
+    console.log("Dev Mode: " + process.env.developer);
 });
