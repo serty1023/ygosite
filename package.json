@@ -5,7 +5,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start:client": "npm run dev --prefix client",
-    "start:server": "node --watch server/server.js",
+    "start:server": "developer=ON node --watch server/server.js",
     "dev-start:all": "developer=ON concurrently \"npm run start:server\" \"npm run start:client\"",
     "start:all": "developer=OFF concurrently \"npm run start:server\" \"npm run start:client\"",
     "git-all": "git add . && git commit -m \"ygo\" && git push origin main"

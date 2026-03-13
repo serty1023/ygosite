@@ -1,0 +1,872 @@
+{
+    "english": 
+    [
+        {
+            "indent": 0,
+            "id": "basic-rules",
+            "title": "Basic Rules",
+            "descriptions": 
+            [
+                {
+                    "type": "text",
+                    "content": "There are basic rules that you need to know before you can play Yu-gi-oh. These include standard playmat, deck size limitations and the gameplay mechanics."
+                }
+            ]
+        },
+        {
+            "indent": 1,
+            "id": "playmat",
+            "title": "Playmat",
+            "descriptions": 
+            [
+                {
+                    "type": "text",
+                    "content": "A Yu-gi-oh Duel is conducted on a playmat, like the one shown below:"
+                },
+                {
+                    "type": "image",
+                    "size": "large",
+                    "content": 
+                    [
+                        "playmat"
+                    ]
+                },
+                {
+                    "type": "text",
+                    "content": "At the right corner of players' field is Main Deck Zone - where you place your Main Deck. <br> At the left corner of players' field is Extra Deck Zone - where you place your Extra Deck. <br> Above the Main Deck's zone is the Graveyard-GY which is used to contain used card or destroyed cards. <br> Above the Extra Deck's zone is the Field Zone where you place Field Spell. <br> Between the Field Zone and GY, there are 5 Main Monster Zones where your monsters are placed and battle <br> Between the Extra Deck Zone and the Main Deck Zone, there are 5 Spell & Trap Zones where you place your Spells and Traps. However, the two zones on the far left and right are quite unique. These are also Pendulum Zones, where you can place Pendulum Monsters. <br> In the middle of the playmat, there're 2 additional zones called Extra Monster Zone. Most monsters from Extra Deck can be placed in both Main Monster Zones and Extra Monster Zones, except Link Monster that can only be placed in Extra Monster Zones."
+                }
+            ]
+        },
+        {
+            "indent": 1,
+            "id": "decks",
+            "title": "Decks",
+            "descriptions": 
+            [
+                {
+                    "type": "text",
+                    "content": "To start a Yu-gi-oh duel, in addition to the playmat, you need a deck(s): <br><br> ● Main Deck (must contain 40-60 cards): This deck includes Monsters, Spells and Traps that you will use throughout the Duel. <br> ● Extra Deck (can contain 0-15 cards): This deck includes monsters that can be only summoned by special methods. These monsters can make your tactic more competitive, helping you defeat your opponent more easily. <br> ● Side Deck (can contain 0-15 cards): In standard Match (which consist of 3 Duels), after finishing a Duel, players can add and remove cards from their Main Deck/Extra Deck to deal up with opponent's deck (this usually happens in a tournament). However, remember that Main Deck/Extra Deck size must remain constant after the siding process."
+                }
+            ]
+        },
+        {
+            "indent": 1,
+            "id": "gameplay",
+            "title": "Gameplay",
+            "descriptions": 
+            [
+                {
+                    "type": "text",
+                    "content": "At the start of the Duel, 2 players must decide who will go first (by rolling a dice, rock-paper-scissor, etc...). Then, each players draw 5 cards and who goes first will play their turn."
+                }
+            ]
+        },
+        {
+            "indent": 2,
+            "id": "phases-in-a-turn",
+            "title": "Phases In A Turn",
+            "descriptions": 
+            [
+                {
+                    "type": "text",
+                    "content": "● Draw Phase: The player draw 1 card from their Main Deck (the player going first doesn't draw in the first turn). <br> ● Standby Phase: The phase that occurs between the Draw Phase and Main Phase 1. <br> ● Main Phase 1: During Main Phase, the player can summon monsters and activate Spells and Traps. <br> ● Battle Phase: During this phase, your monsters can attack and battle with your opponent's monsters (whoever goes first can't conduct Battle Phase in the first turn). <br> ● Main Phase 2: After the Battle Phase is Main Phases 2 (like the Main Phases 1). <br> ● End Phase: The end of the turn."
+                }
+            ]
+        },
+        {
+            "indent": 2,
+            "id": "summon-monsters",
+            "title": "Summon Monsters",
+            "descriptions": 
+            [
+                {
+                    "type": "text",
+                    "content": "There are 4 main types of Summons in Yu-gi-oh: Normal Summon, Set, Flip Summon and Special Summon: <br> ● Normal Summon: Place your monster from your hand into your Main Monster Zone vertically (face-up)."
+                },
+                {
+                    "type": "video",
+                    "content": "Normal Summon"
+                },
+                {
+                    "type": "text",
+                    "content": "● Set: Place your monster from your hand into your Main Monster Zone horizontally (face-down)."
+                },
+                {
+                    "type": "video",
+                    "content": "Normal Set"
+                },
+                {
+                    "type": "text",
+                    "content": "● Flip Summon: When your monster already Set in the Main Monster Zone, you can flip it up (place it vertically) (You can't Flip Summon a monster in the turn it was set)."
+                },
+                {
+                    "type": "video",
+                    "content": "Flip Summon"
+                },
+                {
+                    "type": "text",
+                    "content": "● Special Summon: A summon performed using a special method or under specific conditions (can be placed either vertically or horizontally, face-up or face-down, by default, special summoned monsters must be face-up). <br><br> You can either Normal Summon or Set a monster once per turn. <br> You can Flip Summon monsters as many as you want, if you have enough Set monsters.  <br> You can Special Summon monsters as many as you want in one turn."
+                }
+            ]
+        },
+        {
+            "indent": 2,
+            "id": "how-to-win",
+            "title": "How To Win",
+            "descriptions": 
+            [
+                {
+                    "type": "text",
+                    "content": "● Each players start with 8000 Life Points (LP). The player who can make opponent's LP reduce to 0 wins the Duel, if both player's LP are reduced to 0 at the same time, it will be treated as a Draw. <br> ● While players need to draw (like in Draw Phases), whoever can't draw card loses the Duel, if both, it will be treated as a Draw. <br> ● By the effects of certain cards, some cards can make you win if you can meet the conditions listed on it...  "
+                }
+            ]
+        },
+        {
+            "indent": 2,
+            "id": "battle-mechanism",
+            "title": "Battle Mechanism",
+            "descriptions": 
+            [
+                {
+                    "type": "text",
+                    "content": "First, let's learn about Battle Position. There 3 types of battle position: Attack Postion, face-up Defense Postion and face-down Defense Postion: <br><br> ● Attack Postion: Monsters that were placed vertically. <br> ● Face-up Defense Postion: Monsters that were placed horizontally (face-up). <br> ● Face-down Defense Postion: Monsters that were Set. <br><br> A monster can't attack unless it is in Attack Position. If it attacks a monster, there can be 3 situations: <br><br> ● If attacked monster is in Attack Position: Which monster with the lower ATK will be destroyed (then sent to GY). The owner will lose LP equal to the difference in ATK. If 2 monsters have equal ATK, both will be destroyed and no players take damage."
+                },
+                {
+                    "type": "video",
+                    "content": "Attack-Attack"
+                },
+                {
+                    "type": "text",
+                    "content": "● If attacked monster is in face-up Defense Position: if attacking monster's ATK less than attacked monster's DEF, it won't be destroyed, but the owner still loses LP equal to the difference; if attacked monster has less DEF than attacking monster's ATK, it will be destroyed, but the owner won't lose any LP."
+                },
+                {
+                    "type": "video",
+                    "content": "Attack-Defense-1"
+                },
+                {
+                    "type": "video",
+                    "content": "Attack-Defense-2"
+                },
+                {
+                    "type": "text",
+                    "content": "● If attacked monster is in face-down Defense Position: It must first be flipped up, the rules will be apllied like with monster in face-up Defense Position. <br><br> If player control no monsters, their opponent's monsters can attack directly, LP will lose equal to those monsters' ATK."
+                }
+            ]
+        },
+        {
+            "indent": 0,
+            "id": "understand-the-cards",
+            "title": "Understand The Cards",
+            "descriptions": 
+            [
+                {
+                    "type": "text",
+                    "content": "In Yu-gi-oh, we have 3 types of cards: Monster, Spell, Trap."
+                }
+            ]
+        },
+        {
+            "indent": 1,
+            "id": "monsters",
+            "title": "Monsters",
+            "descriptions": 
+            [
+                {
+                    "type": "text",
+                    "content": "A Monster Card will include: <br><br> ● Card Name: Used to identify cards and distinguish them from each other. <br> ● Attribute: There're 7 Attributes - LIGHT, DARK, FIRE, WATER, EARTH, WIND and DIVINE. <br> ● Level (from 1 - 12): Great Level cames with great power. <br><br> The Level of monsters decide how they can be Normal Summoned or Set: For Level 4 or lower monsters, you can Normal Summon/Set it without Tributing (send monster from field to GY); for Level 5 or 6 monsters, you must Tributing 1 monster you control to Normal Summon/Set it; for Level 7 or more monsters, you must Tribute 2. <br><br> ● Card Image: Show monster image. <br> ● Information: Includes monsters types such as Spellcaster, Dragon, Warrior,... <br> ● Description/Effect: To descript about monster and its effects. <br> ● ATK/DEF."
+                },
+                {
+                    "type": "image",
+                    "size": "large",
+                    "content": 
+                    [
+                        "Monster Card"
+                    ]
+                },
+                {
+                    "type": "text",
+                    "content": "Next, we will learn about some types of monsters."
+                }
+            ]
+        },
+        {
+            "indent": 2,
+            "id": "normal-monsters",
+            "title": "Normal Monsters",
+            "descriptions": 
+            [
+                {
+                    "type": "text",
+                    "content": "Normal Monster is monster card with no effects, so its description doesn't affect to gameplay."
+                },
+                {
+                    "type": "image",
+                    "size": "medium",
+                    "content": 
+                    [
+                        "Normal Monster"
+                    ]
+                },
+                {
+                    "type": "text",
+                    "content": "As you can see, in the information of Normal Monster Card, beside its type is text \"Normal\"."
+                }
+            ]
+        },
+        {
+            "indent": 2,
+            "id": "effect-monsters",
+            "title": "Effect Monsters",
+            "descriptions": 
+            [
+                {
+                    "type": "text",
+                    "content": "Effect Monster is monster card with special effects, which are described in its desription. And in its information is text \"Effect\"."
+                },
+                {
+                    "type": "image",
+                    "size": "medium",
+                    "content": 
+                    [
+                        "Effect Monster"
+                    ]
+                },
+                {
+                    "type": "text",
+                    "content": "This card's description says: \"Cannot be destroyed by battle with monsters that has 1900 ATK or more\". This means that when this monster battles with monster that has 1900 ATK or more, it can be destroyed even though it has lower ATK, but you still lose LP from that battle. <br><br> A Monster can also be both an Effect Monster and a Ritual, Fusion, Synchro, Xyz, Pendulum or Link Monster."
+                }
+            ]
+        },
+        {
+            "indent": 2,
+            "id": "ritual-monsters",
+            "title": "Ritual Monsters",
+            "descriptions": 
+            [
+                {
+                    "type": "text",
+                    "content": "Ritual Monster is monster that only can be Special Summoned (from your hand) by using Ritual Spell and requiring tributing monsters from field or hand whose total Levels equal or exceed the Level of Ritual Monster. This summon method is called \"Ritual Summon\"(All monsters must be face-up on the field before being sent to GY)."
+                },
+                {
+                    "type": "image",
+                    "size": "medium",
+                    "content": 
+                    [
+                        "Ritual Monster",
+                        "Ritual Spell"
+                    ]
+                },
+                {
+                    "type": "text",
+                    "content": "There are Level 8 Ritual Monster and Ritual Spell used to Ritual Summon it, so the Spell's text will ask you to tribute monsters whose total Levels equal 8 or more."
+                },
+                {
+                    "type": "video",
+                    "content": "Ritual Summon"
+                }
+            ]
+        },
+        {
+            "indent": 2,
+            "id": "fusion-monsters",
+            "title": "Fusion Monsters",
+            "descriptions": 
+            [
+                {
+                    "type": "text",
+                    "content": "Fusion Monster is Extra Deck monster that only can be Special Summoned by Spells like \"Polymerization\" or \"Fusion\" and requires sending monster from hand or field that listed in the Fusion Monster's description. This summon method is called \"Fusion Summon\" (All monster must be face-up on the field before being sent to GY)."
+                },
+                {
+                    "type": "image",
+                    "size": "medium",
+                    "content": 
+                    [
+                        "Fusion Monster",
+                        "Polymerization"
+                    ]
+                },
+                {
+                    "type": "text",
+                    "content": "This Fusion Monster requires 3 \"Blue-eyes White Dragon\"mean you need 3 \"Blue-eyes White Dragon\"in your hand or field to activate Spell \"Polymerization\" then Fusion Summon it."
+                },
+                {
+                    "type": "video",
+                    "content": "Fusion Summon"
+                }
+            ]
+        },
+        {
+            "indent": 2,
+            "id": "synchro-monsters",
+            "title": "Synchro Monster",
+            "descriptions": 
+            [
+                {
+                    "type": "text",
+                    "content": "Synchro Monster is Extra Deck monster that only can be Special Summoned by sending monster from your field to GY whose total Levels exactly equal to the Level of Synchro Monster. This summon method is called \"Synchro Summon\"(All monsters must be face-up on the field before being sent to GY). <br> In addition, Synchro Summon requires a specific type of monster - Tuner."
+                },
+                {
+                    "type": "image",
+                    "size": "medium",
+                    "content": 
+                    [
+                        "Synchro Monster",
+                        "Tuner Monster"
+                    ]
+                },
+                {
+                    "type": "text",
+                    "content": "In the field, we have Level 3 Tuner Monster and Level 3 non-Tuner monsters, so we can Synchro Summon Level 6 (3+3) Synchro Monster."
+                },
+                {
+                    "type": "video",
+                    "content": "Synchro Summon"
+                }
+            ]
+        },
+        {
+            "indent": 2,
+            "id": "xyz-monsters",
+            "title": "Xyz Monsters",
+            "descriptions": 
+            [
+                {
+                    "type": "text",
+                    "content": "Xyz Monster is also Extra Deck monster but it is unique because it doesn't have Level. To Xyz Summon it, you need overlay monsters in your field with he same Level in your field, and place Xyz Monster on top of those monsters (overlay). (All monsters must be face-up on the field before being overlayed)."
+                },
+                {
+                    "type": "image",
+                    "size": "medium",
+                    "content": 
+                    [
+                        "Xyz Monster"
+                    ]
+                },
+                {
+                    "type": "text",
+                    "content": "Xyz Monster \"stars\" will place in opposite position with other types of monsters, it called Rank, and the Rank is equal to the Level of overlayed monsters. (For example, Rank 4 Monster is Summoned by using Level 4 monsters)."
+                },
+                {
+                    "type": "video",
+                    "content": "Xyz Summon"
+                },
+                {
+                    "type": "text",
+                    "content": "If Xyz Monster has effect(s), you can remove its overlayed monsters to GY (detach materials) for activating its effects (detaching materials don't treated as sending to GY). <br> For example, opponent's monster declare an attack target your monster, but your monster can negate that attack by detaching its material."
+                },
+                {
+                    "type": "video",
+                    "content": "Detach"
+                }
+            ]
+        },
+        {
+            "indent": 2,
+            "id": "pendulum-monsters",
+            "title": "Pendulum Monsters",
+            "descriptions": 
+            [
+                {
+                    "type": "text",
+                    "content": "Pendulum Monsters are very special monsters, they look like a combination of Spell and Normal, Effect, Ritual, Fusion, Synchro or Xyz Monster."
+                },
+                {
+                    "type": "image",
+                    "size": "small",
+                    "content": 
+                    [
+                        "Normal Pendulum Monster",
+                        "Effect Pendulum Monster",
+                        "Ritual Pendulum Monster",
+                        "Fusion Pendulum Monster",
+                        "Synchro Pendulum Monster",
+                        "Xyz Pendulum Monster"
+                    ]
+                },
+                {
+                    "type": "text",
+                    "content": "Pendulum Monsters' lower half colored of Spell and upper half colored of Monster card. Also they has extra description-part called \"Pendulum Effect\" and \"Pendulum Scale\" which is necessary to Pendulum Summon. <br> Pendulum Monster can still be Summoned like the way to Summon its monster type (Normal, Ritual, Fusion, Synchro, Xyz). Moreover, in case Pendulum Monsters would be sent from the field to GY, it will be placed face-up on the top of Extra Deck instead of being sent to GY."
+                },
+                {
+                    "type": "video",
+                    "content": "Pendulum Monster Leaves The Field"
+                },
+                {
+                    "type": "text",
+                    "content": "To Pendulum Summon, you must first place 2 Pendulum Monsters in Pendulum Zones. Placing them will count as activating Spell and also these monsters will be treated as Spells (you can only use its effects that are described in Pendulum Scale). <br><br> While you already have 2 Pendulum Monsters in Pendulum Zones, you can Pendulum Summon monsters."
+                },
+                {
+                    "type": "video",
+                    "content": "Pendulum Scale"
+                },
+                {
+                    "type": "text",
+                    "content": "Depending on Pendulum Scales of those 2 Pendulum Monsters, you can Special Summon any number of monsters from (your hand) or Pendulum Monsters that placed face-up on Extra Deck whose Levels is in the range of Pendulum Scale. <br> For example, if you have 2 Pendulum Monsters: one with Pendulum Scale of 1 and the other with Pendulum Scale of 8, you can Special Summon monsters whose Level from 2 to 7. <br><br> You can even Pendulum Summon monsters that are not Pendulum Monster if their Level is in Pendulum Scale. Howeover, you can only Pendulum Summon 1 Pendulum Monster from Extra Deck per turn (and it must be placed on Extra Monster Zones), you also can only Pendulum Summon once per turn." 
+                },
+                {
+                    "type": "video",
+                    "content": "Pendulum Summon"
+                }
+            ]
+        },
+        {
+            "indent": 2,
+            "id": "link-monsters",
+            "title": "Link Monsters",
+            "descriptions": 
+            [
+                {
+                    "type": "text",
+                    "content": "Link Monster is Extra Deck monsters which can easily Special Summon by sending number of monsters from your field to GY equal to its Link Rating (Link Summon). There are 2 Extra Monster Zones in the field, but you can only use one of them. <br><br> Now, let's take a look of Link Monster Card."
+                },
+                {
+                    "type": "image",
+                    "size": "medium",
+                    "content": 
+                    [
+                        "Link Monster"
+                    ]
+                },
+                {
+                    "type": "text",
+                    "content": "Link Monsters don't have Level/Rank and DEF (so it can't be place in Defense Position), but they have 8 arrows (Link Rating). Which Zones that Link Monster point to can be treated as Extra Monster Zone for Pendulum Summon or Link Summon. <br> (If 2 Link Monsters point to each others, it called co-link) <br> If you can make an Extra Link - the arrangement of co-linked Link Monster, like the one below, you can take control of the left Extra Monster Zone:"
+                },
+                {
+                    "type": "image",
+                    "size": "large",
+                    "content": 
+                    [
+                        "Extra Link"
+                    ]
+                },
+                {
+                    "type": "text",
+                    "content": "<br><br> If you use Link Monster to Link Summon another Link Monster, it can be treated as 1 monster or n monster (n is its Link Rating). For example, if you Link Summon Link-4 Monster like the one above, you can send 4 monsters to GY (can include Link Monster or not), or 2 Link-2 Monsters, or 2 monsters (include Link Monster or not) and Link-2 Monster. <br><br> But, if Link-4 Monster you need to Link Summon requires 3+ monsters (listed in card description), you can't use 2 Link-2 monsters as Link Materials, you must use at least 3 monsters."
+                },
+                {
+                    "type": "video",
+                    "content": "Normal Link Summon-1"
+                },
+                {
+                    "type": "video",
+                    "content": "Normal Link Summon-2"
+                }
+            ]
+        },
+        {
+            "indent": 1,
+            "id": "spells",
+            "title": "Spells",
+            "descriptions": 
+            [
+                {
+                    "type": "text",
+                    "content": "Spell Card is a card that you can activate from your hand by placing it in your Spell & Trap Zones to give yourself more advantages. A Spell Card will include: <br><br> ● Card Name: To identify cards with each others. <br> ● Spell Icon. <br> ● Spell Symbol: Normal, Equip, Ritual, Continuous, Field or Quick-Play. <br><br> Although Pendulum Monsters placed in Pendulum Zones treated as Spell, but they're not considered to be any of above types. <br><br> There are symbols of Spell Type (Normal Spells don't have symbol):"
+                },
+                {
+                    "type": "icon",
+                    "content":
+                    [
+                        "Equip",
+                        "Ritual",
+                        "Continuous",
+                        "Field",
+                        "Quick-Play"
+                    ]
+                },
+                {
+                    "type" :"text",
+                    "content": "● Card Image: Show spells image. <br> ● Effects: To descript about spells' effects."
+                },
+                {
+                    "type": "image",
+                    "size": "large",
+                    "content": 
+                    [
+                        "Spell Card"
+                    ]
+                }
+            ]
+        },
+        {
+            "indent": 2,
+            "id": "normal-spells",
+            "title": "Normal Spells",
+            "descriptions": 
+            [
+                {
+                    "type": "text",
+                    "content": "Normal Spell is Spell that only can be activated during the Main Phase, and will be sent to GY after it resolves."
+                },
+                {
+                    "type": "image",
+                    "size": "medium",
+                    "content": 
+                    [
+                        "Normal Spell"
+                    ]
+                },
+                {
+                    "type": "text",
+                    "content": "For example, you can activate this card, this card will be sent to GY and you will draw 2 cards."
+                },
+                {
+                    "type": "video",
+                    "content": "Activate Normal Spell"
+                }
+            ]
+        },
+        {
+            "indent": 2,
+            "id": "equip-spells",
+            "title": "Equip Spells",
+            "descriptions": 
+            [
+                {
+                    "type": "text",
+                    "content": "Equip Spell is type of Spell that give benefits and powers to your monsters. After activating Equip Spell by choosing a monster, it still remains on your Spell & Trap Zones, but if monster equiped with that spell leaves the field, that spell will be destroyed and sent to GY."
+                },
+                {
+                    "type": "image",
+                    "size": "medium",
+                    "content": 
+                    [
+                        "Equip Spell"
+                    ]
+                },
+                {
+                    "type": "text",
+                    "content": "This card can equip to a Spellcaster-type monster, and that monster will gain 300 ATK and DEF. <br><br> As you can see, you activate \"Book of Secret Arts\" equip to your monster, your opponent activate Normal Spell \"Raigeki\"destroy your monster (make that monster leaves the field), so \"Book of Secret Arts\" is sent to GY."
+                },
+                {
+                    "type": "video",
+                    "content": "Activate Equip Spell"
+                }
+            ]
+        },
+        {
+            "indent": 2,
+            "id": "ritual-spells",
+            "title": "Ritual Spells",
+            "descriptions": 
+            [
+                {
+                    "type": "text",
+                    "content": "Ritual Spell is Spell used to Ritual Summon Ritual Monster, you can back to Ritual Monster part to watch again."
+                }
+            ]
+        },
+        {
+            "indent": 2,
+            "id": "continuous-spells",
+            "title": "Continuous Spells",
+            "descriptions": 
+            [
+                {
+                    "type": "text",
+                    "content": "Continuous Spell is Spell that remains forever on the field."
+                },
+                {
+                    "type": "image",
+                    "size": "medium",
+                    "content": 
+                    [
+                        "Continuous Spell"
+                    ]
+                },
+                {
+                    "type": "text",
+                    "content": "After activating this card, it will remains on the field, and Insect monsters your opponent controls can't declare attack."
+                },
+                {
+                    "type": "video",
+                    "content": "Activate Continuous Spell"
+                }
+            ]
+        },
+        {
+            "indent": 2,
+            "id": "field-spells",
+            "title": "Field Spells",
+            "descriptions": 
+            [
+                {
+                    "type": "text",
+                    "content": "Field Spells are the same as Continuous Spell, but is will be placed on Field Zone instead of Spell & Trap Zones."
+                },
+                {
+                    "type": "image",
+                    "size": "medium",
+                    "content": 
+                    [
+                        "Field Spell"
+                    ]
+                },
+                {
+                    "type": "video",
+                    "content": "Activate Field Spell"
+                },
+                {
+                    "type": "text",
+                    "content": "All of Spell Types above can only be activated during your Main Phase."
+                }
+            ]
+        },
+        {
+            "indent": 2,
+            "id": "quick-play-spells",
+            "title": "Quick-Play Spells",
+            "descriptions": 
+            [
+                {
+                    "type": "text",
+                    "content": "Quick-Play Spell work the same as Normal Spell, but you can activate it during any Phases of your turn."
+                },
+                {
+                    "type": "image",
+                    "size": "medium",
+                    "content": 
+                    [
+                        "Quick-Play Spell"
+                    ]
+                },
+                {
+                    "type": "text",
+                    "content": "As you can see, your monster attack opponent's monster, but you can activate Quick-Play Spell immediately during the battle."
+                },
+                {
+                    "type": "video",
+                    "content": "Activate Quick-Play Spell"
+                }
+            ]
+        },
+        {
+            "indent": 1,
+            "id": "traps",
+            "title": "Traps",
+            "descriptions": 
+            [
+                {
+                    "type": "text",
+                    "content": "Trap Cards are cards that can be only activate if they were set (face-down horizontally) in the previous turn and can cause negative effects to opponent. (Spells can also be set, but you can activate it the turn it was set except Quick-Play Spell). <br><br> A Trap Card will include: <br><br> ● Card Name: To identify cards with each others. <br> ● Trap Icon. <br> ● Trap Symbol: Normal, Continuous, Counter. <br> There are symbols of Trap type (Normal Trap don't have symbol):"
+                },
+                {
+                    "type": "icon",
+                    "content": 
+                    [
+                        "Continuous",
+                        "Counter"
+                    ]
+                },
+                {
+                    "type": "text",
+                    "content": "● Card Image: Show traps image. <br> ● Effects: To descript about traps' effects. <br><br> Quick-Play can also work like a Traps as long as you set it in the previous turn."
+                },
+                {
+                    "type": "image",
+                    "size": "large",
+                    "content":
+                    [
+                        "Trap Card"
+                    ]
+                }
+            ]
+        },
+        {
+            "indent": 2,
+            "id": "normal-traps",
+            "title": "Normal Traps",
+            "descriptions": 
+            [
+                {
+                    "type": "text",
+                    "content": "Normal Traps work as Normal Spells and can create the unprediction in your tactics, will be sent to GY after it resolves."
+                },
+                {
+                    "type": "image",
+                    "size": "medium",
+                    "content":
+                    [
+                        "Normal Trap"
+                    ]
+                },
+                {
+                    "type": "text",
+                    "content": "For the example below, opponent's monster declare an attack, you can activate your Trap to destroy that monster, and the Trap Cards will be sent to GY."
+                },
+                {
+                    "type": "video",
+                    "content": "Activate Normal Trap"
+                }
+            ]
+        },
+        {
+            "indent": 2,
+            "id": "continuous-traps",
+            "title": "Continuous Traps",
+            "descriptions": 
+            [
+                {
+                    "type": "text",
+                    "content": "Continuous Traps work as Continuous Spells, will remain on the field forever."
+                },
+                {
+                    "type": "image",
+                    "size": "medium",
+                    "content": 
+                    [
+                        "Continuous Trap"
+                    ]
+                },
+                {
+                    "type": "text",
+                    "content": "As you can see, you can activate the traps card, and the card will remain on the field, the opponent's monster cannot attack or change its battle position."
+                },
+                {
+                    "type": "video",
+                    "content": "Activate Continuous Trap"
+                }
+            ]
+        },
+        {
+            "indent": 2,
+            "id": "counter-traps",
+            "title": "Counter Traps",
+            "descriptions": 
+            [
+                {
+                    "type": "text",
+                    "content": "Counter Traps is a card that can counter your opponent's cards, will be sent to GY after it resolves."
+                },
+                {
+                    "type": "image",
+                    "size": "medium",
+                    "content":
+                    [
+                        "Counter Trap"
+                    ]
+                },
+                {
+                    "type": "text",
+                    "content": "Your opponent attack your monster, you activate \"Mirror Force\" to destroy his/her monster, but they activate \"Solemn Judgement\" to negate your card, but you also activate \"Solemn Judgement\" to negate the opponent's \"Solemn Judgement\"."
+                },
+                {
+                    "type": "video",
+                    "content": "Activate Counter Trap"
+                }
+            ]
+        },
+        {
+            "indent": 0,
+            "id": "understand-monster-effects",
+            "title": "Understand Monster Effects",
+            "descriptions": 
+            [
+                {
+                    "type": "text",
+                    "content": "Monster Effects are classified to 5 types: Ignition, Flip, Trigger, Continuous and Quick Effect. (Quick Effect is can be either Ignition or Trigger Effect)."
+                }
+            ]
+        },
+        {
+            "indent": 1,
+            "id": "ignition-effects",
+            "title": "Ignition Effects",
+            "descriptions": 
+            [
+                {
+                    "type": "text",
+                    "content": "Ignition Effect is the effect that you can activate it whenever you want during your Main Phases (or any Phases if it is a Quick Effect)."
+                }
+            ]
+        },
+        {
+            "indent": 1,
+            "id": "flip-effects",
+            "title": "Flip Effects",
+            "descriptions": 
+            [
+                {
+                    "type": "text",
+                    "content": "Flip Effect is the effect that will be activated when a Flip Monster is flipped face-up."
+                }
+            ]
+        },
+        {
+            "indent": 1,
+            "id": "trigger-effects",
+            "title": "Trigger Effects",
+            "descriptions": 
+            [
+                {
+                    "type": "text",
+                    "content": "Trigger Effect is the effect that can be only activated when suitable trigger happens (when a monster is summoned, a card is activated, or a monster attacks...)."
+                }
+            ]
+        },
+        {
+            "indent": 1,
+            "id": "continuous-effects",
+            "title": "Continuos Effects",
+            "descriptions": 
+            [
+                {
+                    "type": "text",
+                    "content": "Continuous Effect don't need to be activated and can't be activated because it's treated to be alway available on the field."
+                }
+            ]
+        },
+        {
+            "indent": 1,
+            "id": "quick-effects",
+            "title": "Quick Effects",
+            "descriptions": 
+            [
+                {
+                    "type": "text",
+                    "content": "Quick Effect is a effect that can be activated during any Phases of turn."
+                }
+            ]
+        },
+        {
+            "indent": 0,
+            "id": "spell-speed-and-chain-link",
+            "title": "Spell Speed And Chain Link",
+            "descriptions": 
+            [
+                {
+                    "type": "text",
+                    "content": "Sometimes, there will be 2 or more cards or effects can be activated. So how we know which card can be activated first, and which card will resolve first."
+                }
+            ]
+        },
+        {
+            "indent": 1,
+            "id": "spell-speed",
+            "title": "Spell Speed",
+            "descriptions": 
+            [
+                {
+                    "type": "text",
+                    "content": "Spell Speed refer to how \"fast\" a card or effect can be. Cards or effects with lower Spell cannot be activated in response to the higher Spell Speed cards. <br><br> ● Spell Speed 1: The activation of Normal, Equip, Continuous, Field, Ritual Spell, or its effects and the activation of monsters' effects. <br> Cards or effects has Spell Speed 1 can't be activated in respond to other cards or effects activation, it means you can't activate 2 or more cards that have Spell Speed 1 at the same time. <br><br> ● Spell Speed 2: The activation of Normal, Continuous Traps, Quick-Play Spells or its effects and the activation of monsters' Quick Effects. <br> Cards or effects has Spell Speed 2 can be activated in respond to Spell Speed 2 and Spell Speed 1 cards or effects activation. <br><br> ● Spell Speed 3: Only the activations of Counter Traps has Spell Speed 3, of course it can be activated in respond to any other cards or effects activation. If 2 or more cards are activated in a row, it will create a Chain Link."
+                }
+            ]
+        },
+        {
+            "indent": 1,
+            "id": "chain-link",
+            "title": "Chain Link",
+            "descriptions": 
+            [
+                {
+                    "type": "text",
+                    "content": "When a cards or effects are activated consecutively, the first activated card is Chain Link 1, the second card is Chain Link 2,... Then, card with highest Chain Link will resolve first. <br><br> For example, your \"Mirror Force\" is activate first, then opponent's \"Solemn Judgement\" is activate second, and your \"Solemn Judgement\" is last. So your \"Solemn Judgement\" with Chain Link 3 will be resolves first."
+                },
+                {
+                    "type": "video",
+                    "content": "Activate Counter Trap"
+                }
+            ]
+        }
+    ]
+}

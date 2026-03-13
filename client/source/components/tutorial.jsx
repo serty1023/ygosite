@@ -9,7 +9,7 @@ function Tutorials()
 
     useEffect(() =>
     {
-        fetch("http://localhost:3000/interface/tutorials",
+        fetch(`http://localhost:3000/interface/tutorials/${language}`,
         {
             headers: {"access":"true"}
         })
