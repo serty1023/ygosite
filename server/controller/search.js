@@ -115,9 +115,13 @@ async function search(input,filterValue,mode)
             Pendulum_Scale = filterValue["Pendulum Scale"],
             Link_Rating = filterValue["Link-Rating"];
 
-        if (Attribute || Monster_Type || Monster_Card_Type || Monster_Sub_category || Level_Rank || Pendulum_Scale || Link_Rating)
+        if (Type || Attribute || Monster_Type || Monster_Card_Type || Monster_Sub_category || Level_Rank || Pendulum_Scale || Link_Rating)
         {
-            if (Type && (Type.includes("Spell") || Type.includes("Trap")))
+            if (Type && Type.length == 1)
+            {
+                cardData = cardData.filter(card => card.type.includes(Type));
+            }
+            else if (Type && Type.length != 1)
             {
                 cardData = [];
             };
