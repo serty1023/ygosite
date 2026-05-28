@@ -50,6 +50,7 @@ async function search(input,filterValue,mode)
 {
     let results = [];
     let cardData = await getCards();
+    let cardNumbers = cardData.length;
     if (mode == "matched-search")
     {
         if (input.length != 0)
@@ -104,7 +105,7 @@ async function search(input,filterValue,mode)
     }
     else if (mode == "filter-search")
     {
-        const 
+        const
             Type = filterValue.Type,
             Attribute = filterValue.Attribute,
             Spell_Trap_Icon = filterValue["Spell/Trap Icon"],
@@ -163,14 +164,6 @@ async function search(input,filterValue,mode)
                     cardData = cardData.filter(card => Link_Rating.includes(card.linkval));
                 };
             };
-        }
-        else
-        {
-            if (Type && Type.includes("Monster"))
-            {
-                cardData = [];
-            };
-            cardData = cardData.filter(card => Spell_Trap_Icon.every(icon => card.race.includes(icon)));
         };
 
         cardData.forEach(card => 
@@ -181,7 +174,7 @@ async function search(input,filterValue,mode)
             };
         });
     };
-    return [results,cardData.length];
+    return [results,cardNumbers];
 };
 
 module.exports = { search };

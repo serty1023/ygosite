@@ -203,6 +203,10 @@
         color: var(--gray);
         font-size: 175%;
     }
+    .current-page
+    {
+        color: var(--white-color);
+    }
 }
 
 .results
