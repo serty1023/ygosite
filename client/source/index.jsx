@@ -49,16 +49,17 @@ function Index()
             <Routes>
                 <Route path="/*" element={<Navigate to="/ygosite/home" replace/>}/>
                 <Route path="/ygosite/" element={<Navigate to="/ygosite/home" replace/>}/>
-                <Route path="/ygosite/search/*" element={<Navigate to="/ygosite/search?mode=matched-search" replace />}/>
+                <Route path="/ygosite/search/*" element={<Navigate to="/ygosite/search?mode=matched-search" replace/>}/>
                 <Route path="/ygosite" element={<NormalLayout/>}>
                     <Route path="home" element={<Introduction/>}/>
-                    <Route path="tutorial" element={<Tutorials/>}/>
+                    <Route path="tutorial" element={<Tutorials/>}>
+                    </Route>
                     <Route path="search" element={<Search/>}/>
                     <Route path="cards" element={<Card/>}/>
                     <Route path="decks" element={<Decks/>}/>
                     <Route path="decks/:id" element={<Deck/>}/>
                 </Route>
-                <Route path="/ygosite/" element={<EmptyLayout/>}>
+                <Route path="/ygosite" element={<EmptyLayout/>}>
                     <Route path="login" element={<LoginForm/>}/>
                     <Route path="register" element={<RegisterForm/>}/>
                 </Route>

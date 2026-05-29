@@ -1,11 +1,14 @@
 import { useState,useEffect,useContext } from "react";
 import { LanguageContext } from "./language";
+import { useParams } from "react-router-dom";
+import { Link } from "react-router-dom";
 import "../style/tutorial.css";
 
 function Tutorials()
 {
     const { language } = useContext(LanguageContext);
     const [tutorialsContent,getTutorialContent] = useState({});
+    const { section,page } = useParams();
 
     useEffect(() =>
     {
@@ -17,7 +20,7 @@ function Tutorials()
         .then(data => getTutorialContent(data))
     },[language]);
 
-    console.log(tutorialsContent.navigation);
+    const currentSection = tutorialsContent.navigation?.find(item => item.id == section);
 
     return (
     <>
@@ -26,16 +29,25 @@ function Tutorials()
             (
                 <>
                     <h1 key={index} className={part.id}>
-                        {part.title}
+                        <Link to={`/ygosite/tutorial/${part.id}`}>
+                            {part.title}
+                        </Link>
                     </h1>
                     {part.content?.map((content,index) =>    
                     (
                         <h2 key={index} className={content.id}>
-                            • {content.title}
+                            <Link to={`/ygosite/tutorial/${part.id}/${content.id}`}>
+                                • {content.title}
+                            </Link>
                         </h2>
                     ))}
                 </>
             ))}
+        </div>
+        <div className="tutorials">
+            {
+
+            }
         </div>
     </>);
 };
