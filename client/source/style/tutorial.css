@@ -18,6 +18,31 @@
     --white-color: rgb(0 0 0);
 }
 
+.navigation
+{
+    top: 75px;
+    left: 0;
+    position: fixed;
+    height: calc(100vh - 150px);
+    width: fit-content;
+    background-color: var(--gray);
+    h1, h2
+    {
+        margin: 0;
+        padding: 5px        
+    }
+    h1
+    {
+        font-size: 25px;
+        margin-left: 10px;
+    }
+    h2
+    {
+        font-size: 22px;
+        margin-left: 20px;
+    }
+}
+
 .tutorials
 {
     margin: 275px 0px 150px 0px;

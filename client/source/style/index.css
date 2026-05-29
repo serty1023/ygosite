@@ -30,6 +30,11 @@
     --white-color: rgb(0 0 0);
 }
 
+html
+{
+    overscroll-behavior: none;
+}
+
 body
 {
     background-color: black;

@@ -7,11 +7,6 @@
             "vietnamese": "Hướng Dẫn Chơi"
         },
         {
-            "path": "advanced_guide",
-            "english": "Advanced Guide",
-            "vietnamese": "Nâng Cao"
-        },
-        {
             "path": "search?mode=matched-search",
             "english": "Search",
             "vietnamese": "Tìm Kiếm"
