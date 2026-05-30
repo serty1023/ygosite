@@ -20,7 +20,19 @@ function Tutorials()
         .then(data => getTutorialContent(data))
     },[language]);
 
-    const currentSection = tutorialsContent.navigation?.find(item => item.id == section);
+    if (!section)
+    {
+        window.location.href = "/ygosite/tutorial/basic";
+    }
+    else if (tutorialsContent.tutorials && !tutorialsContent.tutorials[section])
+    {
+        window.location.href = "/ygosite/tutorial/basic";
+    };
+
+    if (page && tutorialsContent.tutorials?.[section] && !tutorialsContent.tutorials[section][page])
+    {
+        window.location.href = `/ygosite/tutorial/${section}`
+    };
 
     return (
     <>
@@ -46,7 +58,7 @@ function Tutorials()
         </div>
         <div className="tutorials">
             {
-
+                
             }
         </div>
     </>);

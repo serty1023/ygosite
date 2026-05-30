@@ -38,6 +38,20 @@
     ],
     "tutorials":
     {
-        
+        "basic":
+        {
+            "playmat":
+            {
+                "id": "playmat",
+                "title": "Playmat",
+                "content":
+                [
+                    {
+                        "type": "text",
+                        "text": "A Yu-gi-oh Duel is conducted on a playmat, like the following one:"
+                    }
+                ]
+            }
+        }
     }
 }
