@@ -52,8 +52,7 @@ function Index()
                 <Route path="/ygosite/search/*" element={<Navigate to="/ygosite/search?mode=matched-search" replace/>}/>
                 <Route path="/ygosite" element={<NormalLayout/>}>
                     <Route path="home" element={<Introduction/>}/>
-                    <Route path="tutorial" element={<Tutorials/>}>
-                    </Route>
+                    <Route path="tutorial/:section?/:page?" element={<Tutorials/>}/>
                     <Route path="search" element={<Search/>}/>
                     <Route path="cards" element={<Card/>}/>
                     <Route path="decks" element={<Decks/>}/>
