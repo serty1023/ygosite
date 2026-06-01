@@ -8,7 +8,8 @@
     "start:server": "cross-env developer=ON node --watch server/server.js",
     "dev-start:all": "cross-env developer=ON concurrently \"npm run start:server\" \"npm run start:client\"",
     "start:all": "cross-env developer=OFF concurrently \"npm run start:server\" \"npm run start:client\"",
-    "git-all": "git add . && git commit -m \"ygo\" && git push origin main"
+    "git-all": "git add . && git commit -m \"ygo\" && git push origin main",
+    "install:all": "npm install && cd server && npm install && cd ../client && npm install && cd .."
   },
   "keywords": [],
   "author": "",

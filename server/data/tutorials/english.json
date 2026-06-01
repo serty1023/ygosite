@@ -7,12 +7,12 @@
             "content":
             [
                 {
-                    "id": "playmat",
-                    "title": "Playmat"
-                },
-                {
                     "id": "decks",
                     "title": "Decks"
+                },
+                {
+                    "id": "playmat",
+                    "title": "Playmat"
                 }
             ]
         },
@@ -32,6 +32,99 @@
                 {
                     "id": "summoning",
                     "title": "Summoning"
+                },
+                {
+                    "id": "battle-mechanism",
+                    "title": "Battle Mechanism"
+                }
+            ]
+        },
+        {
+            "id": "monsters",
+            "title": "Monsters",
+            "content":
+            [
+                {
+                    "id": "normal-monsters",
+                    "title": "Normal Monsters"
+                },
+                {
+                    "id": "effect-monsters",
+                    "title": "Effect Monsters"
+                },
+                {
+                    "id": "ritual-monsters",
+                    "title": "Ritual Monsters"
+                },
+                {
+                    "id": "fusion-monsters",
+                    "title": "Fusion Monsters"
+                },
+                {
+                    "id": "synchro-monsters",
+                    "title": "Synchro Monsters"
+                },
+                {
+                    "id": "xyz-monsters",
+                    "title": "Xyz Monsters"
+                },
+                {
+                    "id": "pendulum-monsters",
+                    "title": "Pendulum Monsters"
+                },
+                {
+                    "id": "link-monsters",
+                    "title": "Link Monsters"
+                }
+            ]
+        },
+        {
+            "id": "spells",
+            "title": "Spells",
+            "content":
+            [
+                {
+                    "id": "normal-spells",
+                    "title": "Normal Spells"
+                },
+                {
+                    "id": "equip-spells",
+                    "title": "Equip Spells"
+                },
+                {
+                    "id": "ritual-spells",
+                    "title": "Ritual Spells"
+                },
+                {
+                    "id": "continuous-spells",
+                    "title": "Continuous Spells"
+                },
+                {
+                    "id": "field-spells",
+                    "title": "Field Spells"
+                },
+                {
+                    "id": "quick-play-spells",
+                    "title": "Quick-Play Spells"
+                }
+            ]
+        },
+        {
+            "id": "traps",
+            "title": "Traps",
+            "content":
+            [
+                {
+                    "id": "normal-traps",
+                    "title": "Normal Traps"
+                },
+                {
+                    "id": "continuous-traps",
+                    "title": "Continuous Traps"
+                },
+                {
+                    "id": "counter-traps",
+                    "title": "Counter Traps"
                 }
             ]
         }
@@ -40,6 +133,27 @@
     {
         "basic":
         {
+            "decks":
+            {
+                "id": "decks",
+                "title": "Decks",
+                "content":
+                [
+                    {
+                        "type": "text",
+                        "text":
+                        [
+                            "Before starting a Duel, you must have a deck(s). There are 3 kinds of decks:",
+                            "• Main Deck (must contain 40 - 60 cards): This deck contain all of your mainly used cards including Monsters, Spells, Traps,...",
+                            "• Extra Deck (must contain 0 - 15 cards): This deck contain monsters that can be only Special Summoned. Those monsters can bring a huge advantage to your tactics.",
+                            "• Side Deck (must contain 0 - 15 cards): For normal Duel, you don't need a Side Deck, but in standard Match which includes 3 Duels, after finish the first Duel, you will want to alter the contents of the Main Deck and Extra Deck to duel with opponent's deck(s). Therefor, you will need a Side Deck that contain cards which has special uses.",
+                            "Notice:",
+                            "Extra Deck and Side Deck are optional, so you can still play without them.",
+                            "After altering your Main Deck / Extra Deck, the number of cards in each decks must remain the same"
+                        ]
+                    }
+                ]
+            },
             "playmat":
             {
                 "id": "playmat",
@@ -48,7 +162,17 @@
                 [
                     {
                         "type": "text",
-                        "text": "A Yu-gi-oh Duel is conducted on a playmat, like the following one:"
+                        "text": 
+                        [
+                            "A Yu-gi-oh Duel is conducted on a playmat, like the following one:"
+                        ]
+                    },
+                    {
+                        "type": "large-image",
+                        "source":
+                        [
+                            "/source/images/playmat.png"
+                        ]
                     }
                 ]
             }

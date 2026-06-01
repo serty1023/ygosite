@@ -34,6 +34,13 @@ function Tutorials()
         window.location.href = `/ygosite/tutorial/${section}`
     };
 
+    let sectionData = tutorialsContent.tutorials?.[section],pageData;
+    if (page)
+    {
+        pageData = sectionData?.[page]
+    };
+    console.log(pageData);
+
     return (
     <>
         <div className="navigation">
@@ -57,9 +64,31 @@ function Tutorials()
             ))}
         </div>
         <div className="tutorials">
-            {
-                
-            }
+            {pageData?
+                <>
+                    <h1 id={pageData?.id}>
+                        {pageData?.title}
+                    </h1>
+                    {pageData?.content.map((item,index) =>
+                    {
+                        if (item.type == "text")
+                        {
+                            return item.text.map((text,i) => 
+                            (
+                                <h2 key={i}>
+                                    {text}
+                                </h2>
+                            ))
+                        }
+                        else if (item.type == "large-image")
+                        {
+                            return (<div className="large-img">
+                                <img src={item.source[0]} alt=""/>
+                            </div>)
+                        };
+                    })}
+                </>
+            :null}
         </div>
     </>);
 };

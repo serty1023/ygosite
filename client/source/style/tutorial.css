@@ -20,6 +20,7 @@
 
 .navigation
 {
+    overflow-y: auto;
     top: 75px;
     left: 0;
     position: fixed;
@@ -55,6 +56,25 @@
 .tutorials
 {
     margin: 275px 0px 150px 0px;
-    justify-self: center;
-    width: 70%;
+    margin-left: 75px;
+    width: 70vw;
+    h1
+    {
+        color: var(--light-gray);
+    }
+    h2
+    {
+        color: var(--gray);
+    }
+}
+
+.large-img
+{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    img
+    {
+        width: 60%;
+    }
 }
