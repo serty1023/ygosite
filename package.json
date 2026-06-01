@@ -5,9 +5,9 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start:client": "npm run dev --prefix client",
-    "start:server": "developer=ON node --watch server/server.js",
-    "dev-start:all": "developer=ON concurrently \"npm run start:server\" \"npm run start:client\"",
-    "start:all": "developer=OFF concurrently \"npm run start:server\" \"npm run start:client\"",
+    "start:server": "cross-env developer=ON node --watch server/server.js",
+    "dev-start:all": "cross-env developer=ON concurrently \"npm run start:server\" \"npm run start:client\"",
+    "start:all": "cross-env developer=OFF concurrently \"npm run start:server\" \"npm run start:client\"",
     "git-all": "git add . && git commit -m \"ygo\" && git push origin main"
   },
   "keywords": [],
@@ -15,6 +15,7 @@
   "license": "ISC",
   "description": "",
   "devDependencies": {
-    "concurrently": "^9.2.0"
+    "concurrently": "^9.2.0",
+    "cross-env": "^10.1.0"
   }
 }
