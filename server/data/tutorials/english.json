@@ -133,6 +133,8 @@
     {
         "basic":
         {
+            "id": "basic",
+            "title": "Basic",
             "decks":
             {
                 "id": "decks",

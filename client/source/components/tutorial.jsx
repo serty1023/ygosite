@@ -39,6 +39,8 @@ function Tutorials()
     {
         pageData = sectionData?.[page]
     };
+
+    console.log(sectionData);
     console.log(pageData);
 
     return (
@@ -66,18 +68,18 @@ function Tutorials()
         <div className="tutorials">
             {pageData?
                 <>
-                    <h1 id={pageData?.id}>
+                    <h2 className={pageData?.id}>
                         {pageData?.title}
-                    </h1>
-                    {pageData?.content.map((item,index) =>
+                    </h2>
+                    {pageData?.content.map(item =>
                     {
                         if (item.type == "text")
                         {
                             return item.text.map((text,i) => 
                             (
-                                <h2 key={i}>
+                                <h3 key={i}>
                                     {text}
-                                </h2>
+                                </h3>
                             ))
                         }
                         else if (item.type == "large-image")
@@ -88,7 +90,12 @@ function Tutorials()
                         };
                     })}
                 </>
-            :null}
+            :<>
+                <h1 className={sectionData?.id}>
+                    {sectionData?.title}
+                </h1>
+                {}
+            </>}
         </div>
     </>);
 };
