@@ -1,7 +1,7 @@
 import { useState,useEffect,useContext } from "react";
 import { LanguageContext } from "./language";
 import { useParams } from "react-router-dom";
-import { Link } from "react-router-dom";
+import { Link,Navigate } from "react-router-dom";
 import "../style/tutorial.css";
 
 function Tutorials()
@@ -22,16 +22,16 @@ function Tutorials()
 
     if (!section)
     {
-        window.location.href = "/ygosite/tutorial/basic";
+        return <Navigate to={"/ygosite/tutorial/basic"} replace/>
     }
     else if (tutorialsContent.tutorials && !tutorialsContent.tutorials[section])
     {
-        window.location.href = "/ygosite/tutorial/basic";
+        return <Navigate to={"/ygosite/tutorial/basic"} replace/>
     };
 
     if (page && tutorialsContent.tutorials?.[section] && !tutorialsContent.tutorials[section][page])
     {
-        window.location.href = `/ygosite/tutorial/${section}`
+        return <Navigate to={"/ygosite/tutorial/basic"} replace/>
     };
 
     let sectionData = tutorialsContent.tutorials?.[section],pageData;
@@ -39,7 +39,7 @@ function Tutorials()
     {
         pageData = sectionData?.[page]
     };
-
+    
     console.log(sectionData);
     console.log(pageData);
 
@@ -84,7 +84,8 @@ function Tutorials()
                         }
                         else if (item.type == "large-image")
                         {
-                            return (<div className="large-img">
+                            return (
+                            <div className="large-img">
                                 <img src={item.source[0]} alt=""/>
                             </div>)
                         };
@@ -94,7 +95,39 @@ function Tutorials()
                 <h1 className={sectionData?.id}>
                     {sectionData?.title}
                 </h1>
-                {}
+                {
+                    Object.entries(sectionData || {})
+                    .filter(([key]) => key != "id" && key != "title")
+                    .map(([key,value]) =>
+                    (
+                        <>
+                            <h2>
+                                {sectionData[key].title}
+                            </h2>
+                            {
+                                sectionData[key].content.map(item => 
+                                {
+                                    if (item.type == "text")
+                                    {
+                                        return item.text.map((text,i) =>
+                                        (
+                                            <h3 key={i}>
+                                                {text}
+                                            </h3>
+                                        ))
+                                    }
+                                    else if (item.type == "large-image")
+                                    {
+                                        return (
+                                        <div className="large-img">
+                                            <img src={item.source[0]} alt=""/>
+                                        </div>)
+                                    }
+                                })
+                            }
+                        </>
+                    ))
+                }
             </>}
         </div>
     </>);

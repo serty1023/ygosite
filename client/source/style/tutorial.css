@@ -58,6 +58,10 @@
     margin: 275px 0px 150px 0px;
     margin-left: 75px;
     width: 70vw;
+    h1
+    {
+        color: var(--white-color);
+    }
     h2
     {
         color: var(--light-gray);
