@@ -36,6 +36,10 @@
                 {
                     "id": "battle-mechanism",
                     "title": "Battle Mechanism"
+                },
+                {
+                    "id": "other-ways-to-win",
+                    "title": "Other Ways to Win"
                 }
             ]
         },
@@ -174,6 +178,121 @@
                         "source":
                         [
                             "/source/images/playmat.png"
+                        ]
+                    },
+                    {
+                        "type": "text",
+                        "text":
+                        [
+                            "Deck Zone & Extra Deck Zone: Each players have 2 zones to place their Main Deck and Extra Deck. For Side Deck, player can place it an anywhere else.",
+                            "Monster Zones: Where monsters are placed and battling.",
+                            "Spell & Trap Zones: Where spells, traps are placed and activated.",
+                            "Pendulum Zones: The leftmost and rightmost Spell & Trap Zones are also Pendulum Zones which used for placing Pendulum Monsters.",
+                            "Field Zone: The zone used for placing Field Spell.",
+                            "Graveyard Zone (GY): The zone of used, destroyed or discarded cards.",
+                            "Extra Monster Zones: Two player share 2 Extra Monster Zones, although Main Monster Zones can also hold monsters from Extra Deck, but for Link Monsters, those must be placed in Extra Monster Zones."
+                        ]
+                    }
+                ]
+            }
+        },
+        "gameplay":
+        {
+            "id": "gameplay",
+            "title": "Gameplay",
+            "main-goal":
+            {
+                "id": "main-goal",
+                "title": "Main Goal",
+                "content":
+                [
+                    {
+                        "type": "text",
+                        "text":
+                        [
+                            "Each player start with 8000 LP (Life Points). Whoever can reduce opponent's LP to 0 (by battling, or effects...) wins the Duel, if both players' LP become 0, it will be treated as a draw."
+                        ]
+                    }
+                ]
+            },
+            "phases":
+            {
+                "id": "phases",
+                "title": "Phases",
+                "content":
+                [
+                    {
+                        "type": "text",
+                        "text": 
+                        [
+                            "A player's turn will include the following phases:",
+                            "• Draw Phase: The turn player draw 1 cards from their Main Deck.",
+                            "• Standby Phase: A transitional phase between the Draw Phase and Main Phase 1.",
+                            "• Main Phase 1: The turn player can summon monster, activate or set spells, traps,...",
+                            "• Battle Phase: Battle Phase: During this phase, turn player's monsters can attack and battle with your opponent's monsters. Unlike other phases which player must enter, player can choose to skip the Battle Phase.",
+                            "• Main Phase 2: The same as Main Phase 1. If player skipped Battle Phase, the Main Phase 2 won't happen, of course...",
+                            "• End Phase: The turn ends."
+                        ]
+                    }
+                ]
+            },
+            "summoning":
+            {
+                "id": "summoning",
+                "title": "Summoning",
+                "content":
+                [
+                    {
+                        "type": "text",
+                        "text":
+                        [
+                            "There are 4 types of summoning in Yu-gi-oh:",
+                            "• Normal Summon: Place monster from hand to Main Monster Zones vertically and face-up."
+                        ]
+                    },
+                    {
+                        "type": "video",
+                        "source":
+                        [
+                            "/source/videos/Normal Summon.mp4"
+                        ]
+                    },
+                    {
+                        "type": "text",
+                        "text": 
+                        [
+                            "• Set: Place monster from hand to Main Monster Zones horizontally and face-down."
+                        ]
+                    },
+                    {
+                        "type": "video",
+                        "source":
+                        [
+                            "/source/videos/Normal Set.mp4"
+                        ]
+                    },
+                    {
+                        "type": "text",
+                        "text":
+                        [
+                            "• Flip Summon: When a monster is already Set, player can flip it up (place it vertically face-up in the same zone). But, a monster cannot be flipped in the turn it was Set."
+                        ]
+                    },
+                    {
+                        "type": "video",
+                        "source":
+                        [
+                            "/source/videos/Flip Summon.mp4"
+                        ]
+                    },
+                    {
+                        "type": "text",
+                        "text": 
+                        [
+                            "• Special Summon: A type of summon which requires a special method or under specific conditions (can be placed either vertically or horizontally, face-up or face-down, by default, special summoned monsters must be face-up).",
+                            "Notice:",
+                            "Player can only Normal Summon or Set 1 monster once per turn, but can Flip Summon as many as possible if there is enough Set monsters.",
+                            "There no limit for the times of Special Summon."
                         ]
                     }
                 ]

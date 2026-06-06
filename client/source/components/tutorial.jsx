@@ -88,6 +88,14 @@ function Tutorials()
                             <div className="large-img">
                                 <img src={item.source[0]} alt=""/>
                             </div>)
+                        }
+                        else if (item.type == "video")
+                        {
+                            return (
+                            <div className="video">
+                                <video src={item.source[0]} controls/>
+                            </div>
+                            )
                         };
                     })}
                 </>
@@ -123,6 +131,14 @@ function Tutorials()
                                             <img src={item.source[0]} alt=""/>
                                         </div>)
                                     }
+                                    else if (item.type == "video")
+                                    {
+                                        return (
+                                        <div className="video">
+                                            <video src={item.source[0]} controls/>
+                                        </div>
+                                        )
+                                    };
                                 })
                             }
                         </>
