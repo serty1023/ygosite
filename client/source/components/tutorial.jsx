@@ -106,7 +106,7 @@ function Tutorials()
                 {
                     Object.entries(sectionData || {})
                     .filter(([key]) => key != "id" && key != "title")
-                    .map(([key,value]) =>
+                    .map(([key]) =>
                     (
                         <>
                             <h2>

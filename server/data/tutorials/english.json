@@ -38,8 +38,8 @@
                     "title": "Battle Mechanism"
                 },
                 {
-                    "id": "other-ways-to-win",
-                    "title": "Other Ways to Win"
+                    "id": "ways-to-win",
+                    "title": "Ways to Win"
                 }
             ]
         },
@@ -293,6 +293,62 @@
                             "Notice:",
                             "Player can only Normal Summon or Set 1 monster once per turn, but can Flip Summon as many as possible if there is enough Set monsters.",
                             "There no limit for the times of Special Summon."
+                        ]
+                    }
+                ]
+            },
+            "battle-mechanism":
+            {
+
+                "id": "battle-mechanism",
+                "title": "Battle Mechanism",
+                "content":
+                [
+                    {
+                        "type": "text",
+                        "text": 
+                        [
+                            "First, let's learn about Battle Position - it is the way that monsters was placed in the field:",
+                            "• Attack Position: A monster is in Attack Position if it is placed vertically and face-up.",
+                            " Face-up Defense Position: A monster is in Face-up Defense Position if it is placed horizontally and face-up.",
+                            "• Face-down Defense Position: Monsters that was Set.",
+                            "Of course, a monster can't attack unless it is in Attack Position. When a monster attack another monster. There can be 3 situation:",
+                            "• If both are in Attack Position: Which monster with lower ATK will be destroyed (and sent to GY). The owner also lose LP equal to the ATK difference. If 2 monsters have the same ATK, both will be destroyed and players take no damage."
+                        ]
+                    },
+                    {
+                        "type": "video",
+                        "source":
+                        [
+                            "/source/videos/Attack-Attack.mp4"
+                        ]
+                    },
+                    {
+                        "type": "text",
+                        "text": 
+                        [
+                            "• If attacked monster is in face-up Defense Position: If attacking monster's ATK is less than attacked monster's DEF, it won't be destroyed, but the owner still lose LP equal to difference. If attacked monster's DEF less than attacking monster's ATK, it will be destroyed, but the owner won't lose any LP."
+                        ]
+                    },
+                    {
+                        "type": "video",
+                        "source": 
+                        [
+                            "/source/videos/Attack-Defense 1.mp4"
+                        ]
+                    },
+                    {
+                        "type": "text",
+                        "text": 
+                        [
+                            "● If attacked monster is in face-down Defense Position: It must first be changed to face-up Defense Position, the rules will be apllied like the same above."
+                        ]
+                    },
+                    {
+                        "type": "video",
+                        "source":
+                        [
+                            "/source/videos/Attack-Defense 2.mp4"
                         ]
                     }
                 ]
