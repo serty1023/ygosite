@@ -334,7 +334,7 @@
                         "type": "video",
                         "source": 
                         [
-                            "/source/videos/Attack-Defense 1.mp4"
+                            "/source/videos/Attack-Defense-1.mp4"
                         ]
                     },
                     {
@@ -348,7 +348,45 @@
                         "type": "video",
                         "source":
                         [
-                            "/source/videos/Attack-Defense 2.mp4"
+                            "/source/videos/Attack-Defense-2.mp4"
+                        ]
+                    },
+                    {
+                        "type": "text",
+                        "text":
+                        [
+                            "Notice:",
+                            "A monster can only attack once per turn. While opponent control no monster, it can attack them directly and make them take damage equal to its ATK."
+                        ]
+                    }
+                ]
+            },
+            "ways-to-win":
+            {
+                "id": "ways-to-win",
+                "title":"Ways to Win",
+                "content":
+                [
+                    {
+                        "type": "text",
+                        "text":
+                        [
+                            "To reduce opponent's LP to 0, beside battling, there are some ways to do that:",
+                            "• Using Spells and Traps: Some spells and traps have effect to deal damage directly to opponent."
+                        ]
+                    },
+                    {
+                        "type": "large-image",
+                        "source":
+                        [
+                            "/source/images/hinotama.png"
+                        ]
+                    },
+                    {
+                        "type": "text",
+                        "text": 
+                        [
+                            "• By monster effect: "
                         ]
                     }
                 ]
