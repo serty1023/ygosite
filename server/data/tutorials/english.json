@@ -49,6 +49,10 @@
             "content":
             [
                 {
+                    "id": "monster-card",
+                    "title": "Monster Card"
+                },
+                {
                     "id": "normal-monsters",
                     "title": "Normal Monsters"
                 },
@@ -372,21 +376,114 @@
                         "text":
                         [
                             "To reduce opponent's LP to 0, beside battling, there are some ways to do that:",
-                            "• Using Spells and Traps: Some spells and traps have effect to deal damage directly to opponent."
+                            "• Using Spells and Traps: Some spells and traps have effect to deal damage directly to opponent.",
+                            "• By monster effect: Some monsters also have effects to deal damage to opponent."
                         ]
                     },
                     {
-                        "type": "large-image",
+                        "type": "medium-image",
                         "source":
                         [
-                            "/source/images/hinotama.png"
+                            "/source/images/hinotama.png",
+                            "/source/images/cannon-soldier.png"
                         ]
                     },
                     {
                         "type": "text",
                         "text": 
                         [
-                            "• By monster effect: "
+                            "• Special Victory: Some card have special effects that can make player win when they meet its certain conditions."
+                        ]
+                    },
+                    {
+                        "type": "small-image",
+                        "source": 
+                        [
+                            "/source/images/right-arm-of-the-forbidden-one.png",
+                            "/source/images/exodia-the-forbidden-one.png",
+                            "/source/images/left-arm-of-the-forbidden-one.png"
+                        ]
+                    },
+                    {
+                        "type": "small-image",
+                        "source":
+                        [
+                            "/source/images/right-leg-of-the-forbidden-one.png",
+                            "/source/images/left-leg-of-the-forbidden-one.png"
+                        ]
+                    }
+                ]
+            }
+        },
+        "monsters":
+        {
+            "id": "monsters",
+            "title": "Monsters",
+            "monster-card":
+            {
+                "id": "monster-card",
+                "title": "Monster Card",
+                "content":
+                [
+                    {
+                        "type": "text",
+                        "text": 
+                        [
+                            "A normal Monster Card will include:",
+                            "• Card Name",
+                            "• Attribute - There are 7 attributes:"
+                        ]
+                    },
+                    {
+                        "type": "icon",
+                        "content": 
+                        [
+                            {
+                                "source": "/source/images/DARK.png",
+                                "text": ""
+                            },
+                            {
+                                "source": "/source/images/LIGHT.png",
+                                "text": ""
+                            },
+                            {
+                                "source": "/source/images/FIRE.png",
+                                "text": ""
+                            },
+                            {
+                                "source": "/source/images/WATER.png",
+                                "text": ""
+                            },
+                            {
+                                "source": "/source/images/EARTH.png",
+                                "text": ""
+                            },
+                            {
+                                "source": "/source/images/WIND.png",
+                                "text": ""
+                            },
+                            {
+                                "source": "/source/images/DIVINE.png",
+                                "text": ""
+                            }
+                        ]
+                    },
+                    {
+                        "type": "text",
+                        "text": 
+                        [
+                            "• Level (1 - 12): For monster that is Level 4 or lower, you can Normal Summon or Set it without Tributing (sent other monsters from field to GY) but for Level 5 / 6 monsters, you need Tributing 1 monster you control to Normal Summon/Set it (also called Tribute Summon). For Level 7 or higher monsters, you need tributing 2.",
+                            "• Monster Image",
+                            "• Monster Type",
+                            "• Description (or Effect)",
+                            "• ATK and DEF"
+                        ]
+                    },
+                    {
+                        "type": "large-image",
+                        "source": 
+                        [
+                            "/source/images/Monster Card.png"
                         ]
                     }
                 ]

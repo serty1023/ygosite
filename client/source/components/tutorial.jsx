@@ -86,16 +86,56 @@ function Tutorials()
                         {
                             return (
                             <div className="large-img">
-                                <img src={item.source[0]} alt=""/>
+                                {item.source.map((source, i) => 
+                                (
+                                    <img key={i} src={source}/>
+                                ))}
+                            </div>)
+                        }
+                        else if (item.type == "medium-image")
+                        {
+                            return (
+                            <div className="medium-img">
+                                {item.source.map((source, i) => 
+                                (
+                                    <img key={i} src={source}/>
+                                ))}
+                            </div>)
+                        }
+                        else if (item.type == "small-image")
+                        {
+                            return (
+                            <div className="small-img">
+                                {item.source.map((source, i) => 
+                                (
+                                    <img key={i} src={source}/>
+                                ))}
                             </div>)
                         }
                         else if (item.type == "video")
                         {
                             return (
                             <div className="video">
-                                <video src={item.source[0]} controls/>
-                            </div>
-                            )
+                                {item.source.map((source, i) => 
+                                (
+                                    <video key={i} src={source} controls/>
+                                ))}
+                            </div>)
+                        }
+                        else if (item.type == "icon")
+                        {
+                            return (
+                            <div className="icons">
+                                {item.content.map((c,i) => 
+                                (
+                                    <div key={i} className="icon">
+                                        <img src={c.source} alt=""/>
+                                        <h4>
+                                            {c.text}
+                                        </h4>
+                                    </div>
+                                ))}
+                            </div>)
                         };
                     })}
                 </>
@@ -128,16 +168,56 @@ function Tutorials()
                                     {
                                         return (
                                         <div className="large-img">
-                                            <img src={item.source[0]} alt=""/>
+                                            {item.source.map((source, i) => 
+                                            (
+                                                <img key={i} src={source}/>
+                                            ))}
+                                        </div>)
+                                    }
+                                    else if (item.type == "medium-image")
+                                    {
+                                        return (
+                                        <div className="medium-img">
+                                            {item.source.map((source, i) => 
+                                            (
+                                                <img key={i} src={source}/>
+                                            ))}
+                                        </div>)
+                                    }
+                                    else if (item.type == "small-image")
+                                    {
+                                        return (
+                                        <div className="small-img">
+                                            {item.source.map((source, i) => 
+                                            (
+                                                <img key={i} src={source}/>
+                                            ))}
                                         </div>)
                                     }
                                     else if (item.type == "video")
                                     {
                                         return (
                                         <div className="video">
-                                            <video src={item.source[0]} controls/>
-                                        </div>
-                                        )
+                                            {item.source.map((source, i) => 
+                                            (
+                                                <video key={i} src={source} controls/>
+                                            ))}
+                                        </div>)
+                                    }
+                                    else if (item.type == "icon")
+                                    {
+                                        return (
+                                        <div className="icons">
+                                            {item.content.map((c,i) => 
+                                            (
+                                                <div key={i} className="icon">
+                                                    <img src={c.source} alt=""/>
+                                                    <h4>
+                                                        {c.text}
+                                                    </h4>
+                                                </div>
+                                            ))}
+                                        </div>)
                                     };
                                 })
                             }
