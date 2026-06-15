@@ -15,7 +15,7 @@ interfaceRouter.get("/interface", developerCheck, (request,response) =>
 interfaceRouter.get("/interface/:name", developerCheck, (request,response) =>
 {
     const { name } = request.params;
-    const data = {header,introduction,search_options,filterbar,card_layout,footer};
+    const data = {header,introduction,search_options,filterbar,card_layout};
     if (data[name])
     {
         response.json( data[name][name] );

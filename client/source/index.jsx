@@ -8,7 +8,6 @@ import Search from "./components/search.jsx";
 import Card from "./components/card.jsx";
 import LoginForm from "./components/login.jsx";
 import RegisterForm from "./components/register.jsx";
-import Footer from "./components/footer.jsx";
 
 const routesPath =
 [
@@ -25,7 +24,6 @@ function NormalLayout()
     <>
         <Header/>
         <Outlet/>
-        <Footer/>
     </>);
 };
 
