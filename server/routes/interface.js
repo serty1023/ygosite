@@ -5,12 +5,11 @@ const introduction = require("../data/introduction.json");
 const search_options = require("../data/search_options.json");
 const filterbar = require("../data/filterbar.json");
 const card_layout = require("../data/card_layout.json");
-const footer = require("../data/footer.json");
 const developerCheck = require("../controller/authorize");
 
 interfaceRouter.get("/interface", developerCheck, (request,response) =>
 {
-    response.json( {header,introduction,search_options,filterbar,card_layout,footer} );
+    response.json( {header,introduction,search_options,filterbar,card_layout} );
 });
 
 interfaceRouter.get("/interface/:name", developerCheck, (request,response) =>

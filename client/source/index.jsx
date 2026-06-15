@@ -6,8 +6,6 @@ import Introduction from "./components/introduction.jsx";
 import Tutorials from "./components/tutorial.jsx";
 import Search from "./components/search.jsx";
 import Card from "./components/card.jsx";
-import Decks from "./components/decks.jsx";
-import Deck from "./components/deck.jsx";
 import LoginForm from "./components/login.jsx";
 import RegisterForm from "./components/register.jsx";
 import Footer from "./components/footer.jsx";
@@ -55,8 +53,6 @@ function Index()
                     <Route path="tutorial/:section?/:page?" element={<Tutorials/>}/>
                     <Route path="search" element={<Search/>}/>
                     <Route path="cards" element={<Card/>}/>
-                    <Route path="decks" element={<Decks/>}/>
-                    <Route path="decks/:id" element={<Deck/>}/>
                 </Route>
                 <Route path="/ygosite" element={<EmptyLayout/>}>
                     <Route path="login" element={<LoginForm/>}/>

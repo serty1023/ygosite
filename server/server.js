@@ -4,7 +4,6 @@ const searchRouter = require("./routes/searchRouter.js");
 const loginRouter = require("./routes/loginRouter.js");
 const registerRouter = require("./routes/registerRouter.js");
 const interfaceRouter = require("./routes/interface.js");
-const deckRouter = require("./routes/deckRouter.js");
 const userRouter = require("./routes/userRouter.js");
 
 const cors = require("cors");
@@ -26,7 +25,6 @@ application.use("/search",searchRouter);
 application.use("/login",loginRouter);
 application.use("/register",registerRouter);
 application.use("/",interfaceRouter);
-application.use("/",deckRouter);
 application.use("/",userRouter);
 
 application.listen(3000 , () =>
