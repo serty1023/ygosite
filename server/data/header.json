@@ -7,9 +7,9 @@
             "vietnamese": "Hướng Dẫn Chơi"
         },
         {
-            "path": "search?mode=matched-search",
-            "english": "Search",
-            "vietnamese": "Tìm Kiếm"
+            "path": "card_search?mode=matched-search",
+            "english": "Card Search",
+            "vietnamese": "Tìm Kiếm Lá Bài"
         }
     ]
 }

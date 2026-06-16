@@ -1,9 +1,18 @@
-import { useState } from "react";
+import { useState,useContext } from "react";
+import { LanguageContext } from "./language";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCaretLeft, faCaretRight } from "@fortawesome/free-solid-svg-icons";
 
+const found =
+{
+    english: ["Found" , "cards"],
+    vietnamese: ["Tìm thấy" , "lá bài"]
+}
+
 function Results({ posted,results,total }) 
 {
+    const { language } = useContext(LanguageContext)
+
     const [page, setPage] = useState(1);
 
     const pageSize = 27;
@@ -93,7 +102,7 @@ function Results({ posted,results,total })
             {posted && 
             (
                 <h1>
-                    Found {results.length}/{total} cards
+                    {found[language][0]} {results.length}/{total} {found[language][1]}
                 </h1>
             )}
 

@@ -1,6 +1,6 @@
 const express = require("express");
 
-const searchRouter = require("./routes/searchRouter.js");
+const cardSearchRouter = require("./routes/cardSearchRouter.js");
 const loginRouter = require("./routes/loginRouter.js");
 const registerRouter = require("./routes/registerRouter.js");
 const interfaceRouter = require("./routes/interface.js");
@@ -21,7 +21,7 @@ application.use(cors(
 application.use(express.json());
 application.use(favicon(path.join(__dirname,"icon.png")))
 
-application.use("/search",searchRouter);
+application.use("/card_search",cardSearchRouter);
 application.use("/login",loginRouter);
 application.use("/register",registerRouter);
 application.use("/",interfaceRouter);

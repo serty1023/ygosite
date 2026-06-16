@@ -2,21 +2,11 @@ import { BrowserRouter as Router,Routes,Route,Outlet,Navigate } from "react-rout
 import Title from "./components/title.jsx";
 import Header from "./components/header.jsx";
 import EmptyHeader from "./components/emptyheader.jsx";
-import Introduction from "./components/introduction.jsx";
 import Tutorials from "./components/tutorial.jsx";
-import Search from "./components/search.jsx";
+import CardSearch from "./components/card_search.jsx";
 import Card from "./components/card.jsx";
 import LoginForm from "./components/login.jsx";
 import RegisterForm from "./components/register.jsx";
-
-const routesPath =
-[
-    "home",
-    "tutorial",
-    "search",
-    "cards",
-    "decks"
-]
 
 function NormalLayout()
 {
@@ -47,9 +37,9 @@ function Index()
                 <Route path="/ygosite/" element={<Navigate to="/ygosite/home" replace/>}/>
                 <Route path="/ygosite/search/*" element={<Navigate to="/ygosite/search?mode=matched-search" replace/>}/>
                 <Route path="/ygosite" element={<NormalLayout/>}>
-                    <Route path="home" element={<Introduction/>}/>
+                    <Route path="home" element={<div></div>}/>
                     <Route path="tutorial/:section?/:page?" element={<Tutorials/>}/>
-                    <Route path="search" element={<Search/>}/>
+                    <Route path="card_search" element={<CardSearch/>}/>
                     <Route path="cards" element={<Card/>}/>
                 </Route>
                 <Route path="/ygosite" element={<EmptyLayout/>}>

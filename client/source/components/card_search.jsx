@@ -3,7 +3,7 @@ import { useState,useEffect,useContext } from "react";
 import { LanguageContext } from "./language.jsx";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMagnifyingGlass,faQuoteLeft,faQuoteRight,faGears,faFilter } from "@fortawesome/free-solid-svg-icons";
-import "../style/search.css";
+import "../style/card_search.css";
 import Filterbar from "./filterbar.jsx";
 import Results from "./results.jsx";
 
@@ -21,14 +21,14 @@ const modeList =
     "filter-search"
 ];
 
-function Search()
+function CardSearch()
 {
     const { language } = useContext(LanguageContext);
     const [searchbarContent,getSearchbarContent] = useState([]);
 
     useEffect(() =>
     {
-        fetch("http://localhost:3000/interface/search_options",
+        fetch("http://localhost:3000/interface/card_search_options",
         {
             headers: {"access":"true"}
         })
@@ -59,7 +59,7 @@ function Search()
         try 
         {
             searchingState(true);
-            const response = await fetch("http://localhost:3000/search",
+            const response = await fetch("http://localhost:3000/card_search",
             {
                 method: "POST",
                 headers: 
@@ -97,12 +97,12 @@ function Search()
     {
         setInputValue([]);
         setFilterValue([]);
-        navigate(`/ygosite/search?mode=${mode}`);
+        navigate(`/ygosite/card_search?mode=${mode}`);
     };
 
     if (!modeList.includes(mode))
     {
-        navigate("/ygosite/search?mode=matched-search");
+        navigate("/ygosite/card_search?mode=matched-search");
     };
 
     return (
@@ -169,4 +169,4 @@ function Search()
     </>);
 };
 
-export default Search;
+export default CardSearch;

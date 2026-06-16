@@ -51,20 +51,6 @@ body
     background-color: var(--dark-gray);
 }
 
-.introduction
-{
-    width: 55%;
-    justify-self: center;
-    margin-top: auto;
-    p
-    {
-        font-size: 150%;
-        line-height: 150%;
-        text-align: center;
-        color: var(--light-gray);
-    }
-}
-
 .data-container
 {
     background-color: var(--light-black);
