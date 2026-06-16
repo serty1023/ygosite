@@ -1,0 +1,74 @@
+.dark
+{
+    --black-color: rgb(0 0 0);
+    --dark-gray: rgb(50 50 50);
+    --light-black: rgb(75 75 75);
+    --gray: rgb(150 150 150);
+    --light-gray: rgb(200 200 200);
+    --white-color: rgb(255 255 255);
+}
+
+.light
+{
+    --black-color: rgb(255 255 255);
+    --dark-gray: rgb(205 205 205);
+    --light-black: rgb(180 180 180);
+    --gray: rgb(105 105 105);
+    --light-gray: rgb(55 55 55);
+    --white-color: rgb(0 0 0);
+}
+
+.homepage
+{
+    background-color: white;
+    margin-top: 10vh;
+    height: 80vh;
+    width: 90vw;
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    grid-template-rows: repeat(4,18.5vh);
+    gap: 2vh;
+    .item
+    {
+        transition: 0.25s;
+    }
+    .item:hover
+    {
+        scale: 1.05;
+    }
+    img
+    {
+        width: 100%;
+    }
+}
+
+.how-to-play
+{
+    position: relative;
+    grid-column: span 3;
+    grid-row: span 2;
+    .background
+    {
+        height: 25%;
+        width: 100%;
+        position: absolute;
+        background-color: var(--light-black);
+        opacity: 0.75;
+        bottom: 0px;
+    }
+    .title
+    {
+        height: 25%;
+        width: 100%;
+        position: absolute;
+        bottom: 0px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        h1
+        {
+            margin: 0px;
+            color: var(--white-color);
+        }
+    }
+}

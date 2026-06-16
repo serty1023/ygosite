@@ -27,7 +27,7 @@
     width: 100%;
     background-color: var(--black-color);
     display: flex;
-    border-radius: 0 0 15px 15px;
+    border-radius: 0 0 15px 0px;
 }
 
 .logo-container

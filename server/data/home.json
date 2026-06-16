@@ -1,0 +1,25 @@
+{
+    "home":
+    {
+        "how_to_play":
+        {
+            "path": "tutorial/basic",
+            "title": 
+            {
+                "english": "How To Play",
+                "vietnamese": "Hướng Dẫn Chơi"
+            },
+            "image_source": "/source/images/playmat.png"
+        },
+        "card_search":
+        {
+            "path": "card_search?mode=matched-search",
+            "title":
+            {
+                "english": "Card Search",
+                "vietnamese": "Tìm Kiếm Lá Bài"
+            },
+            "image_source": ""
+        }
+    }
+}
