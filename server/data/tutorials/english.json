@@ -487,6 +487,115 @@
                         ]
                     }
                 ]
+            },
+            "normal-monsters":
+            {
+                "id": "normal-monsters",
+                "title": "Normal Monsters",
+                "content":
+                [
+                    {
+                        "type": "text",
+                        "text":
+                        [
+                            "Normal Monster is monster card with no effects and can be Normal Summon, which mean its description doesn't affect to the gameplay. Normal Monster Card is yellow colored, like this one:"
+                        ]
+                    },
+                    {
+                        "type": "medium-image",
+                        "source":
+                        [
+                            "/source/images/Normal Monster.png"
+                        ]
+                    },
+                    {
+                        "type": "text",
+                        "text":
+                        [
+                            "Notice:",
+                            "Not every monster that has no effects is Normal Monster. It must have the word \"Normal\" in its type, if not, it will be called \"non-Effect Monster\"."
+                        ]
+                    }
+                ]
+            },
+            "effect-monsters":
+            {
+                "id": "effect-monsters",
+                "title": "Effect Monsters",
+                "content":
+                [
+                    {
+                        "type": "text",
+                        "text": 
+                        [
+                            "Effect monster is monster that has special abilites (effects). Effect Monster Card is brown colored."
+                        ]
+                    },
+                    {
+                        "type": "medium-image",
+                        "source":
+                        [
+                            "/source/images/Effect Monster.png"
+                        ]
+                    },
+                    {
+                        "type": "text",
+                        "text":
+                        [
+                            "This card's description says it couldnot be destroyed by battle with monster that has 1900 or more ATK. Which mean if this card attack (or be attacked by) a monster with 1900+ ATK, it won't be destroyed, but the owner still take the battle damage."
+                        ]
+                    }
+                ]
+            },
+            "ritual-monsters":
+            {
+                "id": "ritual-monsters",
+                "title": "Ritual Monsters",
+                "content":
+                [
+                    {
+                        "type": "text",
+                        "text":
+                        [
+                            "Ritual monster is monster that can be Special Summon (from hand) by using Ritual Spell and tributing monsters whose total Level equal or exceed to the Level of Ritual monster. Of course, this method of summoning is called \"Ritual Summon\". Ritual Monster Card is light-blue colored."
+                        ]
+                    },
+                    {
+                        "type": "medium-image",
+                        "source":
+                        [
+                            "/source/images/Ritual Monster.png",
+                            "/source/images/Ritual Spell.png"
+                        ]
+                    },
+                    {
+                        "type": "text",
+                        "text":
+                        [
+                            "To Ritual Summon, the player must activate Ritual Spell first, then sent the monsters (called \"materials\") from field and/or hand to the GY, then placed the Ritual Monster from hand to the field."
+                        ]
+                    },
+                    {
+                        "type": "video",
+                        "source":
+                        [
+                            "/source/videos/Ritual Summon.mp4"
+                        ]
+                    },
+                    {
+                        "type": "text",
+                        "text":
+                        [
+                            "Notice:",
+                            "Ritual Monster Card is inside the Main Deck, which mean player has to draw it before can summon it.",
+                            "All materials must be face-up before being sent to GY."
+                        ]
+                    }
+                ]
+            },
+            "fusion-monsters":
+            {
+                
             }
         }
     }

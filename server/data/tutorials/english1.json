@@ -221,7 +221,7 @@
             [
                 {
                     "type": "text",
-                    "content": "Effect Monster is monster card with special effects, which are described in its desription. And in its information is text \"Effect\"."
+                    "content": "Effect Monster is monster card with special effects, which are described in its description. And in its information is text \"Effect\"."
                 },
                 {
                     "type": "image",

@@ -30,6 +30,8 @@
     .item
     {
         transition: 0.25s;
+        border-radius: 15px;
+        border: 1px solid var(--white-color);
     }
     .item:hover
     {
@@ -37,8 +39,10 @@
     }
     img
     {
-        overflow: hidden;
+        border-radius: 15px;
+        height: 100%;
         width: 100%;
+        object-fit: cover;
     }
 }
 
@@ -57,6 +61,7 @@
 
 .title-background
 {
+    border-radius: 0px 0px 15px 15px;
     height: 25%;
     width: 100%;
     position: absolute;
