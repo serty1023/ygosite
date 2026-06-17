@@ -54,14 +54,14 @@
     display: flex;
     align-items: center;
     gap: 5%;
-    a
+    h1
     {
         text-decoration: none;
         color: var(--white-color);
         font-size: 125%;
         font-weight: bold;
     }
-    a::after
+    h1::after
     {
         content: "";
         display: flex;
@@ -72,11 +72,12 @@
         transform: scale(0,0);
         transition: all ease 0.3s;
     }
-    a:hover
+    h1:hover
     {
+        cursor: pointer;
         color: var(--light-black);
     }
-    a:hover:after
+    h1:hover:after
     {
         transform: scale(1,1);                   
     }
@@ -91,14 +92,14 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    a
+    h1
     {
         text-decoration: none;
         color: var(--gray);
         font-size: 125%;
         font-weight: bold;
     }
-    a:hover
+    h1:hover
     {
         cursor: pointer;
         color: var(--light-gray);

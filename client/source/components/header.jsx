@@ -1,4 +1,5 @@
 import { useState,useEffect,useContext } from "react";
+import { useNavigate } from "react-router-dom";
 import { LanguageContext } from "./language.jsx";
 import LanguageSwitcher from "./language_switcher.jsx";
 import ThemeSwitcher from "./theme_switcher.jsx";
@@ -22,6 +23,7 @@ function Header()
 {
     const { language } = useContext(LanguageContext);
     const [headerContent,getHeaderContent] = useState([]);
+    const navigate = useNavigate();
 
     useEffect(() =>
     {
@@ -39,7 +41,7 @@ function Header()
     {
         if (login == "0")
         {
-            window.location.href = "/ygosite/login"
+            navigate("/ygosite/login")
         }
         else
         {
@@ -57,15 +59,15 @@ function Header()
             <div className="menu">
                 {headerContent.map((item,index) =>
                 (
-                    <a key={index} href={`/ygosite/${item.path}`}>
+                    <h1 key={index} onClick={() => navigate(`/ygosite/${item.path}`)}>
                         {item[language]}
-                    </a>
+                    </h1>
                 ))}
             </div>
             <div className="login">
-                <a onClick={() => sign()}>
+                <h1 onClick={() => sign()}>
                     {loginText[language][login]}
-                </a>
+                </h1>
             </div>
             <LanguageSwitcher/>
             <ThemeSwitcher/>

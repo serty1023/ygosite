@@ -30,7 +30,7 @@ function Filterbar( {filterValue,setFilterValue} )
             {filterbarContent.map((bar,index) =>
             (
                 <div key={index} className="bar">
-                    <div className="title">
+                    <div className="search-option-title">
                         <h1>
                             {bar.title[language]}
                         </h1>

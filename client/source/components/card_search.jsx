@@ -111,7 +111,7 @@ function CardSearch()
             {searchbarContent.map((option,index) =>
             (
                 <div key={index} className={`${option.mode} ${option.mode == mode ? "light-gray" : ""}`} onClick={() => modeSwitch(option.mode)}>
-                    <div className="title">
+                    <div className="mode-title">
                         {option.mode == "matched-search" ? 
                         <>
                             <FontAwesomeIcon icon={faMagnifyingGlass} style={{transform: "scaleX(-1)"}}/>

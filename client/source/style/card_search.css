@@ -44,7 +44,7 @@
             text-align: center;
             font-weight: bold;
         }
-        .title
+        .mode-title
         {
             width: fit-content;
             display: flex;
@@ -61,7 +61,7 @@
     {
         cursor: pointer;
         background-color: var(--light-gray);
-        .title
+        .mode-title
         {
             background-color: var(--light-gray);
         }
@@ -70,7 +70,7 @@
     {
         background-color: var(--light-gray);
         pointer-events: none;
-        .title
+        .mode-title
         {
             background-color: var(--light-gray);
         }
@@ -130,7 +130,7 @@
 .bar
 {
     display: flex;
-    .title
+    .search-option-title
     {
         width: 25%;
         display: flex;
