@@ -76,6 +76,15 @@
     {
         color: var(--light-gray);
     }
+    .small-link
+    {
+        color: var(--light-gray);
+        text-decoration: none;
+    }
+    .small-link:hover
+    {
+        color: var(--white-color);
+    }
 }
 
 .large-img

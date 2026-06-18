@@ -39,9 +39,6 @@ function Tutorials()
     {
         pageData = sectionData?.[page]
     };
-    
-    console.log(sectionData);
-    console.log(pageData);
 
     return (
     <>
@@ -76,11 +73,26 @@ function Tutorials()
                         if (item.type == "text")
                         {
                             return item.text.map((text,i) => 
-                            (
+                            {
+                                const parts = text.split(/(\[\{.*?\}\])/g);
+                                
+                                return (
                                 <h3 key={i}>
-                                    {text}
-                                </h3>
-                            ))
+                                    {parts.map((part,i) => 
+                                    {
+                                        const match = part.match(/\[\{(.*?)\|(.*?)\}\]/);
+
+                                        if (match)
+                                        {
+                                            return (
+                                            <Link className="small-link" to={`/ygosite/tutorial/${match[2]}`}>
+                                                {match[1]}
+                                            </Link>)
+                                        }
+
+                                        return part
+                                    })}
+                                </h3>)})
                         }
                         else if (item.type == "large-image")
                         {
@@ -157,12 +169,27 @@ function Tutorials()
                                 {
                                     if (item.type == "text")
                                     {
-                                        return item.text.map((text,i) =>
-                                        (
+                                        return item.text.map((text,i) => 
+                                        {
+                                            const parts = text.split(/(\[\{.*?\}\])/g);
+                                            
+                                            return (
                                             <h3 key={i}>
-                                                {text}
-                                            </h3>
-                                        ))
+                                                {parts.map((part,i) => 
+                                                {
+                                                    const match = part.match(/\[\{(.*?)\|(.*?)\}\]/);
+            
+                                                    if (match)
+                                                    {
+                                                        return (
+                                                        <Link className="small-link" to={`/ygosite/tutorial/${match[2]}`}>
+                                                            {match[1]}
+                                                        </Link>)
+                                                    }
+            
+                                                    return part
+                                                })}
+                                            </h3>)})
                                     }
                                     else if (item.type == "large-image")
                                     {
