@@ -550,7 +550,9 @@
                         "type": "text",
                         "text":
                         [
-                            "This card's description says it couldnot be destroyed by [{battle|gameplay/battle-mechanism}] with monster that has 1900 or more ATK. Which mean if this card attacks (or is attacked by) a monster with 1900+ ATK, it won't be destroyed, but the owner still take the [{battle damage|gameplay/battle-mechanism}]."
+                            "This card's description says it couldnot be destroyed by [{battle|gameplay/battle-mechanism}] with monster that has 1900 or more ATK. Which mean if this card attacks (or is attacked by) a monster with 1900+ ATK, it won't be destroyed, but the owner still take the [{battle damage|gameplay/battle-mechanism}].",
+                            "Notice:",
+                            "A [{Ritual|monsters/ritual-monsters}] / [{Fusion|monsters/fusion-monsters}] / [{Synchro|monsters/synchro-monsters}] / [{Xyz|monsters/xyz-monsters}] monster can also be an Effect monster."
                         ]
                     }
                 ]
@@ -772,6 +774,32 @@
                         "text":
                         [
                             "Pendulum monster is a very unique type of monster. It look like a combination of [{Spell|spells}] and [{Monster|monsters}]. The upper half of Pendulum Monster Card frame is green colored (like a [{spell|spells}]) while the lower half is colored like the type of [{monsters|monsters}]."
+                        ]
+                    },
+                    {
+                        "type": "small-image",
+                        "source":
+                        [
+                            "/source/images/Normal Pendulum Monster.png",
+                            "/source/images/Effect Pendulum Monster.png",
+                            "/source/images/Ritual Pendulum Monster.png"
+                        ]
+                    },
+                    {
+                        "type": "small-image",
+                        "source":
+                        [
+                            "/source/images/Fusion Pendulum Monster.png",
+                            "/source/images/Synchro Pendulum Monster.png",
+                            "/source/images/Xyz Pendulum Monster.png"
+                        ]
+                    },
+                    {
+                        "type": "text",
+                        "text":
+                        [
+                            "Pendulum monsters will be placed in [{Extra Deck|basic/decks}] or Main Deck depends on its type of monster. For example, if it was [{Fusion|monsters/fusion-monsters}] / [{Synchro|monsters/synchro-monsters}] / [{Xyz|monsters/xyz-monsters}], it will be inside the [{Extra Deck|basic/decks}], if it was [{Normal|monsters/normal-monsters}] or [{Ritual|monsters/ritual-monsters}], it will be inside the [{Main Deck|basic/decks}].",
+                            "If we look at the card, we can see that Pendulum Monster Cards have an additional description called \"Pendulum Effect\". By default, those effects cannot be used"
                         ]
                     }
                 ]
