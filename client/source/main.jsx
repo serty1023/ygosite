@@ -11,9 +11,7 @@ if (!login || (login != "0" && login != "1"))
     localStorage.setItem("login","0");
 };
 
-const params = new URLSearchParams(window.location.search);
-const cardID = params.get("id");
-export { login,cardID };
+export { login };
 
 createRoot(document.getElementById("blank")).render(
     <StrictMode>

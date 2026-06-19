@@ -47,14 +47,14 @@ function Tutorials()
             (
                 <>
                     <h1 key={index} className={part.id}>
-                        <Link to={`/ygosite/tutorial/${part.id}`}>
+                        <Link className={`${section == part.id && !page ? "active" : ""}`} to={`/ygosite/tutorial/${part.id}`}>
                             {part.title}
                         </Link>
                     </h1>
                     {part.content?.map((content,index) =>    
                     (
                         <h2 key={index} className={content.id}>
-                            <Link to={`/ygosite/tutorial/${part.id}/${content.id}`}>
+                            <Link className={`${page == content.id ? "active" : ""}`} to={`/ygosite/tutorial/${part.id}/${content.id}`}>
                                 • {content.title}
                             </Link>
                         </h2>
@@ -74,21 +74,29 @@ function Tutorials()
                         {
                             return item.text.map((text,i) => 
                             {
-                                const parts = text.split(/(\[\{.*?\}\])/g);
+                                const parts = text.split(/(\[\{.*?\}\]|\{\[.*?]\})/g);
                                 
                                 return (
                                 <h3 key={i}>
                                     {parts.map((part,i) => 
                                     {
-                                        const match = part.match(/\[\{(.*?)\|(.*?)\}\]/);
+                                        const linkWord = part.match(/\[\{(.*?)\|(.*?)\}\]/);
+                                        const linkCard = part.match(/\{\[(.*?)\|(.*?)\]\}/);
 
-                                        if (match)
+                                        if (linkWord)
                                         {
                                             return (
-                                            <Link className="small-link" to={`/ygosite/tutorial/${match[2]}`}>
-                                                {match[1]}
+                                            <Link to={`/ygosite/tutorial/${linkWord[2]}`}>
+                                                {linkWord[1]}
                                             </Link>)
-                                        }
+                                        };
+                                        if (linkCard)
+                                        {
+                                            return (
+                                            <Link to={linkCard[2]}>
+                                                {linkCard[1]}
+                                            </Link>)
+                                        };
 
                                         return part
                                     })}
@@ -177,17 +185,25 @@ function Tutorials()
                                             <h3 key={i}>
                                                 {parts.map((part,i) => 
                                                 {
-                                                    const match = part.match(/\[\{(.*?)\|(.*?)\}\]/);
-            
-                                                    if (match)
+                                                    const linkWord = part.match(/\[\{(.*?)\|(.*?)\}\]/);
+                                                    const linkCard = part.match(/\{\[(.*?)\|(.*?)\]\}/);
+
+                                                    if (linkWord)
                                                     {
                                                         return (
-                                                        <Link className="small-link" to={`/ygosite/tutorial/${match[2]}`}>
-                                                            {match[1]}
+                                                        <Link to={`/ygosite/tutorial/${linkWord[2]}`}>
+                                                            {linkWord[1]}
                                                         </Link>)
-                                                    }
-            
-                                                    return part
+                                                    };
+                                                    if (linkCard)
+                                                    {
+                                                        return (
+                                                        <Link to={linkCard[2]}>
+                                                            {linkCard[1]}
+                                                        </Link>)
+                                                    };
+
+                                                    return part;
                                                 })}
                                             </h3>)})
                                     }

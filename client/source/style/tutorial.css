@@ -26,15 +26,15 @@
     position: fixed;
     height: calc(100vh - 80px);
     width: fit-content;
-    background-color: var(--light-black);
+    background-color: var(--dark-gray);
     a
     {
-        color: var(--light-gray);
+        color: var(--gray);
         text-decoration: none;
     }
     a:hover
     {
-        color: var(--gray);
+        color: var(--light-gray);
     }
     h1,h2
     {
@@ -50,6 +50,14 @@
     {
         font-size: 22px;
         margin-left: 20px;
+    }
+    .active
+    {
+        color: white
+    }
+    .active:hover
+    {
+        color: var(--light-gray);
     }
 }
 
@@ -76,12 +84,12 @@
     {
         color: var(--light-gray);
     }
-    .small-link
+    a
     {
         color: var(--light-gray);
         text-decoration: none;
     }
-    .small-link:hover
+    a:hover
     {
         color: var(--white-color);
     }

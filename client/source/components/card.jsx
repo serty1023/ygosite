@@ -1,14 +1,18 @@
 import { useState,useEffect,useContext } from "react";
+import { useSearchParams } from "react-router-dom";
 import { LanguageContext } from "./language.jsx";
-import { cardID } from "../main";
 import "../style/index.css";
 
 function Card()
 {
     const { language } = useContext(LanguageContext);
+    const [searchParams] = useSearchParams();
     const [card,getCardContent] = useState([]);
     const [cardLayout,getCardLayout] = useState([]);
     const [loading,setLoading] = useState(true);
+
+    const cardID = searchParams.get("id");
+
 
     useEffect(() =>
     {
@@ -20,8 +24,10 @@ function Card()
         .then(data => getCardLayout(data[language]))
     },[language]);
 
+
     useEffect(() =>
     {
+        if (!cardID) return;
         async function getCard()
         {
             try
@@ -43,7 +49,7 @@ function Card()
         };
 
         getCard();
-    },[]);
+    },[cardID]);
 
     if (loading) return;
 

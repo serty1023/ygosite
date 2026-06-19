@@ -1,15 +1,19 @@
-import { useLocation } from "react-router-dom";
+import { useLocation,useSearchParams } from "react-router-dom";
 import { useEffect,useState } from "react";
-import { cardID } from "../main.jsx";
 
 function Title()
 {
     const [card,getCardContent] = useState([]);
     const [loading,setLoading] = useState(true);
     const location = useLocation();
+    const [searchParams] = useSearchParams();
+
+    const cardID = searchParams.get("id")
 
     async function getCard()
     {
+        if (!cardID) return;
+
         try
         {
             const data = await (await fetch("https://db.ygoprodeck.com/api/v7/cardinfo.php?id=" + cardID)).json();
