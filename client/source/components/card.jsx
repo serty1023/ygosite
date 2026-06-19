@@ -7,8 +7,8 @@ function Card()
 {
     const { language } = useContext(LanguageContext);
     const [searchParams] = useSearchParams();
-    const [card,getCardContent] = useState([]);
-    const [cardLayout,getCardLayout] = useState([]);
+    const [card,getCardContent] = useState(null);
+    const [cardLayout,getCardLayout] = useState(null);
     const [loading,setLoading] = useState(true);
 
     const cardID = searchParams.get("id");
@@ -23,7 +23,6 @@ function Card()
         .then(response => response.json())
         .then(data => getCardLayout(data[language]))
     },[language]);
-
 
     useEffect(() =>
     {
@@ -51,7 +50,7 @@ function Card()
         getCard();
     },[cardID]);
 
-    if (loading) return;
+    if (loading || !cardLayout) return;
 
     card.desc = card.desc.replace(/(\r\n|\n|\r)/g,"<br>");
 

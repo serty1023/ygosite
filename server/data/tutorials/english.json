@@ -611,7 +611,7 @@
                         "type": "text",
                         "text":
                         [
-                            "Fusion monster is type of monster can be [{Special Summoned|gameplay/summoning}] (Fusion Summoned) from [{Extra Deck|basic/decks}] by using a [{spell|spells}] card called \"{[Polymerization|/ygosite/cards?id=24094653]}\" (or \"Fusion\"), then send its set of materials which list in the card description from field and/or hand to GY. Fusion Monster Card frame is violet colored."
+                            "Fusion monster is type of monster can be [{Special Summoned|gameplay/summoning}] (Fusion Summoned) from [{Extra Deck|basic/decks}] by using a [{spell|spells}] card called \"{[Polymerization|/ygosite/cards?id=24094653]}\" (or \"[{Fusion|search:fusion}]\"), then send its set of materials which list in the card description from field and/or hand to GY. Fusion Monster Card frame is violet colored."
                         ]
                     },
                     {

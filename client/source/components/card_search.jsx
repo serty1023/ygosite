@@ -1,4 +1,4 @@
-import { useNavigate,useSearchParams } from "react-router-dom";
+import { useNavigate,useLocation,useSearchParams } from "react-router-dom";
 import { useState,useEffect,useContext } from "react";
 import { LanguageContext } from "./language.jsx";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -42,10 +42,15 @@ function CardSearch()
     const [total,getTotal] = useState([])
     const [posted,postedCheck] = useState(false);
     const [searching,searchingState] = useState(false);
+
     const postInput = async (event) =>
     {
         event.preventDefault();
 
+        await cardSearch(inputValue);
+    };
+    async function cardSearch(input)
+    {
         const filter = filterValue.reduce((acc,cur) =>
         {
             if (!acc[cur.title])
@@ -68,7 +73,7 @@ function CardSearch()
                 },
                 body: JSON.stringify(
                 {
-                    input:inputValue,
+                    input:input,
                     filterValue:filter,
                     mode
                 }),
@@ -90,6 +95,7 @@ function CardSearch()
     };
 
     const [searchParams] = useSearchParams();
+    const location = useLocation();
     const mode = searchParams.get("mode");
     const navigate = useNavigate();
 
@@ -104,6 +110,17 @@ function CardSearch()
     {
         navigate("/ygosite/card_search?mode=matched-search");
     };
+
+    useEffect(() =>
+    {
+        const keyword = location.state?.input;
+
+        if (!keyword) return;
+
+        setInputValue(keyword);
+        
+        cardSearch(keyword);
+    },[location.state]);
 
     return (
     <>

@@ -85,6 +85,17 @@ function Tutorials()
 
                                         if (linkWord)
                                         {
+                                            if (linkWord[2].startsWith("search:"))
+                                            {
+                                                const keyword = linkWord[2].slice(7);
+
+                                                return (
+                                                <Link 
+                                                to={"/ygosite/card_search?mode=matched-search"}
+                                                state={{ input:keyword }}>
+                                                    {linkWord[1]}
+                                                </Link>)
+                                            };
                                             return (
                                             <Link to={`/ygosite/tutorial/${linkWord[2]}`}>
                                                 {linkWord[1]}
