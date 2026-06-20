@@ -104,7 +104,7 @@ function Tutorials()
                                         if (linkCard)
                                         {
                                             return (
-                                            <Link to={linkCard[2]}>
+                                            <Link to={`/ygosite/cards?id=${linkCard[2]}`}>
                                                 {linkCard[1]}
                                             </Link>)
                                         };
@@ -220,7 +220,7 @@ function Tutorials()
                                                     if (linkCard)
                                                     {
                                                         return (
-                                                        <Link to={linkCard[2]}>
+                                                        <Link to={`/ygosite/cards?id=${linkCard[2]}`}>
                                                             {linkCard[1]}
                                                         </Link>)
                                                     };

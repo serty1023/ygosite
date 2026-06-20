@@ -34,8 +34,8 @@
                     "title": "Summoning"
                 },
                 {
-                    "id": "battle-mechanism",
-                    "title": "Battle Mechanism"
+                    "id": "battle-mechanics",
+                    "title": "Battle Mechanics"
                 },
                 {
                     "id": "ways-to-win",
@@ -167,6 +167,7 @@
                             "• Side Deck (must contain 0 - 15 cards): For normal Duel, you don't need a Side Deck, but in standard Match which includes 3 Duels, after finish the first Duel, you will want to alter the contents of the Main Deck and Extra Deck to duel with opponent's deck(s). Therefore, you will need a Side Deck that contain cards which has special uses.",
                             "Notice:",
                             "Extra Deck and Side Deck are optional, so you can still play without them.",
+                            "Every card in Extra Deck cannot exist in hand or Main Deck and must be returned to Extra Deck in those cases.",
                             "After altering your Main Deck / Extra Deck, the number of cards in each decks must remain the same"
                         ]
                     }
@@ -197,7 +198,7 @@
                         "text":
                         [
                             "Deck Zone & Extra Deck Zone: Each players have 2 zones to place their Main Deck and Extra Deck. For Side Deck, player can place it an anywhere else.",
-                            "[{Monster|monsters}] Zones: Where [{monsters|monsters}] are placed and [{battling|gameplay/battle-mechanism}].",
+                            "[{Monster|monsters}] Zones: Where [{monsters|monsters}] are placed and [{battling|gameplay/battle-mechanics}].",
                             "[{Spell|spells}] & [{Trap|traps}] Zones: Where [{spells|spells}], [{traps|traps}] are placed and activated.",
                             "Pendulum Zones: The leftmost and rightmost [{Spell|spells}] & [{Trap|traps}] are also Pendulum Zones which used for placing [{Pendulum Monsters|monsters/pendulum-monsters}].",
                             "Field Zone: The zone used for placing [{Field Spell|spells/field-spells}].",
@@ -222,7 +223,7 @@
                         "type": "text",
                         "text":
                         [
-                            "Each player start with 8000 LP (Life Points). Whoever can reduce opponent's LP to 0 (by [{battling|gameplay/battle-mechanism}], or effects...) wins the Duel, if both players' LP become 0, it will be treated as a draw."
+                            "Each player start with 8000 LP (Life Points). Whoever can reduce opponent's LP to 0 (by [{battling|gameplay/battle-mechanics}], or effects...) wins the Duel, if both players' LP become 0, it will be treated as a draw."
                         ]
                     }
                 ]
@@ -241,7 +242,7 @@
                             "• Draw Phase: The turn player draw 1 cards from their [{Main Deck|basic/decks}].",
                             "• Standby Phase: A transitional phase between the Draw Phase and Main Phase 1.",
                             "• Main Phase 1: The turn player can summon [{monster|monsters}], activate or set [{spells|spells}], [{traps|traps}],...",
-                            "• [{Battle|gameplay/battle-mechanism}] Phase: [{Battle|gameplay/battle-mechanism}] Phase: During this phase, turn player's monsters can attack and [{battle|gameplay/battle-mechanism}] with your opponent's monsters. Unlike other phases which player must enter, player can choose to skip the [{Battle|gameplay/battle-mechanism}] Phase.",
+                            "• [{Battle|gameplay/battle-mechanics}] Phase: [{Battle|gameplay/battle-mechanics}] Phase: During this phase, turn player's monsters can attack and [{battle|gameplay/battle-mechanics}] with your opponent's monsters. Unlike other phases which player must enter, player can choose to skip the [{Battle|gameplay/battle-mechanics}] Phase.",
                             "• Main Phase 2: The same as Main Phase 1. If player skipped Battle Phase, the Main Phase 2 won't happen, of course...",
                             "• End Phase: The turn ends."
                         ]
@@ -309,11 +310,11 @@
                     }
                 ]
             },
-            "battle-mechanism":
+            "battle-mechanics":
             {
 
-                "id": "battle-mechanism",
-                "title": "Battle Mechanism",
+                "id": "battle-mechanics",
+                "title": "Battle Mechanics",
                 "content":
                 [
                     {
@@ -322,7 +323,7 @@
                         [
                             "First, let's learn about Battle Position - it is the way that [{monsters|monsters}] was placed in the field:",
                             "• Attack Position: A [{monster|monsters}] is in Attack Position if it is placed vertically and face-up.",
-                            "Face-up Defense Position: A [{monster|monsters}] is in Face-up Defense Position if it is placed horizontally and face-up.",
+                            "• Face-up Defense Position: A [{monster|monsters}] is in Face-up Defense Position if it is placed horizontally and face-up.",
                             "• Face-down Defense Position: [{Monsters|monsters}] that was Set.",
                             "Of course, a [{monster|monsters}] can't attack unless it is in Attack Position. When a [{monster|monsters}] attack another [{monster|monsters}]. There can be 3 situation:",
                             "• If both are in Attack Position: Which [{monster|monsters}] with lower ATK will be destroyed (and sent to [{GY|basic/playmat}]). The owner also lose LP equal to the ATK difference. If 2 [{monsters|monsters}] have the same ATK, both will be destroyed and players take no damage."
@@ -383,7 +384,7 @@
                         "type": "text",
                         "text":
                         [
-                            "To reduce opponent's LP to 0, beside [{battling|gameplay/battle-mechanism}], there are some ways to do that:",
+                            "To reduce opponent's LP to 0, beside [{battling|gameplay/battle-mechanics}], there are some ways to do that:",
                             "• Using [{Spells|spells}] and [{Traps|traps}]: Some [{spells|spells}] and [{traps|traps}] have effect to deal damage directly to opponent.",
                             "• By [{monster's effects|monsters/effect-monsters}]: Some [{monsters|monsters}] also have effects to deal damage to opponent."
                         ]
@@ -480,7 +481,7 @@
                         "type": "text",
                         "text": 
                         [
-                            "• Level (1 - 12): For monster that is Level 4 or lower, you can [{Normal Summon|gameplay/summoning}] or [{Set|gameplay/summoning}] it without Tributing (sent other monsters from field to [{GY|basic/playmat}]) but for Level 5 / 6 monsters, you need Tributing 1 monster you control to [{Normal Summon|gameplay/summoning}]/[{Set|gameplay/summoning}] it (also called Tribute Summon). For Level 7 or higher monsters, you need tributing 2.",
+                            "• Level (1 - 12): For monster that is Level 4 or lower, you can [{Normal Summon|gameplay/summoning}] or [{Set|gameplay/summoning}] it without Tributing (remove other monsters from field) but for Level 5 / 6 monsters, you need Tributing 1 monster you control to [{Normal Summon|gameplay/summoning}]/[{Set|gameplay/summoning}] it (also called Tribute Summon). For Level 7 or higher monsters, you need tributing 2.",
                             "• Monster Image",
                             "• Monster Type",
                             "• Description (or Effect)",
@@ -492,6 +493,14 @@
                         "source": 
                         [
                             "/source/images/Monster Card.png"
+                        ]
+                    },
+                    {
+                        "type": "text",
+                        "text": 
+                        [
+                            "Notice:",
+                            "By default, tributed [{monsters|monsters}] will be sent to [{GY|basic/playmat}]."
                         ]
                     }
                 ]
@@ -550,9 +559,9 @@
                         "type": "text",
                         "text":
                         [
-                            "This card's description says it couldnot be destroyed by [{battle|gameplay/battle-mechanism}] with monster that has 1900 or more ATK. Which mean if this card attacks (or is attacked by) a monster with 1900+ ATK, it won't be destroyed, but the owner still take the [{battle damage|gameplay/battle-mechanism}].",
+                            "This card's description says it couldnot be destroyed by [{battle|gameplay/battle-mechanics}] with monster that has 1900 or more ATK. Which mean if this card attacks (or is attacked by) a monster with 1900+ ATK, it won't be destroyed, but the owner still take the [{battle damage|gameplay/battle-mechanics}].",
                             "Notice:",
-                            "A [{Ritual|monsters/ritual-monsters}] / [{Fusion|monsters/fusion-monsters}] / [{Synchro|monsters/synchro-monsters}] / [{Xyz|monsters/xyz-monsters}] monster can also be an Effect monster."
+                            "A [{Ritual|monsters/ritual-monsters}] / [{Fusion|monsters/fusion-monsters}] / [{Synchro|monsters/synchro-monsters}] / [{Xyz|monsters/xyz-monsters}] / [{Link|monsters/link-monsters}] monster can also be an Effect monster."
                         ]
                     }
                 ]
@@ -567,7 +576,7 @@
                         "type": "text",
                         "text":
                         [
-                            "Ritual monster is monster that can be [{Special Summon|gameplay/summoning}] (from hand) by using [{Ritual Spell|spells/ritual-spells}] and send monsters (from field and/or hand to [{GY|basic/playmat}]) whose total Level equal or exceed to the Level of Ritual monster. Of course, this method of summoning is called \"Ritual Summon\". Ritual Monster Card frame is light-blue colored."
+                            "Ritual monster is monster that can be [{Special Summon|gameplay/summoning}] (from hand) by using [{Ritual Spell|spells/ritual-spells}] and remove monsters (from field and/or hand]) whose total Level equal or exceed to the Level of Ritual monster. Of course, this method of summoning is called \"Ritual Summon\". Ritual Monster Card frame is light-blue colored."
                         ]
                     },
                     {
@@ -582,7 +591,7 @@
                         "type": "text",
                         "text":
                         [
-                            "To Ritual Summon, the player must activate [{Ritual Spell|spells/ritual-spells}] first, then sent the monsters (called \"materials\") from field and/or hand to the [{GY|basic/playmat}], then placed the Ritual Monster from hand to the field."
+                            "To Ritual Summon, the player must activate [{Ritual Spell|spells/ritual-spells}] first, then sent the monsters (called \"materials\") from field and/or hand to the [{GY|basic/playmat}] (by default), then placed the Ritual Monster from hand to the field."
                         ]
                     },
                     {
@@ -598,7 +607,7 @@
                         [
                             "Notice:",
                             "Ritual Monster Card is inside the [{Main Deck|basic/decks}], which mean player has to draw it before can summon it.",
-                            "If a material is on the field, it must be face-up before being sent to [{GY|basic/playmat}]. If a material is on the hand, it must be revealed before being sent to [{GY|basic/playmat}]."
+                            "If a monster is on the field, it must be face-up before being used as material. If a monster is on the hand, it must be revealed before being used as material."
                         ]
                     }
                 ]
@@ -613,7 +622,7 @@
                         "type": "text",
                         "text":
                         [
-                            "Fusion monster is type of monster can be [{Special Summoned|gameplay/summoning}] (Fusion Summoned) from [{Extra Deck|basic/decks}] by using a [{spell|spells}] card called \"{[Polymerization|/ygosite/cards?id=24094653]}\" (or \"[{Fusion|search:fusion}]\"), then send its set of materials which list in the card description from field and/or hand to GY. Fusion Monster Card frame is violet colored."
+                            "Fusion monster is type of monster can be [{Special Summoned|gameplay/summoning}] (Fusion Summoned) from [{Extra Deck|basic/decks}] by using a [{spell|spells}] card called \"{[Polymerization|24094653]}\" (or \"[{Fusion|search:fusion}]\"), then remove its set of materials which list in the card description from field and/or hand. Fusion Monster Card frame is violet colored."
                         ]
                     },
                     {
@@ -628,7 +637,7 @@
                         "type": "text",
                         "text":
                         [
-                            "Look at this card description, it require 3 \"Blue-Eyes White Dragon\", which mean the player must send 3 copies \"Blue-Eyes White Dragon\" from field and/or hand to GY after activating the \"Polymerization\"."
+                            "Look at this card description, it require 3 \"Blue-Eyes White Dragon\", which mean the player must send 3 copies \"Blue-Eyes White Dragon\" from field and/or hand to [{GY|basic/playmat}] (by default) after activating the \"Polymerization\"."
                         ]
                     },
                     {
@@ -643,7 +652,7 @@
                         "text": 
                         [
                             "Notice:",
-                            "If a material is on the field, it must be face-up before being sent to GY. If a material is on the hand, it must be revealed before being sent to GY."
+                            "If a monster is on the field, it must be face-up before being used as material. If a monster is on the hand, it must be revealed before being used as material."
                         ]
                     }
                 ]
@@ -658,7 +667,7 @@
                         "type": "text",
                         "text":
                         [
-                            "Synchro monster can be Special Summoned (Synchro Summoned) from Extra Deck to the field by sending monsters from the field whose total Level is exactly equal to the Level of Synchro monster to GY. But, Synchro Summon require an unique type of monster called \"Tuner\". Synchro Monster Card frame is white colored while Tuner is just sub-type of monster and doesn't has its own frame color."
+                            "Synchro monster can be Special Summoned (Synchro Summoned) from Extra Deck to the field by remove monsters from the field whose total Level is exactly equal to the Level of Synchro monster. But, Synchro Summon require an unique type of monster called \"Tuner\". Synchro Monster Card frame is white colored while Tuner is just sub-type of monster and doesn't has its own frame color."
                         ]
                     },
                     {
@@ -673,7 +682,7 @@
                         "type": "text",
                         "text":
                         [
-                            "To Synchro Summon, the player just need send all materials to GY, then place the Synchro monster to the field. Like the card above, the player need exactly 1 Tuner monster and 1 or more non-Tuner monsters."
+                            "To Synchro Summon, the player just need to send all materials to [{GY|basic/playmat}] (by default), then place the Synchro monster to the field. Like the card above, the player need exactly 1 Tuner monster and 1 or more non-Tuner monsters."
                         ]
                     },
                     {
@@ -688,7 +697,7 @@
                         "text": 
                         [
                             "Notice:",
-                            "All materials must be face-up before being sent to GY."
+                            "All monsters must be face-up before being used as materials."
                         ]
                     }
                 ]
@@ -757,8 +766,8 @@
                         "text":
                         [
                             "Notice:",
-                            "All materials must be face-up before being sent to GY. After Xyz Summon, they will no longer be not treated \"are on the field\". Also when they are detached, it won't be treated as \"leave the field\".",
-                            "If a Xyz Monster leave the field, all materials will be sent to GY, but like above, it won't be treated as \"leave the field\"."
+                            "All monsters must be face-up before being used as materials. After Xyz Summon, they will no longer be not treated \"are on the field\". Also when they are detached, it won't be treated as \"leave the field\".",
+                            "If a Xyz Monster leaves the field, all materials will be sent to GY, but like above, it won't be treated as \"leave the field\"."
                         ]
                     }
                 ]
@@ -799,7 +808,106 @@
                         "text":
                         [
                             "Pendulum monsters will be placed in [{Extra Deck|basic/decks}] or Main Deck depends on its type of monster. For example, if it was [{Fusion|monsters/fusion-monsters}] / [{Synchro|monsters/synchro-monsters}] / [{Xyz|monsters/xyz-monsters}], it will be inside the [{Extra Deck|basic/decks}], if it was [{Normal|monsters/normal-monsters}] or [{Ritual|monsters/ritual-monsters}], it will be inside the [{Main Deck|basic/decks}].",
-                            "If we look at the card, we can see that Pendulum Monster Cards have an additional description called \"Pendulum Effect\". By default, those effects cannot be used"
+                            "A Pendulum monster can be used as a [{spell|spells}] or [{monster|monsters}] depends on where it is placed:",
+                            "• As a [{Spell|spells}]: By placing Pendulum monster in a [{Pendulum Zone|basic/playmat}], it will treated as activating a [{spell|spells}] and also it will be treated as a [{spell|spells}].",
+                            "If we look at the card, we can see that Pendulum Monster Cards have an additional description called \"Pendulum Effect\". While being placed in [{Pendulum Zones|basic/playmat}], the player can only use those effect of the card."
+                        ]
+                    },
+                    {
+                        "type": "video",
+                        "source":
+                        [
+                            "/source/videos/Pendulum Scale.mp4"
+                        ]
+                    },
+                    {
+                        "type": "text",
+                        "text": 
+                        [
+                            "• As a Monster: The player still can Normal Summon / Set / Flip or Special Summon a Pendulum Monster like a monster. In that case, Pendulum Effect cannot be used.",
+                            "All Pendulum Monsters has a special mechanics: If it would be sent from field to [{GY|basic/playmat}], it is placed face-up on top of the Extra Deck instead (but if it was sent from hand or [{Deck|basic/decks}], it still goes to [{GY|basic/playmat}])."
+                        ]
+                    },
+                    {
+                        "type": "video",
+                        "source":
+                        [
+                            "/source/videos/Pendulum Monster Leaves The Field.mp4"
+                        ]
+                    },
+                    {
+                        "type": "text",
+                        "text":
+                        [
+                            "For examply: If we tribute a pendulum monster to summon another monster, that pendulum monsters will go to Extra Deck.",
+                            "• Pendulum Summon:",
+                            "To Pendulum Summon, first, the player need to have 2 Pendulum monsters in [{Pendulum Zones|basic/playmat}]. Then, look at the \"Pendulum Scale\" on the card (the blue and red crystal) of both cards. If both Pendulum Scales are different (like 1 and 8). it will create a Pendulum Scale Range.",
+                            "Now, the player can special summon any number of monsters from hand and/or any number of face-up Pendulum monsters in Extra Deck whose Level are in Pendulum Scale Range but not equal to the lowest and highest values which means if Pendulum Scale Range is 1 - 8, the player can summon monsters from Level 2 - 7."
+                        ]
+                    },
+                    {
+                        "type": "video",
+                        "source":
+                        [
+                            "/source/videos/Pendulum Summon.mp4"
+                        ]
+                    },
+                    {
+                        "type": "text",
+                        "text":
+                        [
+                            "Notice:",
+                            "If there is an effect that makes cards {[go to other places instead of GY|11448373]}, it will overwrite the mechanics of pendulum monsters.",
+                            "A monster doesn't need to be a pendulum monster to be Pendulum Summoned.",
+                            "For Xyz Pendulum Monsters, cause they [{don't have the Level|monsters/xyz-monsters}], they cannot be Pendulum Summoned by normal ways.",
+                            "All monsters summoned from hand must be placed in [{Main Monster Zone|basic/playmat}] while all monsters summoned from Extra Deck must be placed in [{Extra Monster Zone|basic/playmat}].",
+                            "Although the player has 2 [{Extra Monster Zone|basic/playmat}], but one of them can be used (for each player)."
+                        ]
+                    }
+                ]
+            },
+            "link-monsters":
+            {
+                "id": "link-monsters",
+                "title": "Link Monsters",
+                "content":
+                [
+                    {
+                        "type": "text",
+                        "text": 
+                        [
+                            "Link Monster can be easily Link Summoned by remove monsters from field (like [{Synchro Monster|monsters/synchro-monsters}]) but it needs to be placed in [{Extra Monster Zone|basic/playmat}]. Link Monster Card frame is dark-blue colored.",
+                            "Like [{Xyz Monster|monsters/xyz-monsters}], Link Monster doesn't have the Level and moreover, it doesn't have the stars. Instead, it has 8 arrows around the card image, some will be red colored and called \"Link Rating\"."
+                        ]
+                    },
+                    {
+                        "type": "medium-image",
+                        "source":
+                        [
+                            "/source/images/Link Monster.png"
+                        ]
+                    },
+                    {
+                        "type": "text",
+                        "text": 
+                        [
+                            "Link Monster's DEF will be replaced by \"Link-n\" when n is equal to its Link Rating. Therefore, a Link Monster cannot be placed in [{Defense Position|gameplay/battle-mechanics}].",
+                            "To Link Summon, the player will need to remove a nummber of monsters equal to the Link Rating of Link Monsters. Like the card above, it has Link-3 and the card description says \"2+ Effect Monsters\" which means player need to 3 materials and atleast 2 of them must be Effect monsters."
+                        ]
+                    },
+                    {
+                        "type": "video",
+                        "source":
+                        [
+                            "/source/videos/Normal Link Summon-2.mp4"
+                        ]
+                    },
+                    {
+                        "type": "text",
+                        "text": 
+                        [
+                            "Link Monsters also have the special mechanics: If a Link-n monster is used for Link Summon, it can act like n monster(s) or just 1 monster. For example, if you has 2 Link-2 monsters, you can Link Summon a Link-4 / Link-3 or another Link-2 Monster.",
+                            "But, if the Link-4 monster description says \"3+ monsters\""
                         ]
                     }
                 ]
