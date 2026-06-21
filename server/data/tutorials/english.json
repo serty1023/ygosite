@@ -92,6 +92,10 @@
             "content":
             [
                 {
+                    "id": "spell-card",
+                    "title": "Spell Card"
+                },
+                {
                     "id": "normal-spells",
                     "title": "Normal Spells"
                 },
@@ -122,6 +126,10 @@
             "title": "Traps",
             "content":
             [
+                {
+                    "id": "trap-card",
+                    "title": "Trap Card"
+                },
                 {
                     "id": "normal-traps",
                     "title": "Normal Traps"
@@ -167,8 +175,8 @@
                             "• Side Deck (must contain 0 - 15 cards): For normal Duel, you don't need a Side Deck, but in standard Match which includes 3 Duels, after finish the first Duel, you will want to alter the contents of the Main Deck and Extra Deck to duel with opponent's deck(s). Therefore, you will need a Side Deck that contain cards which has special uses.",
                             "Notice:",
                             "Extra Deck and Side Deck are optional, so you can still play without them.",
-                            "Every card in Extra Deck cannot exist in hand or Main Deck and must be returned to Extra Deck in those cases.",
-                            "After altering your Main Deck / Extra Deck, the number of cards in each decks must remain the same"
+                            "Every card in Extra Deck cannot exist in hand or Main Deck and must be returned to Extra Deck in those cases (except for the special cases, {[card effect can overwrite this rule|66100045]})",
+                            "After altering your Main Deck / Extra Deck, the number of cards in each decks must remain the same."
                         ]
                     }
                 ]
@@ -264,7 +272,7 @@
                         ]
                     },
                     {
-                        "type": "video",
+                        "type": "medium-video",
                         "source":
                         [
                             "/source/videos/Normal Summon.mp4"
@@ -278,7 +286,7 @@
                         ]
                     },
                     {
-                        "type": "video",
+                        "type": "medium-video",
                         "source":
                         [
                             "/source/videos/Normal Set.mp4"
@@ -292,7 +300,7 @@
                         ]
                     },
                     {
-                        "type": "video",
+                        "type": "medium-video",
                         "source":
                         [
                             "/source/videos/Flip Summon.mp4"
@@ -330,7 +338,7 @@
                         ]
                     },
                     {
-                        "type": "video",
+                        "type": "medium-video",
                         "source":
                         [
                             "/source/videos/Attack-Attack.mp4"
@@ -344,7 +352,7 @@
                         ]
                     },
                     {
-                        "type": "video",
+                        "type": "medium-video",
                         "source": 
                         [
                             "/source/videos/Attack-Defense-1.mp4"
@@ -358,7 +366,7 @@
                         ]
                     },
                     {
-                        "type": "video",
+                        "type": "medium-video",
                         "source":
                         [
                             "/source/videos/Attack-Defense-2.mp4"
@@ -595,7 +603,7 @@
                         ]
                     },
                     {
-                        "type": "video",
+                        "type": "medium-video",
                         "source":
                         [
                             "/source/videos/Ritual Summon.mp4"
@@ -641,7 +649,7 @@
                         ]
                     },
                     {
-                        "type": "video",
+                        "type": "medium-video",
                         "source":
                         [
                             "/source/videos/Fusion Summon.mp4"
@@ -686,7 +694,7 @@
                         ]
                     },
                     {
-                        "type": "video",
+                        "type": "medium-video",
                         "source":
                         [
                             "/source/videos/Synchro Summon.mp4"
@@ -730,7 +738,7 @@
                         ]
                     },
                     {
-                        "type": "video",
+                        "type": "medium-video",
                         "source":
                         [
                             "/source/videos/Xyz Summon.mp4"
@@ -758,7 +766,7 @@
                         ]
                     },
                     {
-                        "type": "video",
+                        "type": "medium-video",
                         "source":["/source/videos/Detach.mp4"]
                     },
                     {
@@ -766,6 +774,7 @@
                         "text":
                         [
                             "Notice:",
+                            "Because of having no Levels, Xyz Monsters are immune to {[card effect that depends on monster's Level|85742772]}.",
                             "All monsters must be face-up before being used as materials. After Xyz Summon, they will no longer be not treated \"are on the field\". Also when they are detached, it won't be treated as \"leave the field\".",
                             "If a Xyz Monster leaves the field, all materials will be sent to GY, but like above, it won't be treated as \"leave the field\"."
                         ]
@@ -814,7 +823,7 @@
                         ]
                     },
                     {
-                        "type": "video",
+                        "type": "medium-video",
                         "source":
                         [
                             "/source/videos/Pendulum Scale.mp4"
@@ -829,7 +838,7 @@
                         ]
                     },
                     {
-                        "type": "video",
+                        "type": "medium-video",
                         "source":
                         [
                             "/source/videos/Pendulum Monster Leaves The Field.mp4"
@@ -846,7 +855,7 @@
                         ]
                     },
                     {
-                        "type": "video",
+                        "type": "medium-video",
                         "source":
                         [
                             "/source/videos/Pendulum Summon.mp4"
@@ -896,9 +905,10 @@
                         ]
                     },
                     {
-                        "type": "video",
+                        "type": "small-video",
                         "source":
                         [
+                            "/source/videos/Normal Link Summon-1.mp4",
                             "/source/videos/Normal Link Summon-2.mp4"
                         ]
                     },
@@ -906,8 +916,110 @@
                         "type": "text",
                         "text": 
                         [
-                            "Link Monsters also have the special mechanics: If a Link-n monster is used for Link Summon, it can act like n monster(s) or just 1 monster. For example, if you has 2 Link-2 monsters, you can Link Summon a Link-4 / Link-3 or another Link-2 Monster.",
-                            "But, if the Link-4 monster description says \"3+ monsters\""
+                            "Link Monsters also have the special mechanics: If a Link-n monster is used for Link Summon, it can act like n monster(s) or just 1 monster. For example, if you has 2 Link-2 monsters, you can Link Summon a Link-4 / Link-3 or another Link-2 Monster."
+                        ]
+                    },
+                    {
+                        "type": "medium-video",
+                        "source":
+                        [
+                            "/source/videos/Link Summon.mp4"
+                        ]
+                    },
+                    {
+                        "type": "text",
+                        "text":
+                        [
+                            "But, if the Link-4 monster description says \"3+ monsters\", it means the player still need atleast 3 actual monsters, so the player cannot just use 2 Link-2 monsters.",
+                            "There is one more mechanic of Link monsters, any [{Main Monster Zones|basic/playmat}] that the Link arrows point to can be treated as [{Extra Monster Zone|basic/playmat}] for other Link monsters or [{Pendulum monster that were Special Summoned from Extra Deck|monsters/pendulum-monsters}] and only for that purpose.",
+                            "If 2 Link Monster point to each other, that is called \"co-link\". If the player can make a series of co-link that point to the second [{Extra Monster Zone|basic/playmat}], they can take over that zone, like the one below:"
+                        ]
+                    },
+                    {
+                        "type": "large-image",
+                        "source": 
+                        [
+                            "/source/images/Extra Link.png"
+                        ]
+                    },
+                    {
+                        "type": "text",
+                        "text": 
+                        [
+                            "Notice:",
+                            "Like [{Xyz Monsters|monsters/xyz-monsters}], Link Monsters are immune to {[card effect that depends on monster's Level|44947065]}. Beside, Link Monsters are also immune to card effect that depends on monster's DEF or changes the [{Battle Position|gameplay/battle-mechanics}]."
+                        ]
+                    }
+                ]
+            }
+        },
+        "spells":
+        {
+            "id": "spells",
+            "title": "Spells",
+            "spell-card":
+            {
+                "id": "spell-card",
+                "title": "Spell Card",
+                "content":
+                [
+                    {
+                        "type": "text",
+                        "text": 
+                        [
+                            "Spell Card have special effect(s) and need to be activated by placed it (from hand) to [{Spell & Trap Zones|basic/playmat}], spell card can bring to the player some advantage or create some disadvantages to the opponent. A Spell Card frame is green colored. A Spell Card will include:",
+                            "• Card Name",
+                            "• Spell Icon",
+                            "• Spell Symbol (Type) - There're 6 types of spell: Normal, Equip, [{Ritual|monsters/ritual-monsters}], Continuous, [{Field|basic/playmat}] and Quick-Play. But Normal Spell Cards don't have the symbol."
+                        ]
+                    },
+                    {
+                        "type": "icon",
+                        "content":
+                        [
+                            {
+                                "source": "/source/images/Equip.png",
+                                "text": "Equip Spell"
+                            },
+                            {
+                                "source": "/source/images/Ritual.png",
+                                "text": "Ritual Spell"
+                            },
+                            {
+                                "source": "/source/images/Continuous.png",
+                                "text": "Continuous Spell"
+                            },
+                            {
+                                "source": "/source/images/Field.png",
+                                "text": "Field Spell"
+                            },
+                            {
+                                "source": "/source/images/Quick-Play.png",
+                                "text": "Quick-Play Spell"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "text",
+                        "text":
+                        [
+                            "• Spell Image",
+                            "• Description (Spell Effects)"
+                        ]
+                    },
+                    {
+                        "type": "large-image",
+                        "source": 
+                        [
+                            "/source/images/Spell Card.png"
+                        ]
+                    },
+                    {
+                        "type": "text",
+                        "text": 
+                        [
+                            "Notice:",
+                            "Although [{Pendulum Monsters in Pendulum Zones|monsters/pendulum-monsters}] is treated as spells, they don't belong to any types above."
                         ]
                     }
                 ]

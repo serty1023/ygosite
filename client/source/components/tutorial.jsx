@@ -143,10 +143,20 @@ function Tutorials()
                                 ))}
                             </div>)
                         }
-                        else if (item.type == "video")
+                        else if (item.type == "medium-video")
                         {
                             return (
-                            <div className="video">
+                            <div className="medium-video">
+                                {item.source.map((source, i) => 
+                                (
+                                    <video key={i} src={source} controls/>
+                                ))}
+                            </div>)
+                        }
+                        else if (item.type == "small-video")
+                        {
+                            return (
+                            <div className="small-video">
                                 {item.source.map((source, i) => 
                                 (
                                     <video key={i} src={source} controls/>
@@ -259,10 +269,20 @@ function Tutorials()
                                             ))}
                                         </div>)
                                     }
-                                    else if (item.type == "video")
+                                    else if (item.type == "medium-video")
                                     {
                                         return (
-                                        <div className="video">
+                                        <div className="medium-video">
+                                            {item.source.map((source, i) => 
+                                            (
+                                                <video key={i} src={source} controls/>
+                                            ))}
+                                        </div>)
+                                    }
+                                    else if (item.type == "small-video")
+                                    {
+                                        return (
+                                        <div className="small-video">
                                             {item.source.map((source, i) => 
                                             (
                                                 <video key={i} src={source} controls/>
